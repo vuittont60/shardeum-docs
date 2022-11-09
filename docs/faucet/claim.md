@@ -12,7 +12,7 @@ image: /img/claim_9.jpeg
 
 2. Visit the Shardeum Liberty faucet:
 
-  Liberty 1.5:
+  Liberty 1.6:
 
   https://faucet.liberty10.shardeum.org/
 
@@ -59,7 +59,7 @@ image: /img/claim_9.jpeg
 
 3. Select the Discord faucet text channel for the network you are using:
 
-  [Liberty 1.5 Faucet Text Channel](https://discord.com/channels/933959587462254612/1021737152251441244)
+  [Liberty 1.6 Faucet Text Channel](https://discord.com/channels/933959587462254612/1021737152251441244)
 
   [Liberty 2.0 Faucet Text Channel](https://discord.com/channels/933959587462254612/1031497272191627284)
 
