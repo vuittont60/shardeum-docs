@@ -6,7 +6,7 @@ slug: /
 
 # Quickstart
 
-## What is Shardeum?
+## Shardeum Overview
 
 Shardeum is a blockchain that supports EVM smart contracts.
 
@@ -14,7 +14,7 @@ For more general information on Shardeum:
 
 [What is Shardeum?](/Introduction/What-Is-Shardeum)
 
-## What makes Shardeum special?
+## Cross Shard Composability with Linear Scaling
 
 Shardeum is sharded, allowing the network to scale linearly with more nodes.
 Horizontally scaling in this fashion allows for high transactions per second at low gas prices.
@@ -23,7 +23,7 @@ Find out more about Shardeum nodes:
 
 [Shardeum Node Types](/Nodes/Node-Types)
 
-## How do I start using Shardeum?
+## Wallet Setup For Using Shardeum
 
 You will need an EVM wallet like Metamask to:
 
@@ -35,13 +35,13 @@ For more info on Metamask:
 
 [Metamask Introduction](/Wallets/Metamask/Introduction)
 
-## How do I fund my wallet to pay for transaction gas fees, transfer tokens and interact with smart contracts?
+## Fund Your Wallet With SHM On Shardeum
 
 Find out how to get testnet tokens from our faucets here:
 
 [Claim LIberty 100 SHM From Shardeum Faucets](/Faucet/Claim)
 
-## How can I connect to Shardeum with Metamask?
+## Connect Wallet To Shardeum
 
 Connect to Shardeum using the following network endpoints found here:
 
@@ -51,13 +51,13 @@ Note: you can quickly connect your Metamask to Shardeum with:
 
 [chainlist.org](https://chainlist.org/)
 
-## How do I view transactions on Shardeum?
+## Reading Shardeum Transactions
 
 View transactions on Shardeum using the Shardeum Explorer:
 
 [Shardeum Explorer](/Network/Explorer)
 
-## How do I deploy smart contracts to Shardeum?
+## Deploy Contracts to Shardeum
 
 Since Shardeum is EVM compatible, you can use the following frameworks to deploy to Shardeum:
 
@@ -71,7 +71,7 @@ To deploy contracts at the same address cross chain:
 
 [Same Address Cross Chain](/SmartContracts/Deploy/SameAddress)
 
-## What tokens can I deploy to Shardeum?
+## Deploying Tokens To Shardeum
 
 All EVM based token standards are supported on Shardeum (since Shardeum is EVM compatible).
 Popular tokens supported on Shardeum:
@@ -82,7 +82,7 @@ Popular tokens supported on Shardeum:
 
 [ERC-1155 (Token Emulator)](/SmartContracts/Tokens/ERC-1155)
 
-## How does sharding impact development on Shardeum?
+## Cross Shard Composability Communication With EIP-2930
 
 Smart contract addresses that don't have the same prefix are deployed to different shards.
 EIP-2930 accessList info is needed for transactions multicalling other contracts.
@@ -93,7 +93,7 @@ Here is a guide on how to use EIP-2930 accessList info:
 
 Shardeum is developing an RPC call to automate creating the EIP-2930 accessList for transactions, which can be used with ethers.js.
 
-## How do I integrate large files into Shardeum?
+## Integrate File Storage Into Shardeum
 
 We recommend users to use decentralized file storage standards like IPFS and Filecoin.
 
