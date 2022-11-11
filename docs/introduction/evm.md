@@ -13,7 +13,7 @@ We now have a state machine that virtualizes servers and interfaces of thousands
 
 ## Shardeum is EVM Compatible
 
-If you are one of those Ethereum or Ethereum-based developers, please note that Shardeum is EVM compatible. You don't need to change your application codes to launch various dApps you are building on Shardeum. Any smart contract written to run in EVM can be easily ported to the Shardeum network. You just need to deploy a smart contract written in Solidity or Viper on Shardeum with a bonus that you will never have to worry about rising gas fees again.
+If you are one of those Ethereum or Ethereum-based developers, please note that Shardeum is EVM compatible. You don't need to change your application codes to launch various dApps you are building on Shardeum. Any smart contract written to run in EVM can be easily ported to the Shardeum network. You just need to deploy a smart contract written in Solidity or Vyper on Shardeum with a bonus that you will never have to worry about rising gas fees again.
 
 
 <iframe id="ytplayer" type="text/html"
