@@ -8,19 +8,19 @@
 @import 'node_modules/polipop/src/sass/default';
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2031E6;
-  /**Blue 700*/
-  --ifm-color-primary-dark: #0029DD;
+  --ifm-color-primary: #808080;
+  /**Gray*/
+  --ifm-color-primary-dark: #000000;
   /**Blue 800*/
-  --ifm-color-primary-darker: #0022B8;
+  --ifm-color-primary-darker: #000000;
   /**Blue 900*/
-  --ifm-color-primary-darkest: #00177A;
+  --ifm-color-primary-darkest: #000000;
   /**Blue 1000*/
-  --ifm-color-primary-light: #4150EA;
+  --ifm-color-primary-light: #FFFFFF;
   /**Blue 600*/
-  --ifm-color-primary-lighter: #C9CDF9;
+  --ifm-color-primary-lighter: #FFFFFF;
   /**Blue 200*/
-  --ifm-color-primary-lightest: #DCDEFA;
+  --ifm-color-primary-lightest: #FFFFFF;
   /**Blue 100*/
   --ifm-code-font-size: 95%;
   --ifm-footer-background-color: #000000;
@@ -129,11 +129,11 @@ img[alt*="claim_8"] {
 
 
 .navbar_item_1, .navbar_item_2  {
-  color: #2031e6;
+  color: #808080;
 }
 
 .navbar_item_1:hover, .navbar_item_2:hover  {
-color: #1c1e21;
+color: #808080;
 }
 
 // a[href="/faucetExplorer"], a[href="/networkHealth"]  {
@@ -162,12 +162,12 @@ color: #1c1e21;
 }
 
 a.navbar__item.navbar__link.navbar_item_button {
-    background-color: #2031E2;
+    background-color: #808080;
     color: white;
 }
 
 a.navbar__item.navbar__link.navbar_item_button:hover {
-    background-color: #3241E8;
+    background-color: #808080;
     color: white;
 }
 
