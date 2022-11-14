@@ -62,7 +62,7 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'Shardeum Docs Logo',
-          src: '/img/shardeum_documentation.png',
+          src: '/img/shardeum_documentation_grey.png',
         },
 
         items: [
@@ -190,12 +190,12 @@ const config = {
         copyright: `Copyright © Shardeum ${new Date().getFullYear()}`,
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
       },
       colorMode: {
-        defaultMode: 'light',
-        disableSwitch: true,
-        respectPrefersColorScheme: false
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: true
       }
     }),
   plugins: ['docusaurus-plugin-sass',
