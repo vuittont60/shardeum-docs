@@ -10,7 +10,7 @@ export default class transactionList extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`https://explorer.liberty10.shardeum.org/api/cycleinfo?count=1`).then(res => {
+    axios.get(`https://explorer-liberty10.shardeum.org/api/cycleinfo?count=1`).then(res => {
       const cycle = res.data;
       this.setState({cycle});
       const currentCycle = this.state.cycle.cycles[0].counter;
@@ -18,7 +18,7 @@ export default class transactionList extends React.Component {
       const cycleTo = currentCycle - this.props.timestampTo;
       this.setState({cycleFrom});
       this.setState({cycleTo});
-      axios.get(`https://explorer.liberty10.shardeum.org/api/transaction?address=0x1f1545eb7ee5c3c1c4784ee9dde5d26a9f76f77c&startCycle=${cycleFrom}&endCycle=${cycleTo}`).then(res => {
+      axios.get(`https://explorer-liberty10.shardeum.org/api/transaction?address=0x1f1545eb7ee5c3c1c4784ee9dde5d26a9f76f77c&startCycle=${cycleFrom}&endCycle=${cycleTo}`).then(res => {
         const transactions = res.data.totalTransactions;
         this.setState({transactions});
       })
