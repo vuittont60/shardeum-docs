@@ -345,14 +345,30 @@ In this case, it will be storage slot0, because it is a single uint storage vari
 
 </Tabs>
 
+## Multicall Storage Read:
+
+Reading contract states cross shard does not need an accessList.
+
+For example, ERC-20 multicall:
+
+    tokenObject.totalSupply()
+
+will work with no accessList cross shard.
 
 ## EIP-2930 Required:
 
-## Contract: Multicall (Multiple Addresses):
+## Multicall Storage Write:
 
-Contract Multicall can call other contracts (in this case contractToCall).
+Writing contract states cross shard requires an accessList.
+
+For example, ERC-20 multicall:
+
+    tokenObject.transfer(recipient, amount)
+
+will require an accessList to work cross shard.
+
+Contract Multicall can change states in other contracts (in this case contractToCall).
 For sharded Shardeum networks (like Liberty 2.0), we need to specify the addresses and storage slots being called outside "from" and "to" in the transaction.
-
 
 ## Liberty 2.0 Address codeHash in storage slots:
 
