@@ -191,6 +191,7 @@ const config = {
       },
       prism: {
         theme: darkCodeTheme,
+        additionalLanguages: ["solidity","python"],
       },
       colorMode: {
         defaultMode: 'dark',
