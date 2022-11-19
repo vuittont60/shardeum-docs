@@ -17,20 +17,22 @@ Note: a uint variable is 256 bits by default in Solidity, equivalent to 32 bytes
 <Tabs>
   <TabItem value="solidity" label="Solidity" default>
 
-    // SPDX-License-Identifier: MIT
-    pragma solidity 0.8.15;
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.15;
 
-    contract SimpleStorage {
-        uint public storedData; //Do not set 0 manually it wastes gas!
+contract SimpleStorage {
+    uint public storedData; //Do not set 0 manually it wastes gas!
 
-        event setEvent();
+    event setEvent();
 
-        function set(uint x) public {
-            storedData = x;
-            emit setEvent();
-        }
-
+    function set(uint x) public {
+        storedData = x;
+        emit setEvent();
     }
+
+}
+```
 
   </TabItem>
 </Tabs>
@@ -54,26 +56,27 @@ Here is a smart contract which uses Assembly (Yul in Solidity) to access these o
 <Tabs>
   <TabItem value="solidity" label="Solidity" default>
 
-      // SPDX-License-Identifier: MIT
-      pragma solidity 0.8.15;
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.15;
 
-      contract AssemblyStorage {
+contract AssemblyStorage {
 
-          uint public storageSlot0; //Do not set 0 manually it wastes gas!
-          uint public storageSlot1; //Do not set 0 manually it wastes gas!
+    uint public storageSlot0; //Do not set 0 manually it wastes gas!
+    uint public storageSlot1; //Do not set 0 manually it wastes gas!
 
-          event setEvent();
+    event setEvent();
 
-          function assemblyStorage(uint x) public {
-              assembly {
-                  sstore(0,x)         //Record memory value in storage slot 0.  
-                  sstore(1,sload(0))  //Record storage slot 0 to storage slot 1 (costs more gas reading data from storage than data).
-              }
-              emit setEvent();
-          }
+    function assemblyStorage(uint x) public {
+        assembly {
+            sstore(0,x)         //Record memory value in storage slot 0.  
+            sstore(1,sload(0))  //Record storage slot 0 to storage slot 1 (costs more gas reading data from storage than data).
+        }
+        emit setEvent();
+    }
 
-      }
-
+}
+```
 
   </TabItem>
 </Tabs>
@@ -88,18 +91,22 @@ if you need a uint, an address and an uint with only 96 bits:
 
 Correct:
 
-      uint     [Slot 0, 32/32 Bytes]
-      address  [Slot 1, 20/32 Bytes]
-      uint96   [Slot 1, 32/32 Bytes]
+```solidity
+uint     [Slot 0, 32/32 Bytes]
+address  [Slot 1, 20/32 Bytes]
+uint96   [Slot 1, 32/32 Bytes]
+```
 
 Note: Pack the compressed data together (above),
 or you will end up using another storage slot anyway (below)
 
 Wrong:
 
-      uint96  [Slot 0, 12/32 Bytes]
-      uint    [Slot 1, 32/32 Bytes]
-      address [Slot 2, 20/32 Bytes]
+```solidity
+uint96  [Slot 0, 12/32 Bytes]
+uint    [Slot 1, 32/32 Bytes]
+address [Slot 2, 20/32 Bytes]
+```
 
 
 ## Why is storing large data not recommended on chain?
