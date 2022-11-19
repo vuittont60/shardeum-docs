@@ -8,26 +8,25 @@
 @import 'node_modules/polipop/src/sass/default';
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #808080;
-  /**Gray*/
-  --ifm-color-primary-dark: #000000;
-  /**Blue 800*/
-  --ifm-color-primary-darker: #000000;
-  /**Blue 900*/
-  --ifm-color-primary-darkest: #000000;
-  /**Blue 1000*/
-  --ifm-color-primary-light: #FFFFFF;
-  /**Blue 600*/
-  --ifm-color-primary-lighter: #FFFFFF;
-  /**Blue 200*/
-  --ifm-color-primary-lightest: #FFFFFF;
-  /**Blue 100*/
+
   --ifm-code-font-size: 95%;
+
+  --ifm-color-primary: #808080;
+
+  --ifm-color-primary-dark: #707070;
+  --ifm-color-primary-darker: #606060;
+  --ifm-color-primary-darkest: #505050;
+
+  --ifm-color-primary-light: #909090;
+  --ifm-color-primary-lighter: #A0A0A0;
+  --ifm-color-primary-lightest: #B0B0B0;
+
   --ifm-footer-background-color: #000000;
   --ifm-footer-title-color: #FAFAFA;
   --ifm-footer-link-color: #9E9E9E;
   --ifm-footer-link-hover-color: #E0E0E0;
   --ifm-footer-color: #9E9E9E;
+
 }
 
 body,
