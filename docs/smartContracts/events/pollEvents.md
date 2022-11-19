@@ -45,8 +45,10 @@ Reading smart contract events can also be done using Shardeum cycles (we listen 
 
 Example with:
 
-        startCycle = endCycle = 49
-        address = 0x23FF65f07cAbAd1643440a0114d71260F2Bb6352
+```
+startCycle = endCycle = 49
+address = 0x23FF65f07cAbAd1643440a0114d71260F2Bb6352
+```
 
 https://explorer.liberty10.shardeum.org/api/transaction?startCycle=49&endCycle=49&address=0x23FF65f07cAbAd1643440a0114d71260F2Bb6352
 
@@ -54,260 +56,262 @@ https://explorer.liberty10.shardeum.org/api/transaction?startCycle=49&endCycle=4
 
 https://explorer.liberty10.shardeum.org/api/transaction?startCycle=49&endCycle=49&address=0x23FF65f07cAbAd1643440a0114d71260F2Bb6352&page=1
 
-
 ## JSON URL Filter Variables
 
-    ?startCycle=lastestCycle
-    &endCycle=lastestCycle
-    &address=addressToListenTo
-    &page=1
+```
+?startCycle=lastestCycle
+&endCycle=lastestCycle
+&address=addressToListenTo
+&page=1
+```
 
 ## Event Listening With Polling Examples:
 
 Reading transaction events from the null address (address(0)) from cycle 0 to 1000:
 
 <Tabs>
-  <TabItem value="python" label="Python" default>
+<TabItem value="javascript" label="Javascript" default>
 
-      from urllib.request import urlopen
-      import json
+```js
+const https = require('https');
 
-      transactionsInCycleRangeUrlString = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=0&endCycle=1000&address=0x0000000000000000000000000000000000000000"
-      transactionsInCycleRangeUrlOpened = urlopen(transactionsInCycleRangeUrlString)
-      transactionsInCycleRangeUrlJSON = json.loads(transactionsInCycleRangeUrlOpened.read())
-      totalTransactions = transactionsInCycleRangeUrlJSON["totalTransactions"]
-      print(totalTransactions)
-      pageIndex = 1
+let totalTransactions = ""
+let baseUrl = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=0&endCycle=1000&address=0x0000000000000000000000000000000000000000"
 
-      while totalTransactions > 0:
-          print(pageIndex)
-          print(totalTransactions)
-          pageIndexIncrementUrlString = transactionsInCycleRangeUrlString + "&page=" + str(pageIndex)
-          pageIndexIncrementUrlOpened = urlopen(pageIndexIncrementUrlString)
-          rawTransactionDataPage = json.loads(pageIndexIncrementUrlOpened.read())
-          print(rawTransactionDataPage)
-          totalTransactions -= 10
-          pageIndex += 1
+let req = https.get(baseUrl, function(res) {
+  let data = '',
+    json_data;
+
+  res.on('data', function(stream) {
+    data += stream;
+  });
+  res.on('end', function() {
+
+    json_data = JSON.parse(data);
+    totalTransactions = json_data.totalTransactions
+    console.log(totalTransactions);
+
+    readJSONLoop(totalTransactions)
+
+  });
+});
+
+req.on('error', function(e) {
+    console.log(e.message);
+});
+
+
+function readJSONLoop(totalTransactions) {
+
+  let total = totalTransactions;
+  let pageIndex = 1
+
+  while (total>0) {
+
+    let filterUrl = baseUrl + "&page=" + pageIndex
+    let req = https.get(filterUrl, function(res) {
+      let data = '',
+        json_data;
+
+      res.on('data', function(stream) {
+        data += stream;
+      });
+      res.on('end', function() {
+
+        json_data = JSON.parse(data);
+        console.log(json_data);
+        let pageIndex = 1;
+
+      });
+    });
+
+    req.on('error', function(e) {
+        console.log(e.message);
+    });
+
+    total -= 10;
+    pageIndex++;
+    console.log(filterUrl)
+  }
+
+}
+```
 
   </TabItem>
-  <TabItem value="javascript" label="Javascript" default>
+  <TabItem value="python" label="Python" default>
 
-      const https = require('https');
+```python
+from urllib.request import urlopen
+import json
 
-      let totalTransactions = ""
-      let baseUrl = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=0&endCycle=1000&address=0x0000000000000000000000000000000000000000"
+transactionsInCycleRangeUrlString = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=0&endCycle=1000&address=0x0000000000000000000000000000000000000000"
+transactionsInCycleRangeUrlOpened = urlopen(transactionsInCycleRangeUrlString)
+transactionsInCycleRangeUrlJSON = json.loads(transactionsInCycleRangeUrlOpened.read())
+totalTransactions = transactionsInCycleRangeUrlJSON["totalTransactions"]
+print(totalTransactions)
+pageIndex = 1
 
-      let req = https.get(baseUrl, function(res) {
-      	let data = '',
-      		json_data;
-
-      	res.on('data', function(stream) {
-      		data += stream;
-      	});
-      	res.on('end', function() {
-
-      		json_data = JSON.parse(data);
-      		totalTransactions = json_data.totalTransactions
-      		console.log(totalTransactions);
-
-          readJSONLoop(totalTransactions)
-
-      	});
-      });
-
-      req.on('error', function(e) {
-          console.log(e.message);
-      });
-
-
-      function readJSONLoop(totalTransactions) {
-
-      	let total = totalTransactions;
-      	let pageIndex = 1
-
-      	while (total>0) {
-
-      		let filterUrl = baseUrl + "&page=" + pageIndex
-      		let req = https.get(filterUrl, function(res) {
-      			let data = '',
-      				json_data;
-
-      			res.on('data', function(stream) {
-      				data += stream;
-      			});
-      			res.on('end', function() {
-
-      				json_data = JSON.parse(data);
-      				console.log(json_data);
-      		    let pageIndex = 1;
-
-      			});
-      		});
-
-      		req.on('error', function(e) {
-      		    console.log(e.message);
-      		});
-
-      	  total -= 10;
-      		pageIndex++;
-      		console.log(filterUrl)
-      	}
-
-      }
+while totalTransactions > 0:
+    print(pageIndex)
+    print(totalTransactions)
+    pageIndexIncrementUrlString = transactionsInCycleRangeUrlString + "&page=" + str(pageIndex)
+    pageIndexIncrementUrlOpened = urlopen(pageIndexIncrementUrlString)
+    rawTransactionDataPage = json.loads(pageIndexIncrementUrlOpened.read())
+    print(rawTransactionDataPage)
+    totalTransactions -= 10
+    pageIndex += 1
+```
 
   </TabItem>
 </Tabs>
 
-
-
 Listening for the latest cycle, which might contain transaction events from an address:
 
 <Tabs>
-  <TabItem value="python" label="Python" default>
+<TabItem value="javascript" label="Javascript" default>
 
+```js
+const https = require('https');
+const Web3 = require('web3')
 
+const rpcURL = "https://liberty20.shardeum.org/"
+const web3 = new Web3(rpcURL)
 
-      from web3 import Web3
-      import time
-      import math
-      from urllib.request import urlopen
-      import json
+console.log("chainId:")
+web3.eth.getChainId().then(console.log);
 
-      ShardeumConnectionHTTPS = "https://liberty20.shardeum.org/";
-      web3 = Web3(Web3.HTTPProvider(ShardeumConnectionHTTPS))
+let addressToSubscribeTo = "0x0000000000000000000000000000000000000000"
 
-      print("Connected to Web3? ")
-      print(web3.isConnected())
+const timeMilliSec = 1000;
 
-      print("Chain ID? ")
-      print(web3.eth.chain_id)
+function timeout(ms) {
+return new Promise(resolve => setTimeout(resolve,ms));
+}
 
-      addressToSubscribeTo = "0x0000000000000000000000000000000000000000"
+async function listenForCycle() {
+while (true){
 
-      while True:
-          print("Current cycle (1 cycle = 10 blocks [bundles]) ")
-          cycle =  (math.floor(web3.eth.blockNumber/10))  #Divide current bundle [block] by 10, then round down to get cycle.
-          print(cycle)
+  console.log("Current cycle (1 cycle = 10 blocks [bundles]) ")
+  let cycle = await web3.eth.getBlockNumber();
+  console.log(Math.floor(cycle/10))
 
-          transactionsInCycleRangeUrlString = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=" + str(cycle) + "&endCycle=" + str(cycle) + "&address=" + addressToSubscribeTo
-          print(transactionsInCycleRangeUrlString)
-          transactionsInCycleRangeUrlOpened = urlopen(transactionsInCycleRangeUrlString)
-          transactionsInCycleRangeUrlJSON = json.loads(transactionsInCycleRangeUrlOpened.read())
-          totalTransactions = transactionsInCycleRangeUrlJSON["totalTransactions"]
-          print(totalTransactions)
-          pageIndex = 1
+  let totalTransactions = ""
+  let baseUrlCycleAddress = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=" + cycle + "&endCycle=" + cycle + "&address=" + addressToSubscribeTo
+  console.log(baseUrlCycleAddress)
 
-          while totalTransactions > 0:
-              print(pageIndex)
-              print(totalTransactions)
-              pageIndexIncrementUrlString = transactionsInCycleRangeUrlString + "&page=" + str(pageIndex)
-              pageIndexIncrementUrlOpened = urlopen(pageIndexIncrementUrlString)
-              rawTransactionDataPage = json.loads(pageIndexIncrementUrlOpened.read())
-              print(rawTransactionDataPage)
-              totalTransactions -= 10
-              pageIndex += 1
+  let req = https.get(baseUrlCycleAddress, function(res) {
+    let data = '',
+      json_data;
 
-          time.sleep(60)   #1 cycle roughly every 60 seconds based on explorer: https://explorer.liberty20.shardeum.org/cycle
+    res.on('data', function(stream) {
+      data += stream;
+    });
+    res.on('end', function() {
 
+      json_data = JSON.parse(data);
+      totalTransactions = json_data.totalTransactions
+      console.log(totalTransactions);
+      let pageIndex = 1;
+
+      readJSONLoop(totalTransactions,baseUrlCycleAddress)
+
+    });
+  });
+
+  req.on('error', function(e) {
+      console.log(e.message);
+  });
+
+  await timeout(60*timeMilliSec)
+
+}
+}
+
+listenForCycle()
+
+function readJSONLoop(totalTransactions,baseUrlCycleAddress) {
+
+let total = totalTransactions;
+let pageIndex = 1
+let baseUrl = baseUrlCycleAddress;
+
+while (total>0) {
+
+  let filterUrl = baseUrl + "&page=" + pageIndex
+  let req = https.get(filterUrl, function(res) {
+    let data = '',
+      json_data;
+
+    res.on('data', function(stream) {
+      data += stream;
+    });
+    res.on('end', function() {
+
+      json_data = JSON.parse(data);
+      console.log(json_data);
+      let pageIndex = 1;
+
+    });
+  });
+
+  req.on('error', function(e) {
+      console.log(e.message);
+  });
+
+  total -= 10;
+  pageIndex++;
+  console.log(filterUrl)
+}
+
+}
+```
 
   </TabItem>
-  <TabItem value="javascript" label="Javascript" default>
+  <TabItem value="python" label="Python" default>
 
+```python
+from web3 import Web3
+import time
+import math
+from urllib.request import urlopen
+import json
 
-      const https = require('https');
-      const Web3 = require('web3')
+ShardeumConnectionHTTPS = "https://liberty20.shardeum.org/";
+web3 = Web3(Web3.HTTPProvider(ShardeumConnectionHTTPS))
 
-      const rpcURL = "https://liberty20.shardeum.org/"
-      const web3 = new Web3(rpcURL)
+print("Connected to Web3? ")
+print(web3.isConnected())
 
-      console.log("chainId:")
-      web3.eth.getChainId().then(console.log);
+print("Chain ID? ")
+print(web3.eth.chain_id)
 
-      let addressToSubscribeTo = "0x0000000000000000000000000000000000000000"
+addressToSubscribeTo = "0x0000000000000000000000000000000000000000"
 
-      const timeMilliSec = 1000;
+while True:
+print("Current cycle (1 cycle = 10 blocks [bundles]) ")
+cycle =  (math.floor(web3.eth.blockNumber/10))  #Divide current bundle [block] by 10, then round down to get cycle.
+print(cycle)
 
-      function timeout(ms) {
-      	return new Promise(resolve => setTimeout(resolve,ms));
-      }
+transactionsInCycleRangeUrlString = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=" + str(cycle) + "&endCycle=" + str(cycle) + "&address=" + addressToSubscribeTo
+print(transactionsInCycleRangeUrlString)
+transactionsInCycleRangeUrlOpened = urlopen(transactionsInCycleRangeUrlString)
+transactionsInCycleRangeUrlJSON = json.loads(transactionsInCycleRangeUrlOpened.read())
+totalTransactions = transactionsInCycleRangeUrlJSON["totalTransactions"]
+print(totalTransactions)
+pageIndex = 1
 
-      async function listenForCycle() {
-        while (true){
+while totalTransactions > 0:
+    print(pageIndex)
+    print(totalTransactions)
+    pageIndexIncrementUrlString = transactionsInCycleRangeUrlString + "&page=" + str(pageIndex)
+    pageIndexIncrementUrlOpened = urlopen(pageIndexIncrementUrlString)
+    rawTransactionDataPage = json.loads(pageIndexIncrementUrlOpened.read())
+    print(rawTransactionDataPage)
+    totalTransactions -= 10
+    pageIndex += 1
 
-          console.log("Current cycle (1 cycle = 10 blocks [bundles]) ")
-          let cycle = await web3.eth.getBlockNumber();
-          console.log(Math.floor(cycle/10))
-
-          let totalTransactions = ""
-          let baseUrlCycleAddress = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=" + cycle + "&endCycle=" + cycle + "&address=" + addressToSubscribeTo
-          console.log(baseUrlCycleAddress)
-
-          let req = https.get(baseUrlCycleAddress, function(res) {
-            let data = '',
-              json_data;
-
-            res.on('data', function(stream) {
-              data += stream;
-            });
-            res.on('end', function() {
-
-              json_data = JSON.parse(data);
-              totalTransactions = json_data.totalTransactions
-              console.log(totalTransactions);
-              let pageIndex = 1;
-
-              readJSONLoop(totalTransactions,baseUrlCycleAddress)
-
-            });
-          });
-
-          req.on('error', function(e) {
-              console.log(e.message);
-          });
-
-          await timeout(60*timeMilliSec)
-
-        }
-      }
-
-      listenForCycle()
-
-      function readJSONLoop(totalTransactions,baseUrlCycleAddress) {
-
-      	let total = totalTransactions;
-      	let pageIndex = 1
-        let baseUrl = baseUrlCycleAddress;
-
-      	while (total>0) {
-
-      		let filterUrl = baseUrl + "&page=" + pageIndex
-      		let req = https.get(filterUrl, function(res) {
-      			let data = '',
-      				json_data;
-
-      			res.on('data', function(stream) {
-      				data += stream;
-      			});
-      			res.on('end', function() {
-
-      				json_data = JSON.parse(data);
-      				console.log(json_data);
-      		    let pageIndex = 1;
-
-      			});
-      		});
-
-      		req.on('error', function(e) {
-      		    console.log(e.message);
-      		});
-
-      	  total -= 10;
-      		pageIndex++;
-      		console.log(filterUrl)
-      	}
-
-      }
-
+time.sleep(60)   #1 cycle roughly every 60 seconds based on explorer: https://explorer.liberty20.shardeum.org/cycle
+```
 
   </TabItem>
 </Tabs>
