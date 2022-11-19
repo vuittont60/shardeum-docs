@@ -3,6 +3,9 @@ title: Hardhat
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers manage and automate the recurring tasks inherent to the process of building smart contracts and dApps and easily introduces more functionality around this workflow. This means compiling, running and testing smart contracts at the very core.
 
 ## Environment Setup
@@ -17,12 +20,18 @@ There are a few technical requirements for developers to start using Hardhat. In
 
 Once the above dependencies are installed successfully, you need to setup a fresh new empty project by using the below commands.
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 mkdir testToken
 cd testToken
 npm init --yes
 npm install --save-dev hardhat
 ```
+
+  </TabItem>
+</Tabs>
 
 :::tip Tip
 
@@ -32,17 +41,31 @@ Installing Hardhat will install some Ethereum JavaScript dependencies, so be pat
 
 This tutorial will use the Ethers.js and Waffle plugins. They'll allow interaction with Shardeum to test contracts.
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
+
+  </TabItem>
+</Tabs>
+
 ## Creating a Hardhat Project
 
 In the same directory where you installed Hardhat run:
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 npx hardhat
 ```
 
+  </TabItem>
+</Tabs>
+
+In the terminal output, select "Create a basic sample project":
 
 ```
 888    888                      888 888               888
@@ -64,16 +87,15 @@ npx hardhat
   Quit
 ```
 
-
-Select "Create a basic sample project".
-
 Once this operation is complete, you'll now have a project structure with the following items:
 
+```
 1. contracts/: Directory for Solidity contracts
 2. scripts/: Directory for scriptable deployment files
 3. test/: Directory for test files for testing your application and contracts
 4. hardhat-config.js:Hardhat configuration file
 5. artifacts(visible after compile): Compiled Solidity contracts with bytecode and ABI
+```
 
 ## Create Contract
 
@@ -81,30 +103,48 @@ You can write your own smart contract, or use open-source openzeppellin standard
 
 We are using openzeppelin for our testToken, which requires a dependency.
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 npm install @openzeppelin/contracts
 ```
 
+  </TabItem>
+</Tabs>
+
 Create a file named "testToken.sol" in the contract directory.
 
-```
-// SPDX-License-Identifier: MIT
+<Tabs>
+  <TabItem value="solidity" label="Solidity" default>
 
+```solidity
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract testToken is ERC20 {
-  constructor(uint256 initialSupply) ERC20("testTkn", "TST") { \_mint(msg.sender, initialSupply);
+
+  constructor(uint256 initialSupply) ERC20("shardeumTestToken", "STT") {
+      _mint(msg.sender, initialSupply);
   }
+
 }
- ```
+```
+
+  </TabItem>
+</Tabs>
 
 ## Configuring Hardhat For Shardeum Liberty
 
  - Go to hardhat-config.js (located in root directory)
  - Update with Shardeum Liberty details ([available here](/Network/endpoints))
 
-```
+<Tabs>
+ <TabItem value="javascript" label="Javascript" default>
+
+```js
 require("@nomiclabs/hardhat-waffle");
 require('@nomiclabs/hardhat-ethers');
 const { privateKeys } = require('./secrets.json');
@@ -112,51 +152,55 @@ const { privateKeys } = require('./secrets.json');
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async () => {
-  const accounts = await ethers.getSigners();
+ const accounts = await ethers.getSigners();
 
-  for (const account of accounts) {
-    console.log(account.address);
-  }
+ for (const account of accounts) {
+   console.log(account.address);
+ }
 });
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
 /**
- * @type import('hardhat/config').HardhatUserConfig
- */
+* @type import('hardhat/config').HardhatUserConfig
+*/
 module.exports = {
-  defaultNetwork: "liberty",
-  networks: {
-    hardhat: {
-    },
-    liberty: {
-      url: "https://liberty10.shardeum.org/",
-      chainId: 8080,
-      accounts:[privateKeys]
-    },
-  },
-  solidity: {
+ defaultNetwork: "liberty",
+ networks: {
+   hardhat: {
+   },
+   liberty: {
+     url: "https://liberty10.shardeum.org/",
+     chainId: 8080,
+     accounts:[privateKeys]
+   },
+ },
+ solidity: {
 //configure solidity version for compilation
-  version: "0.8.0",
-  settings: {
-    optimizer: {
-      enabled: true
-    }
+ version: "0.8.0",
+ settings: {
+   optimizer: {
+     enabled: true
    }
-  },
-  paths: {
-    sources: "./contracts",
-    tests: "./test",
-    cache: "./cache",
-    artifacts: "./artifacts"
-  },
-  mocha: {
-    timeout: 20000
   }
+ },
+ paths: {
+   sources: "./contracts",
+   tests: "./test",
+   cache: "./cache",
+   artifacts: "./artifacts"
+ },
+ mocha: {
+   timeout: 20000
+ }
 };
-
 ```
+
+   </TabItem>
+</Tabs>
+
+
 
 **Note:** Make sure to add your mnemonic or private key and add it to a separate file named "secrets.json" (make sure never to upload this file to GitHub or GitLab).
 
@@ -164,15 +208,24 @@ module.exports = {
 
 To compile a Hardhat project, change to the root directory (in our case testToken directory) and run the command in the terminal.
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 npx hardhat compile
 ```
+
+  </TabItem>
+</Tabs>
 
 ## Coding Deployment Scripts
 
 Create a file in scripts folder named "deploy.js".
 
-```
+<Tabs>
+  <TabItem value="javascript" label="Javascript" default>
+
+```js
 // Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
 
@@ -202,13 +255,22 @@ main()
  });
 ```
 
+  </TabItem>
+</Tabs>
+
 ## Deploying on Shardeum Liberty
 
 To deploy the testToken contract run this command in testToken directory.
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 npx hardhat run --network liberty scripts/deploy.js
 ```
+
+  </TabItem>
+</Tabs>
 
 The contract will be deployed on Shardeum Liberty.
 

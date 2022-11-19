@@ -3,6 +3,9 @@ title: Truffle
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Truffle is a world-class development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM), aiming to make life as a developer easier.
 
 ## Environment Setup
@@ -17,9 +20,15 @@ There are a few technical requirements for developers to start using Truffle. In
 
 Once the above dependencies are installed successfully. You can now install Truffle.
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 npm install -g truffle
 ```
+
+  </TabItem>
+</Tabs>
 
 To verify that Truffle is installed properly, type truffle version into the terminal (cmd).
 
@@ -29,23 +38,38 @@ After ensuring Truffle is installed successfully. Create your own project, name 
 
  - Create a new directory for your Truffle project
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 mkdir testToken
 cd testToken
 ```
 
+  </TabItem>
+</Tabs>
+
 - Initialize your project
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 truffle init
 ```
+
+  </TabItem>
+</Tabs>
+
 Once this operation is complete, you'll now have a project structure with the following items:
 
+```
 1. contracts/: Directory for Solidity contracts
 2. migrations/: Directory for scriptable deployment files
 3. test/: Directory for test files for testing your application and contracts
 4. truffle-config.js: Truffle configuration file
 5. build(visible after compile): Compiled Solidity contracts with bytecode and ABI
+```
 
 ## Create Contract
 
@@ -53,37 +77,62 @@ You can write your own smart contract, or use open-source openzeppellin standard
 
 We are using openzeppelin for our testToken, which requires a dependency.
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 npm install @openzeppelin/contracts
 ```
 
+  </TabItem>
+</Tabs>
+
 After the dependency is installed, create a file named "testToken.sol" in the contract directory.
 
-```
-// SPDX-License-Identifier: MIT
+<Tabs>
+  <TabItem value="solidity" label="Solidity" default>
 
+```solidity
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract testToken is ERC20 {
-  constructor(uint256 initialSupply) ERC20("testTkn", "TST") { _mint(msg.sender, initialSupply);
+
+  constructor(uint256 initialSupply) ERC20("shardeumTestToken", "STT") {
+      _mint(msg.sender, initialSupply);
   }
+
 }
 ```
+
+  </TabItem>
+</Tabs>
 
 ## Compile Contract
 
 To compile a Truffle project, change to the root directory (in our case testToken directory) and run the command in the terminal.
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 truffle compile
 ```
+
+  </TabItem>
+</Tabs>
+
 ## Coding Migrations
 
 To deploy our testToken contract on Shardeum Liberty, we have to create a migration to get the contract on the network.
 Create a file in the migrations folder named "2_deploy.js".
 
-```
+<Tabs>
+  <TabItem value="javascript" label="Javascript" default>
+
+```js
 var test = artifacts.require("testToken");
 
 module.exports = function(deployer) {
@@ -92,12 +141,18 @@ module.exports = function(deployer) {
 };
 ```
 
+  </TabItem>
+</Tabs>
+
 ## Configuring Truffle For Shardeum Liberty
 
 - Go to truffle-config.js (located in root directory)
 - Update with Shardeum Liberty details ([available here](/Network/endpoints))
 
-```
+<Tabs>
+  <TabItem value="javascript" label="Javascript" default>
+
+```js
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const fs = require('fs');
 const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -130,23 +185,38 @@ module.exports = {
     }
   }
 }
-
 ```
+
+  </TabItem>
+</Tabs>
+
 **Note:** Make sure to add your mnemonic or private key and add it to a separate file ".secret" (make sure never to upload this file to GitHub or GitLab).
 
 Make sure you have @truffle/hdwallet-provider dependency installed, if not install it using the below command.
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 npm i @truffle/hdwallet-provider
 ```
+
+  </TabItem>
+</Tabs>
 
 ## Deploying on Shardeum Liberty
 
 To deploy our testToken contract run this command in the testToken directory:
 
-```
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
 truffle migrate --network liberty
 ```
+
+  </TabItem>
+</Tabs>
 
 The contract will be deployed on Shardeum Liberty, it should look like this:
 
