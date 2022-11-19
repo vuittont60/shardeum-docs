@@ -3,6 +3,9 @@ title: ERC-20
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Deploy Your Own Crypto Token (ERC20)
 
 ## What is ERC-20 Token?
@@ -32,9 +35,11 @@ And follow these [instructions](https://docs.shardeum.org/basics/claim) to add S
 
 We are using [Remix IDE](https://remix.ethereum.org/) for writing the smart contract as mentioned above. In Remix, create a new contract file and name it ‘ShardeumERC20Token.sol’ (you can name it anything you want). And, in the contract, write the following code:
 
-```
-//SPDX-License-Identifier: MIT
+<Tabs>
+  <TabItem value="solidity" label="Solidity" default>
 
+```solidity
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
@@ -47,6 +52,10 @@ contract ShardeumERC20Token is ERC20 {
    }
 }
 ```
+
+  </TabItem>
+</Tabs>
+
 Code explanation in brief for reference:
 
 1. **pragma solidity ^0.8.0** – This line specifies the compiler version of Solidity to be used. ^0.8.0 means any version greater than 0.8.0.
