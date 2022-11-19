@@ -3,6 +3,9 @@ title: Remix IDE
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Remix IDE is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs. Remix is used for the entire journey of contract development as well as act as a playground for learning and teaching Ethereum.
 
 1, Visit https://remix.ethereum.org/
@@ -15,35 +18,30 @@ Remix IDE is an open source web and desktop application. It fosters a fast devel
 
 3, Copy and paste the code below to HelloWorld.sol file.
 
+<Tabs>
+  <TabItem value="solidity" label="Solidity" default>
+
 ```solidity
-// Specifies the version of Solidity, using semantic versioning.
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17; // Specifies the version of Solidity, using semantic versioning.
 
-pragma solidity ^0.7.0;
+contract HelloWorld { // Defines a contract named `HelloWorld`
 
-// Defines a contract named `HelloWorld`
+   string public message; // Declares a state variable `message` of type `string`.
 
-contract HelloWorld {
-
-   // Declares a state variable `message` of type `string`.
-
-   string public message;
-
-   // Constructors are used to initialize the contract's data.
-
-   constructor(string memory initMessage) {
-
-      // Accepts a string argument `initMessage`.
-
-      message = initMessage;
+   constructor(string memory initMessage) {    // Constructors are used to initialize the contract's data.
+      message = initMessage;      // Accepts a string argument `initMessage`.
    }
 
-   // A public function that accepts a string argument.
-
-   function update(string memory newMessage) public {
+   function update(string memory newMessage) public { // A public function that accepts a string argument.
       message = newMessage;
    }
+
 }
 ```
+
+  </TabItem>
+</Tabs>
 
 ## Compiling
 
