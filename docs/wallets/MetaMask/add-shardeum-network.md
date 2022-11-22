@@ -40,6 +40,10 @@ sidebar_position: 3
 
 ## Save the Network
 
-3, Click save.
+3, Click
 
-![adding_shardeum_3](/img/adding_shardeum/adding_shardeum_3.png)
+```
+Save
+```
+
+after filling in the Shardeum network endpoint info inside Metamask.
