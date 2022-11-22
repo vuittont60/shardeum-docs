@@ -29,6 +29,10 @@
 
 }
 
+[data-theme='light'] { /* Overriding root Infima variables */
+  --ifm-color-primary: #FF0000;
+}
+
 body,
 html {
   padding: 0;
