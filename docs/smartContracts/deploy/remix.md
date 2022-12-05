@@ -49,32 +49,38 @@ contract HelloWorld { // Defines a contract named `HelloWorld`
 
 ![remix_2](/img/remix/remix_2.png)
 
-## Deploying
+## Deploying to Shardeum
 
-If you want to deploy the contract to a live network like Shardeum Alphanet, configure your MetaMask using this doc.
+5, Select Injected Web3 for deploying to Shardeum.
 
-5, Deploy the compiler contract. Select Injected Web3 for deploying to live network.
+:::caution
+If Injected Web3 cannot detect the network, refresh the Remix IDE page, and then switch between networks in MetaMask.
+:::
 
 ![remix_3](/img/remix/remix_3.png)
 
-6, Confirm the deploy transaction in MetaMask.
+6, Deploy the compiler contract.
 
 ![remix_4](/img/remix/remix_4.png)
 
-7, Find the deployed contract address in Remix.
+7, Confirm the deploy transaction in MetaMask.
 
 ![remix_5](/img/remix/remix_5.png)
 
-## Interacting
-
-8, Update the contract by interacting with the contract.
+8, Find the deployed contract address in Remix.
 
 ![remix_6](/img/remix/remix_6.png)
 
-9, Confirm the deploy transaction in MetaMask.
+## Interacting
+
+9, Update the contract by interacting with the contract.
 
 ![remix_7](/img/remix/remix_7.png)
 
-10, Check the contract has been updated.
+10, Confirm the deploy transaction in MetaMask.
 
 ![remix_8](/img/remix/remix_8.png)
+
+11, Check the contract has been updated.
+
+![remix_9](/img/remix/remix_9.png)
