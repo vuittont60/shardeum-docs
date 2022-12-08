@@ -1,5 +1,5 @@
 ---
-title: List
+title: Address List
 sidebar_position: 4
 ---
 

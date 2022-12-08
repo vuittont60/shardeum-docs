@@ -73,8 +73,8 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://forms.gle/BFLXtLn9Urq9KH998',
-            label: 'Publicize Your dApp',
+            href: 'https://airtable.com/shrIXaaf87BzaTfYy',
+            label: 'List dApp on Ecosystem Page',
             position: 'left',
             className: 'navbar_item_1',
        },
