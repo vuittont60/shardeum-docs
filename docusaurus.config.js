@@ -200,7 +200,8 @@ const config = {
       }
     }),
   plugins: ['docusaurus-plugin-sass',
-              'plugin-image-zoom'],
+            'plugin-image-zoom',
+            'docusaurus-lunr-search'],
 };
 
 
