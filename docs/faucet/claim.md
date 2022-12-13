@@ -81,3 +81,15 @@ Video tutorial on using Shardeum Discord Faucet:
   webkitallowfullscreen="webkitallowfullscreen"
   frameBorder="0">
   </iframe>
+
+## Chaindrop Faucet Website
+
+1. Visit the Chaindrop faucet and select shardeum network:
+
+https://chaindrop.org
+
+![chaindrop_2](/img/chaindrop/chaindrop_2.png)
+
+3. Enter valid wallet address and complete the captcha and click send to receive tokens.
+
+![chaindrop_3](/img/chaindrop/chaindrop_3.png)
