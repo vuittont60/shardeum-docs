@@ -21,7 +21,7 @@
   --ifm-color-primary-lighter: #A0A0A0;
   --ifm-color-primary-lightest: #B0B0B0;
 
-  --ifm-footer-background-color: #000000;
+  --ifm-footer-background-color: #151515;
   --ifm-footer-title-color: #FAFAFA;
   --ifm-footer-link-color: #9E9E9E;
   --ifm-footer-link-hover-color: #E0E0E0;
@@ -30,7 +30,14 @@
 }
 
 [data-theme='light'] { /* Overriding root Infima variables */
+  --ifm-background-color: #FFFFFF;
+  --ifm-background-surface-color: #FFFFFF;
   --ifm-color-primary: #FF0000;
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #151515;
 }
 
 body,
