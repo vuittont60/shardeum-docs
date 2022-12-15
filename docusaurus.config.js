@@ -62,7 +62,8 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'Shardeum Docs Logo',
-          src: '/img/shardeum_documentation_grey.png',
+          src:     '/img/shardeum_documentation_dark.png',
+          srcDark: '/img/shardeum_documentation_light.png',
         },
 
         items: [
