@@ -66,30 +66,28 @@ const config = {
         },
 
         items: [
-
           {
-            href: 'https://github.com/shardeum/shardeum-docs',
-            label: 'GitHub',
-            position: 'right',
+            href: '/faucet/claim',
+            label: 'Claim 100 Testnet SHM',
+            position: 'left',
+            // className: 'navbar_item_button',
           },
           {
             href: 'https://airtable.com/shrIXaaf87BzaTfYy',
             label: 'List dApp on Ecosystem Page',
             position: 'left',
-            className: 'navbar_item_1',
-       },
+            // className: 'navbar_item_1',
+          },
           {
             href: 'https://forms.gle/LzPB7aoHQ6sreABeA',
             label: 'Report Bugs Here',
             position: 'left',
-            className: 'navbar_item_2',
+            // className: 'navbar_item_2',
           },
-
           {
-            href: '/faucet/claim',
-            label: 'Claim 100 Testnet SHM',
-            position: 'left',
-            className: 'navbar_item_button',
+            href: 'https://github.com/shardeum/shardeum-docs',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
       },
