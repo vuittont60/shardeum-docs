@@ -14,10 +14,10 @@ https://eips.ethereum.org/EIPS/eip-2930
 
 ## Why is EIP-2930 important?
 
-Shardeum Liberty 1.6 does not require EIP-2930 because the network is not sharded.
-You can optionally use EIP-2930 to save gas on Shardeum Liberty 1.6.
+Shardeum Liberty 1.X does not require EIP-2930 because the network is not sharded.
+You can optionally use EIP-2930 to save gas on Shardeum Liberty 1.X.
 
-Shardeum Liberty 2.0 requires EIP-2930 in order to communicate with addresses that exist on different shards.
+Shardeum Liberty 2.X requires EIP-2930 in order to communicate with addresses that exist on different shards.
 Note: some addresses with the same prefix will be on same shard, so in that scenario EIP-2930 is optional.
 
 ## Where is EIP-2930 data located for a transaction?
@@ -50,7 +50,7 @@ Example:
     ]
 ```
 
-## When should I use EIP-2930 on Shardeum Liberty 2.0?
+## When should I use EIP-2930 on Shardeum Liberty 2.X?
 
 ## EIP-2930 Optional:
 
@@ -395,11 +395,11 @@ tokenObject.transfer(recipient, amount)
 will require an accessList to work cross shard.
 
 Contract Multicall can change states in other contracts (in this case contractToCall).
-For sharded Shardeum networks (like Liberty 2.0), we need to specify the addresses and storage slots being called outside "from" and "to" in the transaction.
+For sharded Shardeum networks (like Liberty 2.X), we need to specify the addresses and storage slots being called outside "from" and "to" in the transaction.
 
-## Liberty 2.0 Address codeHash in storage slots:
+## Liberty 2.X Address codeHash in storage slots:
 
-Liberty 2.0 requires the codeHash for each externally called address (20 bytes) to be mentioned in a storage slot for each address being called externally.
+Liberty 2.X requires the codeHash for each externally called address (20 bytes) to be mentioned in a storage slot for each address being called externally.
 Liberty 2.1 will not need the codeHash in storage slots for each corresponding externally called address.
 
 In Solidity, you can get an address codeHash from a deployed contract on the matching network [along with checking if an address is a contract].
@@ -595,7 +595,7 @@ Tool generates accessList with 91% accuracy:
 
 https://github.com/alexchenzl/predict-al
 
-## GlobalSwap: Liberty 2.0 Multicall Sharded AMM DEX
+## GlobalSwap: Liberty 2.X Multicall Sharded AMM DEX
 
 Website:
 
