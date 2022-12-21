@@ -38,6 +38,7 @@
 html[data-theme='dark'] {
   --ifm-background-color: #000000;
   --ifm-background-surface-color: #151515;
+  --ifm-color-scheme: light;
 }
 
 body,
@@ -56,6 +57,23 @@ html {
 
 [data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .react-daterange-picker__button svg {
+  stroke: white;
+}
+
+[data-theme='dark'] .faucetItem {
+border:  1px solid white;
+}
+
+[data-theme='dark'] .react-daterange-picker__inputGroup__input {
+
+color: white;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    color: black;
 }
 
 img[alt*="adding_shardeum_1"],
