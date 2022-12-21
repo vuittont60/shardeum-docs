@@ -6,6 +6,7 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+
 ## What is EIP-2930?
 
 EIP-2930 allows users to define addresses and storage slots for a transaction.
@@ -16,6 +17,13 @@ https://eips.ethereum.org/EIPS/eip-2930
 
 Shardeum Liberty 1.X does not require EIP-2930 because the network is not sharded.
 You can optionally use EIP-2930 to save gas on Shardeum Liberty 1.X.
+
+:::warning WARNING
+
+Liberty 2.1 has automated the accessList for Shardeum nodes, so you no longer need to specify it.
+This document is meant for educational purposes and for situations where the automated accessList fails.
+
+:::
 
 Shardeum Liberty 2.X requires EIP-2930 in order to communicate with addresses that exist on different shards.
 Note: some addresses with the same prefix will be on same shard, so in that scenario EIP-2930 is optional.
