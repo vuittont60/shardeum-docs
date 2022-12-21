@@ -50,11 +50,11 @@ startCycle = endCycle = 49
 address = 0x23FF65f07cAbAd1643440a0114d71260F2Bb6352
 ```
 
-https://explorer.liberty10.shardeum.org/api/transaction?startCycle=49&endCycle=49&address=0x23FF65f07cAbAd1643440a0114d71260F2Bb6352
+https://explorer-liberty10.shardeum.org/api/transaction?startCycle=49&endCycle=49&address=0x23FF65f07cAbAd1643440a0114d71260F2Bb6352
 
 3. Filter for transactions per page [note, 10 transactions per page]:
 
-https://explorer.liberty10.shardeum.org/api/transaction?startCycle=49&endCycle=49&address=0x23FF65f07cAbAd1643440a0114d71260F2Bb6352&page=1
+https://explorer-liberty10.shardeum.org/api/transaction?startCycle=49&endCycle=49&address=0x23FF65f07cAbAd1643440a0114d71260F2Bb6352&page=1
 
 ## JSON URL Filter Variables
 
@@ -76,7 +76,7 @@ Reading transaction events from the null address (address(0)) from cycle 0 to 10
 const https = require('https');
 
 let totalTransactions = ""
-let baseUrl = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=0&endCycle=1000&address=0x0000000000000000000000000000000000000000"
+let baseUrl = "https://explorer-liberty20.shardeum.org/api/transaction?startCycle=0&endCycle=1000&address=0x0000000000000000000000000000000000000000"
 
 let req = https.get(baseUrl, function(res) {
   let data = '',
@@ -144,7 +144,7 @@ function readJSONLoop(totalTransactions) {
 from urllib.request import urlopen
 import json
 
-transactionsInCycleRangeUrlString = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=0&endCycle=1000&address=0x0000000000000000000000000000000000000000"
+transactionsInCycleRangeUrlString = "https://explorer-liberty20.shardeum.org/api/transaction?startCycle=0&endCycle=1000&address=0x0000000000000000000000000000000000000000"
 transactionsInCycleRangeUrlOpened = urlopen(transactionsInCycleRangeUrlString)
 transactionsInCycleRangeUrlJSON = json.loads(transactionsInCycleRangeUrlOpened.read())
 totalTransactions = transactionsInCycleRangeUrlJSON["totalTransactions"]
@@ -196,7 +196,7 @@ while (true){
   console.log(Math.floor(cycle/10))
 
   let totalTransactions = ""
-  let baseUrlCycleAddress = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=" + cycle + "&endCycle=" + cycle + "&address=" + addressToSubscribeTo
+  let baseUrlCycleAddress = "https://explorer-liberty20.shardeum.org/api/transaction?startCycle=" + cycle + "&endCycle=" + cycle + "&address=" + addressToSubscribeTo
   console.log(baseUrlCycleAddress)
 
   let req = https.get(baseUrlCycleAddress, function(res) {
@@ -292,7 +292,7 @@ print("Current cycle (1 cycle = 10 blocks [bundles]) ")
 cycle =  (math.floor(web3.eth.blockNumber/10))  #Divide current bundle [block] by 10, then round down to get cycle.
 print(cycle)
 
-transactionsInCycleRangeUrlString = "https://explorer.liberty20.shardeum.org/api/transaction?startCycle=" + str(cycle) + "&endCycle=" + str(cycle) + "&address=" + addressToSubscribeTo
+transactionsInCycleRangeUrlString = "https://explorer-liberty20.shardeum.org/api/transaction?startCycle=" + str(cycle) + "&endCycle=" + str(cycle) + "&address=" + addressToSubscribeTo
 print(transactionsInCycleRangeUrlString)
 transactionsInCycleRangeUrlOpened = urlopen(transactionsInCycleRangeUrlString)
 transactionsInCycleRangeUrlJSON = json.loads(transactionsInCycleRangeUrlOpened.read())
@@ -310,7 +310,7 @@ while totalTransactions > 0:
     totalTransactions -= 10
     pageIndex += 1
 
-time.sleep(60)   #1 cycle roughly every 60 seconds based on explorer: https://explorer.liberty20.shardeum.org/cycle
+time.sleep(60)   #1 cycle roughly every 60 seconds based on explorer: https://explorer-liberty20.shardeum.org/cycle
 ```
 
   </TabItem>
