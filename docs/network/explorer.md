@@ -17,7 +17,7 @@ https://explorer-liberty20.shardeum.org/
 
 ## View Transaction Data
 
-Click on a transaction from an address on the Shardeum Explorer to see transaction data.
+Select a transaction on the Shardeum Explorer to see transaction data.
 
 ![explorer_transactions](/img/explorer/transactions.png)
 
