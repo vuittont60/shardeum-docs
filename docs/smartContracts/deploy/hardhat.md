@@ -18,6 +18,10 @@ There are a few technical requirements for developers to start using Hardhat. In
 
 ## Installing Hardhat
 
+:::caution Hardhat Version
+Hardhat Version 2.9.1 or higher is recommended with Shardeum to avoid gas errors for testing and deployment.
+:::
+
 Once the above dependencies are installed successfully, you need to setup a fresh new empty project by using the below commands.
 
 <Tabs>
