@@ -32,5 +32,10 @@ Shardeum validators with dishonest transaction consensus will have their SHM sla
 
 ## How do I run a node on Shardeum?
 
-More details on how to run a Shardeum node will be shared at Shardeum Betanet.
-Betanet ETA is Q4 2022.
+More details on how to run a Shardeum node and validator will be shared at Shardeum Betanet.
+Betanet ETA is early Q1 2023.
+
+## How do I run an archiver node on Shardeum?
+
+More details on how to run a Shardeum archiver node will be shared at Shardeum Mainnet.
+Mainnet ETA is Q1 2023.
