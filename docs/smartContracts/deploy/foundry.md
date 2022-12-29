@@ -278,6 +278,9 @@ If you want to see how many lines and branches you are hitting with all tests:
 2. Check coverage results in
 
         report/index.html
+
+The coverage report should look like this in your web browser:
+![foundryCoverageLCOV](/img/foundry/foundryCoverageLCOV.png)
     
 3. Delete the following before pushing to GitHub to keep commits lightweight:
 
