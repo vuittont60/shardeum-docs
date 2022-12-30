@@ -182,7 +182,7 @@ contract TestContract is Test {
 
     function testSetRevertPath() public {
         assertEq(simpleStorageInstance.storedData(),0);
-        vm.expectRevert();    
+        vm.expectRevert(sameStorageValue.selector);    //Revert if the new value matches the current storage value. Custom error from SimpleStorage. 
         simpleStorageInstance.set(0);
         assertEq(simpleStorageInstance.storedData(),0);
     }
@@ -200,7 +200,7 @@ contract TestContract is Test {
     function testSetOwnerDataRevertPath() public {
         vm.startPrank(address(0)); //Change the address to not be the owner. The owner is address(this) in this context.
         assertEq(simpleStorageInstance.ownerUnixTimeContract(),0);
-        vm.expectRevert();    
+        vm.expectRevert(notOwner.selector);    //Revert if not the owner. Custom error from SimpleStorage.
         simpleStorageInstance.setOwnerData();
     }
     
@@ -224,8 +224,8 @@ contract TestContract is Test {
     }
 
     function testDonateToOwnerRevertPath() public {
-        vm.expectRevert();                     //Revert if MSG.VALUE is 0.
-        simpleStorageInstance.donateToOwner(); //MSG.VALUE is not set for call, so it is 0. 
+        vm.expectRevert(msgValueZero.selector);  //Revert if MSG.VALUE is 0. Custom error from SimpleStorage.
+        simpleStorageInstance.donateToOwner();   //MSG.VALUE is not set for call, so it is 0. 
     }
 }
 ```
