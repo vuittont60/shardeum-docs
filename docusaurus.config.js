@@ -80,7 +80,7 @@ const config = {
             // className: 'navbar_item_1',
           },
           {
-            href: 'https://forms.gle/LzPB7aoHQ6sreABeA',
+            href: 'https://github.com/Shardeum/shardeum-bug-reporting',
             label: 'Report Bugs Here',
             position: 'left',
             // className: 'navbar_item_2',

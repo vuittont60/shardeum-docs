@@ -63,6 +63,8 @@ Since Shardeum is EVM compatible, you can use the following frameworks to deploy
 
 [Remix IDE](/SmartContracts/Deploy/Remix)
 
+[Foundry](/SmartContracts/Deploy/Foundry)
+
 [Hardhat](/SmartContracts/Deploy/Hardhat)
 
 [Truffle](/SmartContracts/Deploy/Truffle)
@@ -100,3 +102,9 @@ We recommend users to use decentralized file storage standards like IPFS and Fil
 Files stored on IPFS can be used in contracts to deploy contracts with CID values as shown in this example:
 
 [IPFS and Filecoin](/Storage/IPFSandFilecoin)
+
+## Oracles on Shardeum
+
+Get off chain data securely on Shardeum using oracle providers.
+
+[SupraOracles](/Oracles/SupraOracles)
