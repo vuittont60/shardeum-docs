@@ -5,7 +5,7 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
+module.exports = {
   title: 'Shardeum Docs',
   tagline: 'Explore Shardeum Docs',
   url: 'https://docs.shardeum.org',
@@ -202,7 +202,3 @@ const config = {
             'plugin-image-zoom',
             'docusaurus-lunr-search'],
 };
-
-
-
-module.exports = config;
