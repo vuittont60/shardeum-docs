@@ -49,7 +49,7 @@ Connect to Shardeum using the following network endpoints found here:
 
 Note: you can quickly connect your Metamask to Shardeum with:
 
-[chainlist.org](https://chainlist.org/)
+[https://chainlist.org/?testnets=true&search=Shardeum](https://chainlist.org/?testnets=true&search=Shardeum)
 
 ## Reading Shardeum Transactions
 
@@ -87,13 +87,11 @@ Popular tokens supported on Shardeum:
 ## Cross Shard Composability Communication With EIP-2930
 
 Smart contract addresses that don't have the same prefix are deployed to different shards.
-EIP-2930 accessList info is needed for transactions multicalling other contracts.
+The EIP-2930 accessList is used for shard routing contracts on different shards and is automated inside Shardeum nodes. 
 
-Here is a guide on how to use EIP-2930 accessList info:
+For more info on how the EIP-2930 accessList works on Shardeum:
 
 [EIP-2930 Overview](/SmartContracts/EIP-2930/MulticallContract)
-
-Shardeum is developing an RPC call to automate creating the EIP-2930 accessList for transactions, which can be used with ethers.js.
 
 ## Integrate File Storage Into Shardeum
 
