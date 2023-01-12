@@ -302,7 +302,7 @@ If you want to test contracts deployed to specific networks and know your code c
 for the ```--fork-url``` flag:
 
 :::tip
-Do local unit testing first before forking a network to speed up testing time
+Do local unit testing first before forking a network to speed up testing time.
 :::
 
 <Tabs>
