@@ -273,7 +273,14 @@ If you want to see how many lines and branches you are hitting with all tests:
 
 1. Run 
 
-        forge coverage --report lcov && genhtml lcov.info -o report --branch-coverage
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+forge coverage --report lcov && genhtml lcov.info -o report --branch-coverage
+```
+  </TabItem>
+</Tabs>
 
 2. Check coverage results in
 
@@ -286,6 +293,27 @@ The coverage report should look like this in your web browser:
 
         lcov.info
         reports
+
+## Fork Network General Test Coverage Percentage 
+
+The test coverage above uses a local network to save time.
+However, some contract applications integrate with contracts already deployed to a network.
+If you want to test contracts deployed to specific networks and know your code coverage, run the following command with a RPC URL endpoint
+for the ```--fork-url``` flag:
+
+:::tip
+Do local unit testing first before forking a network to speed up testing time
+:::
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+forge coverage --fork-url $mainnetHTTPS_InfuraAPIKey --report lcov && genhtml lcov.info -o report --branch-coverage
+```
+  </TabItem>
+</Tabs>
+
 
 ## Deploy to Goerli with EIP-1559 and verify with Etherscan
 
