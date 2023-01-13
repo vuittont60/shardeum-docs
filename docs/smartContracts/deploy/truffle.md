@@ -165,8 +165,8 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
     liberty: {
-      provider: () => new HDWalletProvider(mnemonic, `https://liberty10.shardeum.org/`),
-      network_id: 8080,
+      provider: () => new HDWalletProvider(mnemonic, `https://liberty20.shardeum.org/`),
+      network_id: 8081,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
@@ -224,7 +224,7 @@ The contract will be deployed on Shardeum Liberty, it should look like this:
 Starting migrations...
 ======================
 > Network name:    'liberty'
-> Network id:      8080
+> Network id:      8081
 > Block gas limit: 20000000000 (0x4a817c800)
 
 2_deploy.js
