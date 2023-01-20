@@ -72,6 +72,7 @@ Calling:
       SELFDESTRUCT
 
 will delete all data in a contract! Be very careful using it.
+Goerli supports SELFDESTRUCT while Shardeum currently does not.
 :::
 
 2. Deploy a contract using a CREATE2 Factory.
