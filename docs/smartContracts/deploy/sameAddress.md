@@ -67,12 +67,9 @@ Do the following steps:
 1. Create a contract with SELFDESTRUCT in a function only the owner can access to keep the contract secure.
 
 :::warning WARNING
-Calling:
-
-      SELFDESTRUCT
-
-will delete all data in a contract! Be very careful using it.
-Goerli supports SELFDESTRUCT while Shardeum currently does not.
+Calling SELFDESTRUCT will delete all data in a contract! Be very careful using it.
+Goerli supports SELFDESTRUCT while Shardeum currently does not. SELFDESTRUCT might
+also be deprecated with EIP-4758: https://eips.ethereum.org/EIPS/eip-4758.
 :::
 
 2. Deploy a contract using a CREATE2 Factory.
