@@ -201,7 +201,9 @@ module.exports = {
         respectPrefersColorScheme: true
       }
     }),
-  plugins: ['docusaurus-plugin-sass',
-            'plugin-image-zoom',
-            'docusaurus-lunr-search'],
+  // plugins: ['docusaurus-plugin-sass',
+  //           'plugin-image-zoom',
+  //           'docusaurus-lunr-search'],
+    plugins: ['docusaurus-plugin-sass',
+    'plugin-image-zoom'],
 };
