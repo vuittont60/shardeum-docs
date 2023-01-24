@@ -40,6 +40,12 @@ GIT_USER=<Your GitHub username> npm run deploy
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
-Search bar support local (loads after deployed to production):
+### Search Bar
+
+Add Algolia Search Bar with API Key:
+
+https://docusaurus.io/docs/search#connecting-algolia
+
+Search bar support without Algolia API Key (loads after deployed to production):
 
 https://github.com/praveenn77/docusaurus-lunr-search
