@@ -37,7 +37,7 @@ export default function connectToLiberty0() {
 
   return (
 
-    <button onClick={addNetwork}>Connect to Liberty 2.1</button>    
+    <button onClick={addNetwork}>Connect Wallet to Liberty 2.X</button>    
 
   );
 
