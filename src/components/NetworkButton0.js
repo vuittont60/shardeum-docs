@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import styled from "styled-components";
 
 export default function connectToLiberty0() {
 
@@ -8,6 +9,16 @@ export default function connectToLiberty0() {
  const currencyName = 'SHM';
  const currencySymbol = 'SHM';
  const explorerURL = 'https://explorer-liberty20.shardeum.org/';
+
+ const Button = styled.button `
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px 60px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+  `;
 
  const addNetwork = async () => {
    if (!window.ethereum) {
@@ -37,7 +48,7 @@ export default function connectToLiberty0() {
 
   return (
 
-    <button onClick={addNetwork}>Connect Wallet to Liberty 2.X</button>    
+    <Button onClick={addNetwork}>Connect to Liberty 2.X</Button>    
 
   );
 
