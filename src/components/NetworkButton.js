@@ -26,6 +26,11 @@ export default function connectToLiberty() {
     // console.error('Metamask not detected');
     return;
     }
+    if (window.ethereum.networkVersion == 8080) {
+      alert("You are already connected to Liberty 1.6 (chainId 8080).", )
+      // console.error('Metamask not detected');
+      return;
+    }
     await window.ethereum.request({
     method: 'wallet_addEthereumChain',
     params: [
