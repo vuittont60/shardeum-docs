@@ -20,30 +20,30 @@ export default function connectToLiberty() {
 //     cursor: pointer;
 //   `;
 
- const addNetwork = async () => {
-   if (!window.ethereum) {
-     console.error('Metamask not detected');
-     return;
-   }
-   await window.ethereum.request({
-     method: 'wallet_addEthereumChain',
-     params: [
-       {
-         chainId: chainId,
-         chainName: networkName,
-         rpcUrls: [rpcURL],
-         blockExplorerUrls: [explorerURL],
-
-         nativeCurrency: {
-           name: currencyName,
-           symbol: currencySymbol, // 2-6 characters long
-           decimals: 18,
-         },
-       },
-     ],
-   });
-   // refresh
-   //  window.location.reload();
+  const addNetwork = async () => {
+    if (!window.ethereum) {
+    alert("Metamask not detected! Install Metamask then try again.")
+    // console.error('Metamask not detected');
+    return;
+    }
+    await window.ethereum.request({
+    method: 'wallet_addEthereumChain',
+    params: [
+      {
+        chainId: chainId,
+        chainName: networkName,
+        rpcUrls: [rpcURL],
+        blockExplorerUrls: [explorerURL],
+        nativeCurrency: {
+          name: currencyName,
+          symbol: currencySymbol, // 2-6 characters long
+          decimals: 18,
+        },
+      },
+    ],
+    });
+    // refresh
+    //  window.location.reload();
   };
 
   return (
