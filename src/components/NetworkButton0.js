@@ -57,7 +57,7 @@ export default function connectToLiberty0() {
 
     // <button onClick={addNetwork}>Connect to Liberty 2.X</button>    
 
-    <button class="button buttonHighContrast" onClick={addNetwork}>Connect to Liberty 2.X</button>
+    <button className="button buttonHighContrast" onClick={addNetwork}>Connect to Liberty 2.X</button>
 
   );
 
