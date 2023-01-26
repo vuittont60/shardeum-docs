@@ -27,7 +27,7 @@ export default function connectToLiberty0() {
     return;
    }
    if (window.ethereum.networkVersion == 8081) {
-    alert("You are already connected to Liberty 2.1 (chainId 8081).", )
+    alert("You are already connected to Liberty 2.X (chainId 8081).", )
     // console.error('Metamask not detected');
     return;
   }
