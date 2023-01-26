@@ -71,7 +71,13 @@ module.exports = {
 
         items: [
           {
-            href: '/faucet/claim',
+            href: '/network/endpoints#connect-wallet',
+            label: 'Connect to Shardeum',
+            position: 'left',
+            // className: 'navbar_item_button',
+          },
+          {
+            href: '/faucet/claim#shardeum-discord-faucet',
             label: 'Claim 100 Testnet SHM',
             position: 'left',
             // className: 'navbar_item_button',
