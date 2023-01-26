@@ -21,7 +21,7 @@ Horizontally scaling in this fashion allows for high transactions per second at 
 
 Find out more about Shardeum nodes:
 
-[Shardeum Node Types](/Nodes/Node-Types)
+[Shardeum Node Types](/Node/Types)
 
 ## Wallet Setup For Using Shardeum
 
