@@ -31,6 +31,7 @@ export default function connectToLiberty() {
       // console.error('Metamask not detected');
       return;
     }
+    
     await window.ethereum.request({
     method: 'wallet_addEthereumChain',
     params: [
@@ -57,7 +58,7 @@ export default function connectToLiberty() {
 
     // <button onClick={addNetwork}>Connect to Liberty 1.X</button>    
 
-    <button class="button buttonHighContrast" onClick={addNetwork}>Connect to Liberty 1.X</button>
+    <button className="button buttonHighContrast" onClick={addNetwork}>Connect to Liberty 1.X</button>
 
   );
 
