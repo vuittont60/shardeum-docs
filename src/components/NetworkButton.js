@@ -31,23 +31,26 @@ export default function connectToLiberty() {
       // console.error('Metamask not detected');
       return;
     }
-    
-    await window.ethereum.request({
-    method: 'wallet_addEthereumChain',
-    params: [
-      {
-        chainId: chainId,
-        chainName: networkName,
-        rpcUrls: [rpcURL],
-        blockExplorerUrls: [explorerURL],
-        nativeCurrency: {
-          name: currencyName,
-          symbol: currencySymbol, // 2-6 characters long
-          decimals: 18,
-        },
-      },
-    ],
-    });
+    try{
+      await window.ethereum.request({
+        method: 'wallet_addEthereumChain',
+        params: [
+          {
+            chainId: chainId,
+            chainName: networkName,
+            rpcUrls: [rpcURL],
+            blockExplorerUrls: [explorerURL],
+            nativeCurrency: {
+              name: currencyName,
+              symbol: currencySymbol, // 2-6 characters long
+              decimals: 18,
+            },
+          },
+        ],
+       });
+    } catch (error) {
+      alert("Failed to add the network. Try using Metamask or BitKeep instead of the Brave Wallet. Also try adding the network on https://chainlist.org/ or manually. Error log: " + error.message)
+    }
     // refresh
     //  window.location.reload();
   };
