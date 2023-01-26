@@ -1,18 +1,18 @@
 ---
-title: Node
+title: RPC
 sidebar_position: 2
 ---
 
-# Running a node
+# Running a RPC
 
-## Why run a node?
+## Why run a RPC?
 
-Running your own node:
+Running your own RPC:
 
     -increases read and write speed to a blockchain
     -improves decentralization with more network endpoints for users to access
 
-## How do I run a node on Shardeum?
+## How do I run a RPC on Shardeum?
 
-More details on how to run a Shardeum node will be shared at Shardeum Betanet.
+More details on how to run a Shardeum RPC will be shared at Shardeum Betanet.
 Betanet ETA is February 2nd, 2023.
