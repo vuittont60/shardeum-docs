@@ -47,7 +47,7 @@ const addNetwork = async () => {
       ],
       });
   } catch (error) {
-    alert("Failed to add the network with wallet_addEthereumChain request. Also try adding the network on https://chainlist.org/ or manually. Error log: " + error.message)
+    alert("Failed to add the network with wallet_addEthereumChain request. Add the network with https://chainlist.org/ or do it manually. Error log: " + error.message)
   }
 
 };
