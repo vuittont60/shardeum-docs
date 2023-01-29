@@ -42,7 +42,7 @@ export default function connectToLiberty0() {
   };
 
   return (
-    <button className="button buttonHighContrast" onClick={addNetwork}>Connect to Liberty 2.X</button>
+    <button className="button buttonHighContrast" onClick={addNetwork}>Click to Connect to Liberty 2.X</button>
   );
 
 }
