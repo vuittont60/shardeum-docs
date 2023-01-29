@@ -58,7 +58,7 @@ const addNetwork = async () => {
 
     // <button onClick={addNetwork}>Connect to Liberty 1.X</button>    
 
-    <button className="button buttonHighContrast" onClick={addNetwork}>Connect to Liberty 1.X</button>
+    <button className="button buttonHighContrast" onClick={addNetwork}>Click to Connect to Liberty 1.X</button>
 
   );
 
