@@ -7,13 +7,17 @@ sidebar_position: 4
 
 ## Links
 
-**Shardeum Liberty 1.X:**
+**Shardeum Sphinx 1.X:**
 
-https://explorer-liberty10.shardeum.org/
+https://explorer-sphinx.shardeum.org/
 
 **Shardeum Liberty 2.X:**
 
 https://explorer-liberty20.shardeum.org/
+
+**Shardeum Liberty 1.X:**
+
+https://explorer-liberty10.shardeum.org/
 
 ## View Transaction Data
 
