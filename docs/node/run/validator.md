@@ -391,7 +391,15 @@ pm2 delete [id]
   </TabItem>
 </Tabs>
 
-## Step 7: Stake SHM to validator
+## Step 7: Connect Wallet to Betanet
+
+[Connect to Betanet 1.X with your wallet by clicking the button linked here](/Network/Endpoints#connect-wallet)
+
+## Step 8: Get SHM from Betanet Faucet
+
+[Shardeum Twitter SHM Faucet Guide for Betanet 1.X](/Faucet/Claim#shardeum-faucet-website)
+
+## Step 9: Stake SHM to validator
 
 After you start the validator, go to the “Settings” page. You will be asked to connect your wallet:
 
