@@ -5,7 +5,7 @@ sidebar_position: 4
 
 # List
 
-## Liberty 1.X Addresses
+## Betanet 1.X Addresses
 
 WSHM
 
@@ -20,3 +20,9 @@ WSHM
 DAI
 
     0x66c3ca101d1D83bb39CBA20EbF5F4D344Aa7514C
+
+## Liberty 1.X Addresses
+
+WSHM
+
+    0xb6204c4b6b2545cF23F5EC0Bf8AEB8cB56E13C15
