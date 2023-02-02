@@ -6,13 +6,13 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Running a validator
+# How to run a validator node
 
-## Why run a validator?
+## Benefits of operating a validator
 
 Running your own validator:
 
-    -helps secure the Shardeum network
+    -enhances Shardeum network security
     -earns testnet SHM from user transaction fees
 
 ## Validating Transactions
