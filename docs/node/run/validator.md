@@ -239,16 +239,6 @@ Add a custom path or install to root:
 What base directory should the node use (defaults to ~/.shardeum): 
 ```
 
-Enter 2 to select Betanet:
-
-```shell
-1) mainnet
-2) betanet
-3) devnet
-4) custom
-Select a network to connect to: 2
-```
-
 Wait for the installation process to complete.
 
 ## Step 3: Open validator CLI
