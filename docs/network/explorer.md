@@ -7,15 +7,15 @@ sidebar_position: 4
 
 ## Links
 
-**Shardeum Sphinx 1.X:**
+**Sphinx 1.X:**
 
 https://explorer-sphinx.shardeum.org/
 
-**Shardeum Liberty 2.X:**
+**Liberty 2.X:**
 
 https://explorer-liberty20.shardeum.org/
 
-**Shardeum Liberty 1.X:**
+**Liberty 1.X:**
 
 https://explorer-liberty10.shardeum.org/
 
