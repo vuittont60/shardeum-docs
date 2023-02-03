@@ -302,14 +302,14 @@ https://localhost:8080/
 :::caution
 You might see the following when opening the page:
 
-```
-Warning: Potential Security Risk Ahead
-```
+![warningPage.png](/img/node/run/validator/warningPage.png)
 
 ignore this warning and continue to the validator dashboard.
 :::
 
 You will be asked for your password set during setup.
+
+![loginPage.png](/img/node/run/validator/loginPage.png)
 
 :::danger
 The login will fail even if you put no password during the setup process.
@@ -329,13 +329,13 @@ operator-cli gui set password <type_new_password__here>
 
 You should see the “Overview” page for the Shardeum Validator Dashboard in your web browser:
 
-![overview.png](/img/node/run/validator/overview.png)
+![overviewBetanet.png](/img/node/run/validator/overviewBetanet.png)
 
 ## Step 5: Start validator 
 
 Go to the “Maintenance” page, then click the “Start Node” button in the top left white box:
 
-![start.png](/img/node/run/validator/start.png)
+![startBetanet.png](/img/node/run/validator/startBetanet.png)
 
 (Same as running)
 
@@ -363,13 +363,13 @@ operator-cli stop
   </TabItem>
 </Tabs>
 
-![started.png](/img/node/run/validator/started.png)
+![startedBetanet.png](/img/node/run/validator/startedBetanet.png)
 
 ## Step 6: Monitor validator 
 
 Go to “Performance” to see your node’s hardware performance here:
 
-![performance.png](/img/node/run/validator/performance.png)
+![performanceBetanet.png](/img/node/run/validator/performanceBetanet.png)
 
 For more details about your node status run the following inside the CLI:
 
@@ -421,9 +421,15 @@ pm2 delete [id]
 
 After you start the validator, go to the “Settings” page. You will be asked to connect your wallet:
 
-![connectWallet.png](/img/node/run/validator/connectWallet.png)
+![connectWalletBetanet.png](/img/node/run/validator/connectWalletBetanet.png)
 
 After you connect your wallet, you should see the following:
+
+![connectedWalletOptions.png](/img/node/run/validator/connectedWalletOptions.png)
+
+When you click "Add Stake", you will see the following:
+
+![connectedWalletAddStake.png](/img/node/run/validator/connectedWalletAddStake.png)
 
 ```
 -Stake Wallet Address [wallet connected]
@@ -437,6 +443,8 @@ Once all fields are filled, click the “Stake” button.
 
 Your wallet will ask you to sign the transaction stake your SHM.
 
-![stakeSHM.png](/img/node/run/validator/stakeSHM.png)
-
 Once the transaction is signed and complete, you have staked your SHM tokens successfully. 
+
+:::caution
+If you have staked before, you can "Remove Stake" (however you will stop getting testnet SHM rewards).
+:::
