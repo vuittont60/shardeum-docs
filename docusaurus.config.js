@@ -78,7 +78,7 @@ module.exports = {
           },
           {
             href: '/faucet/claim#shardeum-discord-website',
-            label: 'Claim 100 Testnet SHM',
+            label: 'Claim Testnet SHM',
             position: 'left',
             // className: 'navbar_item_button',
           },

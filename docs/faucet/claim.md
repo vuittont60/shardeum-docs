@@ -1,14 +1,55 @@
 ---
-title: Claim 100 Testnet SHM
+title: Claim Testnet SHM
 sidebar_position: 1
 image: /img/claim_9.jpeg
 ---
 
-# Claim 100 Testnet SHM
+# Claim Testnet SHM
+
+## Shardeum Discord Faucet
+
+1. Join the Shardeum Discord:
+
+  [Invitation to Shardeum Discord](https://discord.com/invite/shardeum)
+
+2. Verify your Discord account on the Shardeum Discord server by clicking on the Shardeum emoji logo.
+
+3. Select the Discord faucet text channel for the network you are using:
+
+  Betanet 1.X:
+
+  https://discord.com/channels/933959587462254612/1070780355931541514
+
+  Liberty 2.X:
+  
+  https://discord.com/channels/933959587462254612/1031497272191627284
+
+  Liberty 1.X: 
+  
+  https://discord.com/channels/933959587462254612/1021737152251441244
+
+4. Submit the following text in the faucet text channel you are in (a black box with address will appear after you type /faucet):
+
+        /faucet [address: yourMetamaskWalletAddress]
+
+SHM will be sent to your wallet after step 4.
+
+Video tutorial on using Shardeum Discord Faucet:
+
+<iframe id="ytplayer" type="text/html"
+  class="video"
+  src="https://www.youtube.com/embed/78xGkWWkXB8"
+  allowFullScreen="allowFullScreen"
+  mozallowfullscreen="mozallowfullscreen"
+  msallowfullscreen="msallowfullscreen"
+  oallowfullscreen="oallowfullscreen"
+  webkitallowfullscreen="webkitallowfullscreen"
+  frameBorder="0">
+  </iframe>
 
 ## Shardeum Faucet Website
 
-1. After adding the Shardeum Liberty network to popular wallets such as MetaMask ([guide here](/wallets/MetaMask/add-shardeum-network)), you can claim 100 testnet SHM from Shardeum Liberty faucet. The SHM can then be used to deploy smart contracts and build dApps on Liberty.
+1. After adding the Shardeum Liberty network to popular wallets such as MetaMask ([guide here](/wallets/MetaMask/add-shardeum-network)), you can claim testnet SHM from Shardeum Liberty faucet. The SHM can then be used to deploy smart contracts and build dApps on Liberty.
 
 2. Visit the Shardeum Liberty faucet:
 
@@ -50,7 +91,7 @@ image: /img/claim_9.jpeg
 ![claim_4](/img/claim/claim_4.png)
 ![claim_6](/img/claim/claim_6.png)
 
-8. A pop-up message will appear if the request is successful and 100 testnet SHM will arrive in your wallet shortly.
+8. A pop-up message will appear if the request is successful and testnet SHM will arrive in your wallet shortly.
 
 ![claim_7](/img/claim/claim_7.png)
 
@@ -73,35 +114,4 @@ https://chaindrop.org/?chainid=8081&token=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 ![chaindrop_3](/img/chaindrop/chaindrop_3.png)
 
 
-## Shardeum Discord Faucet
 
-1. Join the Shardeum Discord:
-
-  [Invitation to Shardeum Discord](https://discord.com/invite/shardeum)
-
-2. Verify your Discord account on the Shardeum Discord server by clicking on the Shardeum emoji logo.
-
-3. Select the Discord faucet text channel for the network you are using:
-
-  [Liberty 2.X Faucet Text Channel](https://discord.com/channels/933959587462254612/1031497272191627284)
-
-  [Liberty 1.X Faucet Text Channel](https://discord.com/channels/933959587462254612/1021737152251441244)
-
-4. Submit the following text in the faucet text channel you are in (a black box with address will appear after you type /faucet):
-
-        /faucet [address: yourMetamaskWalletAddress]
-
-100 SHM will be sent to your wallet after step 4.
-
-Video tutorial on using Shardeum Discord Faucet:
-
-<iframe id="ytplayer" type="text/html"
-  class="video"
-  src="https://www.youtube.com/embed/78xGkWWkXB8"
-  allowFullScreen="allowFullScreen"
-  mozallowfullscreen="mozallowfullscreen"
-  msallowfullscreen="msallowfullscreen"
-  oallowfullscreen="oallowfullscreen"
-  webkitallowfullscreen="webkitallowfullscreen"
-  frameBorder="0">
-  </iframe>
