@@ -296,8 +296,18 @@ operator-cli gui start
 Go to your web browser and go to:
 
 ```shell
-localhost:8080
+https://localhost:8080/
 ```
+
+:::caution
+You might see the following when opening the page:
+
+```
+Warning: Potential Security Risk Ahead
+```
+
+ignore this warning and continue to the validator dashboard.
+:::
 
 You will be asked for your password set during setup.
 
