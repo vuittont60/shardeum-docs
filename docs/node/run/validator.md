@@ -221,7 +221,7 @@ Enter y to setup the web based dashboard:
 Do you want to run the web based Dashboard? (y/n): y 
 ```
 
-Set a password for dashboard access (optional)
+Set a password for dashboard access:
 
 ```shell
 Set the password to access the Dashboard: 
@@ -298,6 +298,24 @@ Go to your web browser and go to:
 ```shell
 localhost:8080
 ```
+
+You will be asked for your password set during setup.
+
+:::danger
+The login will fail even if you put no password during the setup process.
+To set a new password inside the validator CLI:
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+operator-cli gui set password <type_new_password__here>
+```
+
+  </TabItem>
+</Tabs>
+
+:::
 
 You should see the “Overview” page for the Shardeum Validator Dashboard in your web browser:
 
