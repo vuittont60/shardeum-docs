@@ -4,7 +4,7 @@ sidebar_position: 1
 image: /img/claim_9.jpeg
 ---
 
-# Claim 100 Liberty SHM
+# Claim 100 Testnet SHM
 
 ## Shardeum Faucet Website
 
