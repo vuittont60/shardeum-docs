@@ -14,5 +14,4 @@ Running your own RPC:
 
 ## How do I run a RPC on Shardeum?
 
-More details on how to run a Shardeum RPC will be shared at Shardeum Betanet.
-Betanet ETA is February 2nd, 2023.
+More details on how to run a Shardeum RPC will be shared after Sphinx 1.X.

@@ -16,7 +16,7 @@ image: /img/claim_9.jpeg
 
 3. Select the Discord faucet text channel for the network you are using:
 
-  Betanet 1.X:
+  Sphinx 1.X:
 
   https://discord.com/channels/933959587462254612/1070780355931541514
 
@@ -53,7 +53,7 @@ Video tutorial on using Shardeum Discord Faucet:
 
 2. Visit the Shardeum Liberty faucet:
 
-  Betanet 1.X:
+  Sphinx 1.X:
 
   https://faucet-sphinx.shardeum.org/
 
@@ -99,7 +99,7 @@ Video tutorial on using Shardeum Discord Faucet:
 
 1. Visit the Chaindrop faucet and select shardeum network:
 
-Betanet 1.X:
+Sphinx 1.X:
 
 https://chaindrop.org/?chainid=8082&token=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 
