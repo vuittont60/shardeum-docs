@@ -34,9 +34,11 @@ https://fleek.co/
 
 ## How to download from IPFS?
 
-Easily read from IPFS using this web browser tool:
+In the Brave Web Browser, search for this IPFS CID URL:
 
-https://ipfsbrowser.com/
+```
+ipfs://Qma1bfuubpepKn7DLDy4NPSKDeT3S4VPCNhu6UmdGrb6YD
+```
 
 ## Mint an NFT on Shardeum using IPFS and Filecoin
 
