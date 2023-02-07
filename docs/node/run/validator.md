@@ -241,6 +241,17 @@ What base directory should the node use (defaults to ~/.shardeum):
 
 Wait for the installation process to complete.
 
+:::caution
+If you are behind a router, ensure ports 9001 and 10001 are forwarded 
+(be careful doing this since it will modify your firewall):
+
+https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/
+
+Reference: 
+
+https://gitlab.com/shardeum/validator/dashboard/
+:::
+
 ## Step 3: Open validator CLI
 
 Make sure you are in the root directory by running:
@@ -298,6 +309,24 @@ Go to your web browser and go to:
 ```shell
 https://localhost:8080/
 ```
+
+<Tabs>
+  <TabItem value="local" label="Local" default>
+
+```shell
+https://localhost:8080/
+```
+
+  </TabItem>
+  <TabItem value="server" label="Server" default>
+
+```shell
+https://<server_ip>:8080/
+```
+
+  </TabItem>
+</Tabs>
+
 
 :::caution
 You might see the following when opening the page:
