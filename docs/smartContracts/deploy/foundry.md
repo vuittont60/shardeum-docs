@@ -314,6 +314,27 @@ forge coverage --fork-url $mainnetHTTPS_InfuraAPIKey --report lcov && genhtml lc
   </TabItem>
 </Tabs>
 
+## Fork Networks using Anvil and Metamask
+
+Run:
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+anvil --block-time 12 --fork-url $mainnetHTTPS_InfuraAPIKey
+```
+  </TabItem>
+</Tabs>
+
+Select a private key wallet that has funds into Metamask from the Anvil terminal.
+
+Connect to Anvil in Metamask with the following data:
+
+```shell
+New RPC URL: http://127.0.0.1:8545
+Chain ID: 31337
+```
 
 ## Deploy to Goerli with EIP-1559 and verify with Etherscan
 
