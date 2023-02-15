@@ -215,6 +215,12 @@ curl -O https://gitlab.com/shardeum/validator/dashboard/-/raw/main/installer.sh 
 
 The terminal will ask questions about your setup settings. 
 
+Give permission to collect validator data for bug reporting:
+
+```shell
+By running this installer, you agree to allow the Shardeum team to collect this data. (y/n)?:
+```
+
 Enter y to setup the web based dashboard:
 
 ```shell
@@ -233,6 +239,18 @@ Add a custom session port for the web based dashboard or hit enter for port 8080
 Enter the port (1025-65536) to access the web based Dashboard (default 8080): 
 ```
 
+Set the first p2p port (default 9001):
+
+```shell
+This allows p2p communication between nodes. Enter the first port (1025-65536) for p2p communication (default 9001):
+```
+
+Set the second p2p port (default 10001):
+
+```shell
+Enter the second port (1025-65536) for p2p communication (default 10001):
+```
+
 Add a custom path or install to root:
 
 ```shell
@@ -242,8 +260,8 @@ What base directory should the node use (defaults to ~/.shardeum):
 Wait for the installation process to complete.
 
 :::caution
-If you are behind a router, ensure ports 9001 and 10001 are forwarded 
-(be careful doing this since it will modify your firewall):
+If you are behind a router and you are using ports 9001 and 10001 for p2p communication,
+make sure ports 9001 and 10001, are forwarded (be careful doing this since it will modify your firewall):
 
 https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/
 
