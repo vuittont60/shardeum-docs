@@ -563,7 +563,7 @@ If you have staked before, you can "Remove Stake".
 :::
 
 :::danger
-If you see your node IP address as "0.0.0.0":
+If you see your validator IP address as "0.0.0.0":
 
 Go into the operator dashboard docker (may be different if you customized install location:
 <Tabs>
