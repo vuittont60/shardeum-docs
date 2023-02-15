@@ -324,10 +324,6 @@ operator-cli gui start
 
 Go to your web browser and go to:
 
-```shell
-https://localhost:8080/
-```
-
 <Tabs>
   <TabItem value="local" label="Local" default>
 
@@ -347,11 +343,71 @@ https://<server_ip>:8080/
 
 
 :::caution
-You might see the following when opening the page:
+You might see a warning page when trying to access this address in your web browser.
+Ignore this warning and continue to the validator dashboard. Another way to work around this warning:
 
-![warningPage.png](/img/node/run/validator/warningPage.png)
+<Tabs>
+  <TabItem value="firefox" label="Firefox" default>
 
-ignore this warning and continue to the validator dashboard.
+```
+From the three bar button (hamburger) menu button, go to Settings
+
+Click on “Privacy & Security” on the left.
+
+Scroll down to locate “View Certificates” and click that button.
+
+Click the “Servers” tab, then click “Add Exception”.
+
+Type: “https://localhost:8080” (or your remote/VPS server’s IP and port), 
+then click “Get Certificate”, then click “Confirm Security Exception”.
+
+The result should be the server/localhost in the list, click “OK”.
+
+Refresh the operator dashboard page and the certificate error should be gone.
+```
+
+  </TabItem>
+  <TabItem value="chrome" label="Chrome" default>
+
+```
+Click on the “Not secure” alert and select/click on “Certificate is not valid”.
+
+Click on the “Details” tab, then click n “localhost” in the “Certificate Hierarchy” box and click the “Export” button.
+
+Click on the “Details” tab, then click on 
+“mynode-sphinx.shardeum.local” in the “Certificate Hierarchy” box and click the “Export” button.
+
+The result of the steps above are two certificate files save in a location to be used in the following steps.
+
+Type: chrome://settings in address bar, hit enter. 
+
+Click on “Privacy and security” on the left menu. Then click “Security” from the list in the main window.
+
+Scroll down to find “Manage device certificates” in the main windows and select it.
+
+Click the “Import” button.
+
+Follow the import prompts. 
+
+Place the ‘mynode-sphinx.shardeum.local.crt” in the “Trusted Root Cert… Auth..” folder.
+
+Click “Yes” and then “OK”.
+
+Click “Import” once more. 
+
+Then follow the import prompts. 
+
+Place the ‘localhost.crt” in the “Personal” folder.
+
+Close all Chrome windows (as in Exit Chrome). 
+
+When you have successfully restarted chrome, the operator dashboard will not show with a white lock.
+```
+
+  </TabItem>
+
+</Tabs>
+
 :::
 
 You will be asked for your password set during setup.
@@ -504,4 +560,50 @@ If you have staked before, you can "Remove Stake".
 
 :::caution
 (however you will stop getting testnet SHM rewards).
+:::
+
+:::danger
+If you see your node IP address as "0.0.0.0":
+
+Go into the operator dashboard docker (may be different if you customized install location:
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+cd ~/.shardeum
+./shell.sh
+```
+
+  </TabItem>
+
+</Tabs>
+
+Get your node's external IP:
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+curl https://ipinfo.io/ip
+```
+
+  </TabItem>
+
+</Tabs>
+
+The returned IP in the format of nnn.nnn.nnn.nnn is your EXTERNAL_IP.
+
+Set the number above in place of EXTERNAL_IP:
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+export APP_IP="EXTERNAL_IP"
+```
+
+  </TabItem>
+
+</Tabs>
+
 :::
