@@ -85,6 +85,13 @@ sudo apt-get install curl
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+add Homebrew to your ```PATH```:
+
+```shell
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
   </TabItem>
 
 </Tabs>
