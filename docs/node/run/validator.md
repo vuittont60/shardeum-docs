@@ -220,6 +220,28 @@ curl -O https://gitlab.com/shardeum/validator/dashboard/-/raw/main/installer.sh 
   </TabItem>
 </Tabs>
 
+:::warning 
+If you see error:
+
+```shell
+Docker daemon is not running
+```
+
+run:
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+sudo usermod -a -G docker $USER && newgrp docker
+```
+
+  </TabItem>
+</Tabs>
+
+then try to install with the curl command again. 
+:::
+
 The terminal will ask questions about your setup settings. 
 
 Give permission to collect validator data for bug reporting:
@@ -314,6 +336,33 @@ Start the CLI by running the following shell script:
 
   </TabItem>
 </Tabs>
+
+:::warning 
+If you see error:
+
+```golang
+Got permission denied while trying to connect to the Docker daemon socket at 
+unix:///var/run/docker.sock: 
+Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/shardeum-dashboard/json": 
+dial unix /var/run/docker.sock: 
+connect: 
+permission denied
+```
+
+run:
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+sudo usermod -a -G docker $USER && newgrp docker
+```
+
+  </TabItem>
+</Tabs>
+
+then try to start the shell script again.
+:::
 
 ## Step 4: Open validator GUI
 
