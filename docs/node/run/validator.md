@@ -663,3 +663,32 @@ export APP_IP="EXTERNAL_IP"
 </Tabs>
 
 :::
+
+## Uninstall Validator
+
+Useful if your validator is outdated and you want to clean your last installation.
+
+You can delete the validator folder while in your root directory with:
+
+```shell
+rm -rf .shardeum
+```
+
+You can also delete docker containers and images that the Shardeum validator was using. 
+
+:::danger
+These commands will delete all docker images and containers on your computer!
+
+Delete all docker containers:
+
+```shell
+docker rm -vf $(docker ps -aq)
+```
+
+Delete all docker images:
+
+```shell
+docker rmi -f $(docker images -aq)
+```
+
+:::
