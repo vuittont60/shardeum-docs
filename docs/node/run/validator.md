@@ -404,7 +404,7 @@ operator-cli gui start
 
 Go to your web browser and go to:
 
-<Tabs>
+<Tabs groupId="validator-local-or-server">
   <TabItem value="local" label="Local" default>
 
 ```shell
@@ -646,6 +646,7 @@ If you have staked before, you can "Remove Stake".
 If you see your validator IP address as "0.0.0.0":
 
 Go into the operator dashboard docker (may be different if you customized install location:
+
 <Tabs>
   <TabItem value="shell" label="Shell" default>
 
@@ -687,6 +688,42 @@ export APP_IP="EXTERNAL_IP"
 </Tabs>
 
 :::
+
+## Check Installed Validator Version
+
+Inside the Validator CLI:
+
+operator-cli version
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+operator-cli version
+```
+
+  </TabItem>
+
+</Tabs>
+
+Outside the Validator CLI:
+
+<Tabs groupId="validator-local-or-server">
+  <TabItem value="local" label="Local" default>
+
+```shell
+curl localhost:9001/nodeinfo
+```
+
+  </TabItem>
+  <TabItem value="server" label="Server" default>
+
+```shell
+curl <server_ip>:9001/nodeinfo
+```
+
+  </TabItem>
+</Tabs>
 
 ## Uninstall Validator
 
