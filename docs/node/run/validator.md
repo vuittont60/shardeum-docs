@@ -691,21 +691,6 @@ export APP_IP="EXTERNAL_IP"
 
 ## Check Installed Validator Version
 
-Inside the Validator CLI:
-
-operator-cli version
-
-<Tabs>
-  <TabItem value="shell" label="Shell" default>
-
-```shell
-operator-cli version
-```
-
-  </TabItem>
-
-</Tabs>
-
 Outside the Validator CLI:
 
 <Tabs groupId="validator-local-or-server">
@@ -723,6 +708,21 @@ curl <server_ip>:9001/nodeinfo
 ```
 
   </TabItem>
+</Tabs>
+
+## Check Installed GUI And CLI Version
+
+Inside the Validator CLI:
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+operator-cli version
+```
+
+  </TabItem>
+
 </Tabs>
 
 ## Uninstall Validator
