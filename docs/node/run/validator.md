@@ -239,6 +239,18 @@ sudo usermod -a -G docker $USER && newgrp docker
   </TabItem>
 </Tabs>
 
+if that does not work, also try:
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+sudo service docker start 
+```
+
+  </TabItem>
+</Tabs>
+
 then try to install with the curl command again. 
 :::
 
@@ -356,6 +368,18 @@ run:
 
 ```shell
 sudo usermod -a -G docker $USER && newgrp docker
+```
+
+  </TabItem>
+</Tabs>
+
+if that does not work, also try:
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+sudo service docker start 
 ```
 
   </TabItem>
