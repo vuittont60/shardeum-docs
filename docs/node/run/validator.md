@@ -749,6 +749,41 @@ operator-cli gui start
 
 :::
 
+
+
+
+### Exit Error Logs
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+sudo docker exec shardeum-dashboard cat cli/build/logs/exit-summary.json
+```
+
+  </TabItem>
+  <TabItem value="CLI" label="CLI" default>
+
+Navigate to the .shardeum directory by entering:
+```shell
+cd .shardeum
+```
+Execute the shell.sh script by entering: 
+```shell
+./shell.sh
+```
+With the Validator CLI running, navigate to the cli/build/logs directory by entering:
+```shell
+cd cli/build/logs
+```
+View the contents of the exit-summary.json file by entering:
+```shell
+cat exit-summary.json
+```
+
+  </TabItem>
+</Tabs>
+
 ## CLI And GUI
 
 ### Check Installed Versions
