@@ -32,7 +32,7 @@ export default class transactionList extends React.Component {
   else {
     return (<div>
       <p>Faucet Claims: {this.state.transactions}</p>
-      <p>SHM Issued: {this.state.transactions *100} </p>
+      <p>SHM Issued: {this.state.transactions *100} (100 SHM per claim)</p>
       <p>Cycle Range: 0 - {this.state.cycleTo}  </p>
 
     </div>)
