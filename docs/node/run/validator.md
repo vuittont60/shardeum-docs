@@ -588,6 +588,8 @@ pm2 delete [id]
 
 ## Step 9: Stake SHM to validator
 
+### GUI
+
 After you start the validator, go to the “Settings” page. You will be asked to connect your wallet:
 
 ![connectWalletBetanet.jpg](/img/node/run/validator/connectWalletBetanet.jpg)
@@ -675,6 +677,44 @@ export APP_IP="EXTERNAL_IP"
 
 :::
 
+### CLI
+
+You can also stake and unstake from the Validator CLI if you are not able to access a web browser for the Validator GUI.
+
+First, set your private key in your Validator CLI:
+
+:::warning
+Be very careful with your private keys. We recommend you use a private key which has testnet tokens only to be safe.
+:::
+
+```shell
+export PRIV_KEY=<private_key>
+```
+
+make sure your private key is stored in your Validator CLI by running:
+
+```shell
+echo $PRIV_KEY
+```
+
+add stake with:
+
+```shell
+operator-cli stake 10
+```
+
+check your stake amount with:
+
+```shell
+operator-cli stake_info <wallet_address>
+```
+
+remove stake with:
+
+```shell
+operator-cli unstake
+```
+
 ## Validator
 
 ### Check Installed Version
@@ -734,9 +774,6 @@ operator-cli gui start
 </Tabs>
 
 :::
-
-
-
 
 ### Exit Error Logs
 
@@ -810,7 +847,7 @@ To see all CLI commands, run:
   <TabItem value="shell" label="Shell" default>
 
 ```shell
-operator-cli --help
+operator-cli help
 ```
 
   </TabItem>
