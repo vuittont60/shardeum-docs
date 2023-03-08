@@ -220,40 +220,6 @@ curl -O https://gitlab.com/shardeum/validator/dashboard/-/raw/main/installer.sh 
   </TabItem>
 </Tabs>
 
-:::warning
-If you see error:
-
-```shell
-Docker daemon is not running
-```
-
-run:
-
-<Tabs>
-  <TabItem value="shell" label="Shell" default>
-
-```shell
-sudo usermod -a -G docker $USER && newgrp docker
-```
-
-  </TabItem>
-</Tabs>
-
-if that does not work, also try:
-
-<Tabs>
-  <TabItem value="shell" label="Shell" default>
-
-```shell
-sudo service docker start
-```
-
-  </TabItem>
-</Tabs>
-
-then try to install with the curl command again.
-:::
-
 The terminal will ask questions about your setup settings.
 
 Give permission to collect validator data for bug reporting:
@@ -350,7 +316,27 @@ Start the CLI by running the following shell script:
 </Tabs>
 
 :::warning
-If you see error:
+If you see docker container error:
+
+```golang
+Error response from daemon: Container <container_id_hexadecimal> is not running
+```
+
+start all docker containers until the errors go away:
+
+<Tabs>
+  <TabItem value="shell" label="Shell" default>
+
+```shell
+docker start <container_id_hexadecimal>
+```
+
+  </TabItem>
+</Tabs>
+:::
+
+:::warning
+If you see docker permission error:
 
 ```golang
 Got permission denied while trying to connect to the Docker daemon socket at
