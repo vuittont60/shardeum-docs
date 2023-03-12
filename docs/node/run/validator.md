@@ -717,7 +717,7 @@ operator-cli unstake
 
 ## Validator
 
-### Check Installed Version
+### Version
 
 :::warning
 New validator versions will be released over time. 
@@ -809,7 +809,7 @@ cat exit-summary.json
 
 ## CLI And GUI
 
-### Check Installed Versions
+### Version
 
 Run:
 
