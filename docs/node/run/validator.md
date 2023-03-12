@@ -610,13 +610,18 @@ When you click "Add Stake", you will see the following:
 
 This example has filled in 10 SHM tokens to stake.
 
+:::tip
+It is recommended to stake just 10 SHM per Validator node, 
+since rewards will be the same with 10 SHM or more staked for a Validator. 
+:::
+
 Once all fields are filled, click the “Stake” button.
 
 Your wallet will ask you to sign the transaction stake your SHM.
 
 Once the transaction is signed and complete, you have staked your SHM tokens successfully.
 
-:::tip
+:::info
 If your node status is on Standby and you have 10 SHM or more staked, your validator node is setup correctly.
 
 The network will automatically add your validator to be active in the network.
@@ -624,10 +629,8 @@ The network will automatically add your validator to be active in the network.
 The time to be added as an active validator will vary based on network load and validators in the network.
 :::
 
-If you have staked before, you can "Remove Stake".
-
 :::caution
-(however you will stop getting testnet SHM rewards).
+If you have staked before, you can "Remove Stake". However, you will stop getting testnet SHM rewards when you unstake.
 :::
 
 :::danger
