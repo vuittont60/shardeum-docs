@@ -112,3 +112,15 @@ https://chaindrop.org/?chainid=8081&token=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 2. Enter valid wallet address and complete the captcha and click send to receive tokens.
 
 ![chaindrop_3](/img/chaindrop/chaindrop_3.jpg)
+
+## Get-SHM Faucet Website
+
+1. Visit the faucet Sphinx 1.X:
+
+https://get-shm.online/
+
+2. Enter a valid wallet address and click "Get tokens" to receive tokens
+
+![get_shm_1](/img/get_shm/get_shm_1.jpg)
+
+3. Try again if you get an error
