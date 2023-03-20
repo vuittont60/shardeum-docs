@@ -73,67 +73,41 @@ Reading transaction events from the null address (address(0)) from cycle 0 to 10
 <TabItem value="javascript" label="Javascript" default>
 
 ```js
-const https = require('https');
+const axios = require('axios');
 
-let totalTransactions = ""
-let baseUrl = "https://explorer-liberty20.shardeum.org/api/transaction?startCycle=0&endCycle=1000&address=0x0000000000000000000000000000000000000000"
+let baseUrl = "https://explorer-sphinx.shardeum.org/api/transaction?startCycle=49330&endCycle=49330&address=0x6bd9e67bf927da1935b6eaea9bf22500c4e1f53a"
 
-let req = https.get(baseUrl, function(res) {
-  let data = '',
-    json_data;
+getTransactionsToAddressCycleRange(baseUrl)
 
-  res.on('data', function(stream) {
-    data += stream;
-  });
-  res.on('end', function() {
+async function readJSONLoop(totalTransactions) {
 
-    json_data = JSON.parse(data);
-    totalTransactions = json_data.totalTransactions
-    console.log(totalTransactions);
+	let total = totalTransactions;
+	let pageIndex = 1
 
-    readJSONLoop(totalTransactions)
+	while ( total > 0 ) {
 
-  });
-});
+		let filterUrl = baseUrl + "&page=" + pageIndex
+		console.log(filterUrl)
 
-req.on('error', function(e) {
-    console.log(e.message);
-});
+		let responseRawJSON = await axios.get(filterUrl);
+		responseRawJSON = responseRawJSON.data;
+		console.log(responseRawJSON);
 
+	  	total -= 10;
+		pageIndex++;
+	}
 
-function readJSONLoop(totalTransactions) {
+}
 
-  let total = totalTransactions;
-  let pageIndex = 1
+async function getTransactionsToAddressCycleRange(baseUrl) {
 
-  while (total>0) {
+	let responseRawJSON = await axios.get(baseUrl);
+	let responseDataJSON = responseRawJSON.data;
+	let totalTransactions = responseDataJSON.totalTransactions
+	console.log(totalTransactions);
 
-    let filterUrl = baseUrl + "&page=" + pageIndex
-    let req = https.get(filterUrl, function(res) {
-      let data = '',
-        json_data;
-
-      res.on('data', function(stream) {
-        data += stream;
-      });
-      res.on('end', function() {
-
-        json_data = JSON.parse(data);
-        console.log(json_data);
-        let pageIndex = 1;
-
-      });
-    });
-
-    req.on('error', function(e) {
-        console.log(e.message);
-    });
-
-    total -= 10;
-    pageIndex++;
-    console.log(filterUrl)
-  }
-
+	readJSONLoop(totalTransactions)
+    
 }
 ```
 
