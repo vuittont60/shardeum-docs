@@ -199,7 +199,7 @@ module.exports = {
       },
       prism: {
         theme: darkCodeTheme,
-        additionalLanguages: ["solidity","python"],
+        additionalLanguages: ["solidity","python","rust"],
       },
       colorMode: {
         defaultMode: 'dark',
