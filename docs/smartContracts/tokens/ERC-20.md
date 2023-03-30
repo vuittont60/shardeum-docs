@@ -93,7 +93,7 @@ After deploying, click the ‘Copy Address’ button to copy the contract addres
 
 ![mint_your_own_crypto_4](/img/mint_your_own_crypto/mint_your_own_crypto_4.jpg)
 
-You can now go to [Shardeum Explorer](https://docs.shardeum.org/network/explorer) the applicable network and search for contract address and you should be able to see it there!
+You can now go to [Shardeum Explorer](https://docs.shardeum.org/network/explorer) and search for contract address and you should be able to see it there!
 
 ## Video Tutorial
 
