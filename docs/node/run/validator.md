@@ -749,19 +749,20 @@ curl <server_ip>:9001/nodeinfo
 
 ### Update
 
-Run:
-
-<Tabs>
-  <TabItem value="shell" label="Shell" default>
+- Stop and Unstake your SHM tokens from the validator
+- In your terminal, first exit from the container using 
 
 ```shell
-cd
-cd .shardeum
-./update.sh
+exit
+cd ..
 ```
 
-  </TabItem>
-</Tabs>
+
+- Run the following curl script
+
+```shell
+curl -O https://gitlab.com/shardeum/validator/dashboard/-/raw/main/installer.sh && chmod +x installer.sh && ./installer.sh
+```
 
 :::caution
 You might manually have to start the GUI afterwards with:
@@ -775,6 +776,8 @@ operator-cli gui start
 
   </TabItem>
 </Tabs>
+
+- Check your currect version from either CLI or GUI and make sure it is the latest version.
 
 :::
 
