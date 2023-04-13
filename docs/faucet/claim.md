@@ -124,3 +124,27 @@ https://get-shm.online/
 ![get_shm_1](/img/get_shm/get_shm_1.jpg)
 
 3. Try again if you get an error
+
+## DotShm Faucet Website
+
+1. Visit the faucet:
+
+https://dotshm.me/faucet
+
+2. Connect your wallet to the network.
+
+3. Click on "Tweet to Claim" & make a tweet.
+
+4. Claim SHM on the following networks: Sphinx 1.1 or Liberty 2.1
+
+Video tutorial on using DotShm Faucet:
+<iframe id="ytplayer" type="text/html"
+  class="video"
+  src="https://www.youtube.com/embed/-2BAurstQ_Y"
+  allowFullScreen="allowFullScreen"
+  mozallowfullscreen="mozallowfullscreen"
+  msallowfullscreen="msallowfullscreen"
+  oallowfullscreen="oallowfullscreen"
+  webkitallowfullscreen="webkitallowfullscreen"
+  frameBorder="0">
+  </iframe>
