@@ -21,8 +21,11 @@ You can optionally use EIP-2930 to save gas on Shardeum Liberty 1.X.
 :::tip Automated Access List
 
 Sphinx 1.X and Liberty 2.X have automated the accessList for Shardeum RPC nodes to route shards.
+
 Therefore, you no longer need to specify the accessList for these networks with automated accessList generation. 
+
 This document is useful for: 
+
 -educational purposes  
 -situations where the automated accessList fails and you need to specifiy the accessList directly
 

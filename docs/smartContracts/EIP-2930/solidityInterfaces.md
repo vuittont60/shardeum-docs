@@ -10,8 +10,14 @@ import TabItem from '@theme/TabItem';
 
 :::tip Automated Access List
 
-Liberty 2.1 has automated the accessList for Shardeum nodes, so you no longer need to specify it.
-This document is meant for educational purposes and for situations where the automated accessList fails.
+Sphinx 1.X and Liberty 2.X have automated the accessList for Shardeum RPC nodes to route shards.
+
+Therefore, you no longer need to specify the accessList for these networks with automated accessList generation. 
+
+This document is useful for: 
+
+-educational purposes  
+-situations where the automated accessList fails and you need to specifiy the accessList directly
 
 :::
 
