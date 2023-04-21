@@ -23,6 +23,12 @@ Shardeum validators with honest transaction consensus earn testnet SHM.
 
 Shardeum validators with dishonest transaction consensus will have their testnet SHM slashed.
 
+:::info
+
+Validators can now check the Node rewards simulations using the [Node Reward Calculator](https://shardeum.org/shm-tokenomics/)
+
+:::
+
 ## Minimum Hardware Requirements
 
 ```
