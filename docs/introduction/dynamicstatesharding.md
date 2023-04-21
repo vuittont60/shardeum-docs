@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Dynamic State Sharding
 
-There are two types of Sharding - **Static State Sharding** & **Dynamic State Sharding**. 
+There are two types of State Sharding - **Static State Sharding** & **Dynamic State Sharding**. 
 
 The most general approach to sharding is to divide the address space of accounts into multiple fixed-size regions called shards, and nodes in the network are assigned to different shards.
 

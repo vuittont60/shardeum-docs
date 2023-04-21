@@ -25,7 +25,7 @@ Shardeum validators with dishonest transaction consensus will have their testnet
 
 :::info
 
-Validators can now check the Node rewards simulations using the [Node Reward Calculator](https://shardeum.org/shm-tokenomics/)
+Estimate future validator rewards using the [Node Reward Calculator](https://shardeum.org/shm-tokenomics/)
 
 :::
 
