@@ -1,5 +1,5 @@
 ---
-title: What is Shardeum?
+title: Overview
 sidebar_position: 1
 ---
 
