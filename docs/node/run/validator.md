@@ -274,7 +274,13 @@ Wait for the installation process to complete.
 
 :::caution
 If you are behind a router and you are using ports 9001 and 10001 for p2p communication,
-make sure ports 9001 and 10001, are forwarded (be careful doing this since it will modify your firewall):
+make sure ports 9001 and 10001, are forwarded (be careful doing this since it will modify your firewall).
+
+Router port forwarding example with AT&T:
+
+https://www.att.com/support/article/u-verse-high-speed-internet/KM1010280/
+
+More info on router port forwarding:
 
 https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/
 
