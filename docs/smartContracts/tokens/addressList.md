@@ -9,7 +9,7 @@ sidebar_position: 4
 
 WSHM
 
-    0x170EF5b8723903e7008F4A9e0FD64c22084E9322
+    0xb6204c4b6b2545cF23F5EC0Bf8AEB8cB56E13C15
 
 ## Liberty 2.X Addresses
 
