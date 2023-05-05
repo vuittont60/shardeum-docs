@@ -23,6 +23,10 @@ Find out more about Shardeum nodes:
 
 [Shardeum Node Types](/Node/Types)
 
+Running nodes:
+
+[How to run a validator node](/Node/Run/Validator)
+
 ## Wallet Setup For Using Shardeum
 
 You will need an EVM wallet like Metamask to:
