@@ -237,7 +237,7 @@ By running this installer, you agree to allow the Shardeum team to collect this 
 Enter y to setup the web based dashboard:
 
 ```shell
-Do you want to run the web based Dashboard? (y/n): y
+Do you want to run the web based Dashboard? (y/n):
 ```
 
 Set a password for dashboard access:
@@ -252,10 +252,24 @@ Add a custom session port for the web based dashboard or hit enter for port 8080
 Enter the port (1025-65536) to access the web based Dashboard (default 8080):
 ```
 
+Add a custom external IP address or use an automatically detected IP address:
+
+```shell
+If you wish to set an explicit external IP, enter an IPv4 address (default=auto):
+```
+
+Add a custom internal IP address or use an automatically detected IP address:
+
+```shell
+If you wish to set an explicit internal IP, enter an IPv4 address (default=auto): 
+```
+
 Set the first p2p port (default 9001):
 
 ```shell
-This allows p2p communication between nodes. Enter the first port (1025-65536) for p2p communication (default 9001):
+To run a validator on the Sphinx network, you will need to open two ports in your firewall.
+This allows p2p communication between nodes.
+Enter the first port (1025-65536) for p2p communication (default 9001):
 ```
 
 Set the second p2p port (default 10001):
