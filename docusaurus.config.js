@@ -125,10 +125,6 @@ module.exports = {
                 label: 'Blog',
                 to: 'https://shardeum.org/blog',
               },
-              {
-                label: 'Languages',
-                to: 'https://docs.shardeum.org/community#global-discord-channels',
-              },
 
             ],
           },
