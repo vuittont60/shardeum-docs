@@ -29,7 +29,13 @@ This step-by-step tutorial will teach you how to create and deploy an ERC-20 tok
 
 [Metamask](https://metamask.io/) allows users to store and manage account keys, broadcast transactions, send and receive Ethereum-based cryptocurrencies and tokens, and securely connect to decentralized applications through a compatible web browser or the mobile app’s built-in browser. Click [here](https://metamask.io/download/) to install the MetaMask extension on your browser.
 
-And follow these [instructions](https://docs.shardeum.org/basics/claim) to add Shardeum to MetaMask wallet and claim test 100 $SHM tokens from Liberty (alphanet) faucet.
+Connect to Shardeum with Metamask automatically by following this link and clicking the add network button:
+
+[Connect Metamask to Shardeum](/Network/Endpoints#Connect-Wallet)
+
+Once you are connected to Shardeum in Metamask, claim SHM from a faucet to pay for transaction fees:
+
+[Claim SHM from faucets](/Faucet/Claim)
 
 ## Writing the Code Using Remix
 
