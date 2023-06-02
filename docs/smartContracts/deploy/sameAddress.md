@@ -1,7 +1,6 @@
 ---
 title: Same Address Cross Chain
 sidebar_position: 5
-slug: /smartContracts/deploy/same-address
 ---
 
 import Tabs from '@theme/Tabs';
