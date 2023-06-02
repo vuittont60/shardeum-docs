@@ -775,7 +775,7 @@ curl <server_ip>:9001/nodeinfo
 
 ### Update
 
-- Stop and Unstake your SHM tokens from the validator
+- Stop your validator before updating (you don't need to unstake though)
 - In your terminal, first exit from the container using 
 
 ```shell
