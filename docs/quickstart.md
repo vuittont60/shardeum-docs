@@ -75,7 +75,7 @@ Since Shardeum is EVM compatible, you can use the following frameworks to deploy
 
 To deploy contracts at the same address cross chain:
 
-[Same Address Cross Chain](/smart-contracts/deploy/sameAddress)
+[Same Address Cross Chain](/smart-contracts/deploy/same-address)
 
 ## Deploying Tokens To Shardeum
 
