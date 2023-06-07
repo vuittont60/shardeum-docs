@@ -35,6 +35,26 @@
       { "source": "/introduction/roadmap", "destination": "https://shardeum.org/roadmap" },
       { "source": "/developer/deploying-to-shardeum/remix", "destination": "/smartContracts/deploy/remix" },
       { "source": "/basics/Wallets/MetaMask/introduction", "destination": "/wallets/MetaMask/introduction" },
-      { "source": "/nodes/node-types", "destination": "/node/types" }
+      { "source": "/nodes/node-types", "destination": "/node/types" },
+      { "source": "/smartContracts/deploy/sameAddress", "destination": "/smart-contracts/deploy/same-address" },
+      { "source": "/wallets/MetaMask/introduction", "destination": "/wallets/metamask/introduction" },
+      { "source": "/wallets/MetaMask/installing", "destination": "/wallets/metamask/installing" },
+      { "source": "/wallets/MetaMask/add-shardeum-network", "destination": "/wallets/metamask/add-shardeum-network" },
+      { "source": "/wallets/MetaMask/create-account", "destination": "/wallets/metamask/create-account" },
+      { "source": "/wallets/MetaMask/sending-transactions", "destination": "/wallets/metamask/sending-transactions" },
+      { "source": "/smartContracts/deploy/foundry", "destination": "/smart-contracts/deploy/foundry" },
+      { "source": "/smartContracts/deploy/hardhat", "destination": "/smart-contracts/deploy/hardhat" },
+      { "source": "/smartContracts/deploy/remix", "destination": "/smart-contracts/deploy/remix" },
+      { "source": "/smartContracts/deploy/truffle", "destination": "/smart-contracts/deploy/truffle" },
+      { "source": "/smartContracts/EIP-2930/multicallContract", "destination": "/smart-contracts/eip-2930/multicall-contract" },
+      { "source": "/smartContracts/tokens/ERC-1155", "destination": "/smart-contracts/tokens/erc-1155" },
+      { "source": "/smartContracts/tokens/ERC-20", "destination": "/smart-contracts/tokens/erc-20" },
+      { "source": "/smartContracts/tokens/ERC-721", "destination": "/smart-contracts/tokens/erc-721" },
+      { "source": "/storage/ipfsAndFilecoin", "destination": "/storage/ipfs-and-filecoin" },
+      { "source": "/storage/storageEVM", "destination": "/storage/storage-evm" },
+      { "source": "/wallets/MetaMask/introduction", "destination": "/wallets/metamask/introduction" },
+      { "source": "/faucet/faucetStatistics", "destination": "/faucet/faucet-statistics" },
+      { "source": "/introduction/Sharding", "destination": "/introduction/sharding" },
+      { "source": "/smartContracts/events/pollEvents", "destination": "/smart-contracts/events/poll-events" }
     ]
   }
