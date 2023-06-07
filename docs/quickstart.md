@@ -65,28 +65,28 @@ View transactions on Shardeum using the Shardeum Explorer:
 
 Since Shardeum is EVM compatible, you can use the following frameworks to deploy to Shardeum:
 
-[Remix IDE](/smartContracts/deploy/remix)
+[Remix IDE](/smart-contracts/deploy/remix)
 
-[Foundry](/smartContracts/deploy/foundry)
+[Foundry](/smart-contracts/deploy/foundry)
 
-[Hardhat](/smartContracts/deploy/hardhat)
+[Hardhat](/smart-contracts/deploy/hardhat)
 
-[Truffle](/smartContracts/deploy/truffle)
+[Truffle](/smart-contracts/deploy/truffle)
 
 To deploy contracts at the same address cross chain:
 
-[Same Address Cross Chain](/smartContracts/deploy/sameAddress)
+[Same Address Cross Chain](/smart-contracts/deploy/sameAddress)
 
 ## Deploying Tokens To Shardeum
 
 All EVM based token standards are supported on Shardeum (since Shardeum is EVM compatible).
 Popular tokens supported on Shardeum:
 
-[ERC-20 (Fungible Tokens)](/smartContracts/tokens/ERC-20)
+[ERC-20 (Fungible Tokens)](/smart-contracts/tokens/ERC-20)
 
-[ERC-721 (NFTs)](/smartContracts/tokens/ERC-721)
+[ERC-721 (NFTs)](/smart-contracts/tokens/ERC-721)
 
-[ERC-1155 (Token Emulator)](/smartContracts/tokens/ERC-1155)
+[ERC-1155 (Token Emulator)](/smart-contracts/tokens/ERC-1155)
 
 ## Cross Shard Composability Communication With EIP-2930
 
@@ -95,7 +95,7 @@ The EIP-2930 accessList is used for shard routing contracts on different shards 
 
 For more info on how the EIP-2930 accessList works on Shardeum:
 
-[EIP-2930 Overview](/smartContracts/EIP-2930/multicallContract)
+[EIP-2930 Overview](/smart-contracts/EIP-2930/multicallContract)
 
 ## Integrate File Storage Into Shardeum
 
