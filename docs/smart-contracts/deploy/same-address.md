@@ -223,3 +223,4 @@ contract Create2Factory { //Modified from: "Create2 | Solidity 0.8" by  Smart Co
 
   </TabItem>
 </Tabs>
+
