@@ -95,7 +95,7 @@ The EIP-2930 accessList is used for shard routing contracts on different shards 
 
 For more info on how the EIP-2930 accessList works on Shardeum:
 
-[EIP-2930 Overview](/smart-contracts/EIP-2930/multicallContract)
+[EIP-2930 Overview](/smart-contracts/eip-2930/multicall-contract)
 
 ## Integrate File Storage Into Shardeum
 
@@ -103,7 +103,7 @@ We recommend users to use decentralized file storage standards like IPFS and Fil
 
 Files stored on IPFS can be used in contracts to deploy contracts with CID values as shown in this example:
 
-[IPFS and Filecoin](/storage/ipfsAndFilecoin)
+[IPFS and Filecoin](/storage/ipfs-and-filecoin)
 
 ## Oracles on Shardeum
 
