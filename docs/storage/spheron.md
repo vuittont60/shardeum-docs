@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 [Spheron](https://spheron.network/) is a game-changing solution revolutionizing decentralized application (dApp) infrastructure. With its comprehensive set of tools and services rooted in Web3 Infra, Spheron empowers developers to meet the dynamic demands of the digital landscape. Going beyond traditional Web2 infrastructures, Spheron offers a wide range of services including web hosting, storage, and compute capabilities, serving as a vital component in the Web3 ecosystem. Its exceptional performance not only rivals Web2 counterparts but also showcases the potential of Web3 technology for the next generation of applications.
 
-> Learn more about Spheron through [our documentation](https://docs.spheron.network/).
+> Learn more about Spheron through [their documentation](https://docs.spheron.network/).
 
 ## How to deploy static apps on Spheron?
 

@@ -170,13 +170,13 @@ task("accounts", "Prints the list of accounts", async () => {
 * @type import('hardhat/config').HardhatUserConfig
 */
 module.exports = {
- defaultNetwork: "liberty",
+ defaultNetwork: "sphinx",
  networks: {
    hardhat: {
    },
-   liberty: {
-     url: "https://liberty20.shardeum.org/",
-     chainId: 8081,
+   sphinx: {
+     url: "https://sphinx.shardeum.org/",
+     chainId: 8082,
      accounts:[privateKeys]
    },
  },
@@ -270,7 +270,7 @@ To deploy the testToken contract run this command in testToken directory.
   <TabItem value="shell" label="Shell" default>
 
 ```shell
-npx hardhat run --network liberty scripts/deploy.js
+npx hardhat run scripts/deploy.js -network sphinx
 ```
 
   </TabItem>

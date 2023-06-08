@@ -126,7 +126,7 @@ truffle compile
 
 ## Coding Migrations
 
-To deploy our testToken contract on Shardeum Liberty, we have to create a migration to get the contract on the network.
+To deploy our testToken contract on Shardeum Sphinx, we have to create a migration to get the contract on the network.
 Create a file in the migrations folder named "2_deploy.js".
 
 <Tabs>
@@ -147,7 +147,7 @@ module.exports = function(deployer) {
 ## Configuring Truffle For Shardeum Liberty
 
 - Go to truffle-config.js (located in root directory)
-- Update with Shardeum Liberty details ([available here](/network/endpoints))
+- Update with Shardeum Sphinx details ([available here](/network/endpoints))
 
 <Tabs>
   <TabItem value="javascript" label="Javascript" default>
@@ -164,9 +164,9 @@ module.exports = {
       port: 8545,            // Standard port (default: none)
       network_id: "*",       // Any network (default: none)
     },
-    liberty: {
-      provider: () => new HDWalletProvider(mnemonic, `https://liberty20.shardeum.org/`),
-      network_id: 8081,
+    sphinx: {
+      provider: () => new HDWalletProvider(mnemonic, `https://sphinx.shardeum.org/`),
+      network_id: 8082,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
@@ -204,7 +204,7 @@ npm i @truffle/hdwallet-provider
   </TabItem>
 </Tabs>
 
-## Deploying on Shardeum Liberty
+## Deploying on Shardeum Sphinx
 
 To deploy our testToken contract run this command in the testToken directory:
 
@@ -212,7 +212,7 @@ To deploy our testToken contract run this command in the testToken directory:
   <TabItem value="shell" label="Shell" default>
 
 ```shell
-truffle migrate --network liberty
+truffle migrate --network sphinx
 ```
 
   </TabItem>
@@ -223,8 +223,8 @@ The contract will be deployed on Shardeum Liberty, it should look like this:
 ```
 Starting migrations...
 ======================
-> Network name:    'liberty'
-> Network id:      8081
+> Network name:    'sphinx'
+> Network id:      8082
 > Block gas limit: 20000000000 (0x4a817c800)
 
 2_deploy.js
