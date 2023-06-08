@@ -50,7 +50,7 @@ Video tutorial on using Shardeum Discord Faucet:
 
   https://faucet-sphinx.shardeum.org/
 
-![claim_1](/img/claim/sphinxFaucet.png)
+![claim_1](/img/claim/sphinxfaucet.png)
 
 3. Click the “Tweet Now” link on the page.
 
