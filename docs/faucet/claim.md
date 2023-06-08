@@ -14,19 +14,12 @@ image: /img/claim/claim_9.jpeg
 
 2. Verify your Discord account on the Shardeum Discord server by clicking on the Shardeum emoji logo.
 
-3. Select the Discord faucet text channel for the network you are using:
+3. Go to the faucet channel in SHardeum discord.
 
   Sphinx 1.X:
 
   https://discord.com/channels/933959587462254612/1070780355931541514
 
-  Liberty 2.X:
-
-  https://discord.com/channels/933959587462254612/1031497272191627284
-
-  Liberty 1.X:
-
-  https://discord.com/channels/933959587462254612/1021737152251441244
 
 4. Submit the following text in the faucet text channel you are in (a black box with address will appear after you type /faucet):
 
@@ -57,16 +50,7 @@ Video tutorial on using Shardeum Discord Faucet:
 
   https://faucet-sphinx.shardeum.org/
 
-  Liberty 2.X:
-
-  https://faucet.liberty20.shardeum.org/
-
-  Liberty 1.X:
-
-  https://faucet.liberty10.shardeum.org/
-
-
-![claim_1](/img/claim/claim_1.jpg)
+![claim_1](/img/claim/sphinxFaucet.png)
 
 3. Click the “Tweet Now” link on the page.
 
@@ -103,9 +87,6 @@ Sphinx 1.X:
 
 https://chaindrop.org/?chainid=8082&token=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 
-Liberty 2.X:
-
-https://chaindrop.org/?chainid=8081&token=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 
 ![chaindrop_2](/img/chaindrop/chaindrop_2.jpg)
 

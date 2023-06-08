@@ -15,12 +15,7 @@ https://eips.ethereum.org/EIPS/eip-2930
 
 ## Why is EIP-2930 important?
 
-Shardeum Liberty 1.X does not require EIP-2930 because the network is not sharded.
-You can optionally use EIP-2930 to save gas on Shardeum Liberty 1.X.
-
-:::tip Automated Access List
-
-Sphinx 1.X and Liberty 2.X have automated the accessList for Shardeum RPC nodes to route shards.
+Sphinx 1.X has automated the accessList for Shardeum RPC nodes to route shards.
 
 Therefore, you no longer need to specify the accessList for these networks with automated accessList generation. 
 
@@ -29,7 +24,6 @@ This document is useful for:
 -educational purposes  
 -situations where the automated accessList fails and you need to specifiy the accessList directly
 
-:::
 
 ## Where is EIP-2930 data located for a transaction?
 
@@ -76,7 +70,7 @@ Send an EIP-2930 transaction with an accessList address that has no storage:
 const Web3 = require('web3')
 const ethers = require("ethers")
 
-const rpcURL = "https://liberty20.shardeum.org/"
+const rpcURL = "https://sphinx.shardeum.org/"
 const web3 = new Web3(rpcURL)
 
 const provider = new ethers.providers.JsonRpcProvider(rpcURL)
@@ -140,7 +134,7 @@ import json
 import os
 import time
 
-ShardeumConnectionHTTPS = "https://liberty20.shardeum.org/";
+ShardeumConnectionHTTPS = "https://sphinx.shardeum.org/";
 web3 = Web3(Web3.HTTPProvider(ShardeumConnectionHTTPS))
 
 chainIdConnected = web3.eth.chain_id
@@ -251,7 +245,7 @@ In this case, it will be storage slot0, because it is a single uint storage vari
 const Web3 = require('web3')
 const ethers = require("ethers")
 
-const rpcURL = "https://liberty20.shardeum.org/"
+const rpcURL = "https://sphinx.shardeum.org/"
 const web3 = new Web3(rpcURL)
 
 const provider = new ethers.providers.JsonRpcProvider(rpcURL)
@@ -315,7 +309,7 @@ import os
 import math
 import time
 
-ShardeumConnectionHTTPS = "https://liberty20.shardeum.org/";
+ShardeumConnectionHTTPS = "https://sphinx.shardeum.org/";
 web3 = Web3(Web3.HTTPProvider(ShardeumConnectionHTTPS))
 
 chainIdConnected = web3.eth.chain_id
@@ -465,7 +459,7 @@ contract addressCodeHash { //From https://soliditydeveloper.com/extcodehash
 const Web3 = require('web3')
 const ethers = require("ethers")
 
-const rpcURL = "https://liberty20.shardeum.org/"
+const rpcURL = "https://sphinx.shardeum.org/"
 const web3 = new Web3(rpcURL)
 
 const provider = new ethers.providers.JsonRpcProvider(rpcURL)
