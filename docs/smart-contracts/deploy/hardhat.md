@@ -142,69 +142,66 @@ contract testToken is ERC20 {
 
 ## Configuring Hardhat For Shardeum Liberty
 
- - Go to hardhat-config.js (located in root directory)
- - Update with Shardeum Liberty details ([available here](/network/endpoints))
+- Go to hardhat-config.js (located in root directory)
+- Update with Shardeum Liberty details ([available here](/network/endpoints))
 
 <Tabs>
  <TabItem value="javascript" label="Javascript" default>
 
 ```js
 require("@nomiclabs/hardhat-waffle");
-require('@nomiclabs/hardhat-ethers');
-const { privateKeys } = require('./secrets.json');
+require("@nomiclabs/hardhat-ethers");
+const { privateKeys } = require("./secrets.json");
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async () => {
- const accounts = await ethers.getSigners();
+  const accounts = await ethers.getSigners();
 
- for (const account of accounts) {
-   console.log(account.address);
- }
+  for (const account of accounts) {
+    console.log(account.address);
+  }
 });
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
 /**
-* @type import('hardhat/config').HardhatUserConfig
-*/
+ * @type import('hardhat/config').HardhatUserConfig
+ */
 module.exports = {
- defaultNetwork: "sphinx",
- networks: {
-   hardhat: {
-   },
-   sphinx: {
-     url: "https://sphinx.shardeum.org/",
-     chainId: 8082,
-     accounts:[privateKeys]
-   },
- },
- solidity: {
-//configure solidity version for compilation
- version: "0.8.0",
- settings: {
-   optimizer: {
-     enabled: true
-   }
-  }
- },
- paths: {
-   sources: "./contracts",
-   tests: "./test",
-   cache: "./cache",
-   artifacts: "./artifacts"
- },
- mocha: {
-   timeout: 20000
- }
+  defaultNetwork: "sphinx",
+  networks: {
+    hardhat: {},
+    sphinx: {
+      url: "https://sphinx.shardeum.org/",
+      chainId: 8082,
+      accounts: [privateKeys],
+    },
+  },
+  solidity: {
+    //configure solidity version for compilation
+    version: "0.8.0",
+    settings: {
+      optimizer: {
+        enabled: true,
+      },
+    },
+  },
+  paths: {
+    sources: "./contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts",
+  },
+  mocha: {
+    timeout: 20000,
+  },
 };
 ```
 
    </TabItem>
 </Tabs>
-
-
 
 **Note:** Make sure to add your mnemonic or private key and add it to a separate file named "secrets.json" (make sure never to upload this file to GitHub or GitLab).
 
@@ -234,29 +231,29 @@ Create a file in scripts folder named "deploy.js".
 const hre = require("hardhat");
 
 async function main() {
- // Hardhat always runs the compile task when running scripts with its command
- // line interface.
- //
- // If this script is run directly using `node` you may want to call compile
- // manually to make sure everything is compiled
- // await hre.run('compile');
+  // Hardhat always runs the compile task when running scripts with its command
+  // line interface.
+  //
+  // If this script is run directly using `node` you may want to call compile
+  // manually to make sure everything is compiled
+  // await hre.run('compile');
 
- // We get the contract to deploy
- const TestToken = await hre.ethers.getContractFactory("testToken");
- const testToken = await TestToken.deploy("100000000000000000000");
+  // We get the contract to deploy
+  const TestToken = await hre.ethers.getContractFactory("testToken");
+  const testToken = await TestToken.deploy("100000000000000000000");
 
- await testToken.deployed();
- console.log("testToken deployed to:", testToken.address);
+  await testToken.deployed();
+  console.log("testToken deployed to:", testToken.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
 main()
- .then(() => process.exit(0))
- .catch((error) => {
-   console.error(error);
-   process.exit(1);
- });
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 ```
 
   </TabItem>
@@ -270,7 +267,7 @@ To deploy the testToken contract run this command in testToken directory.
   <TabItem value="shell" label="Shell" default>
 
 ```shell
-npx hardhat run scripts/deploy.js -network sphinx
+npx hardhat run scripts/deploy.js --network sphinx
 ```
 
   </TabItem>
@@ -281,4 +278,5 @@ The contract will be deployed on Shardeum Liberty.
 ```
 testToken deployed to: 0x2f4cBD1a614E1F3760b06Dad3868994591e140d3
 ```
+
 Congratulations! You have successfully deployed ERC20 Smart Contract. Now you can interact with the Smart Contract by building a dApp.
