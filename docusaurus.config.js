@@ -174,12 +174,12 @@ module.exports = {
                 to: 'mailto:hi@shardeum.org',
               },
               {
-                label: 'Investment Purpose',
-                to: 'mailto:invest@shardeum.org',
-              },
-              {
                 label: 'GitHub',
                 to: 'https://github.com/shardeum',
+              },
+              {
+                label: 'Gitlab',
+                to: 'https://gitlab.com/shardeum',
               },
             ],
           },
