@@ -15,7 +15,7 @@ export default function connectToSphinx() {
       return;
     }
     if (window.ethereum.networkVersion == 8082) {
-      alert("You are already connected to Sphinx 1.X (chainId 8082).", )
+      alert("You are already connected to Sphinx Validator 1.X (chainId 8082).", )
       return;
     }
     try{
