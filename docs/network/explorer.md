@@ -11,7 +11,7 @@ sidebar_position: 4
 
 https://explorer-sphinx.shardeum.org/
 
-**Shardeum App Sphinx 1.X :**
+**Shardeum Dapp Sphinx 1.X :**
 
 https://explorer-dapps.shardeum.org
 
