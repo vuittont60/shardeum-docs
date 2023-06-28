@@ -23,7 +23,7 @@ ERC 20 tokens are issued on the Ethereum network. They have emerged as the techn
 
 ## Create and Deploy your ERC-20 Token using Remix
 
-This step-by-step tutorial will teach you how to create and deploy an ERC-20 token on the Shardeum Liberty network. We will use [Metamask](https://metamask.io/) and [Remix IDE](https://remix.ethereum.org/) for this tutorial.
+This step-by-step tutorial will teach you how to create and deploy an ERC-20 token on the Shardeum Sphinx network. We will use [Metamask](https://metamask.io/) and [Remix IDE](https://remix.ethereum.org/) for this tutorial.
 
 ## Add Shardeum Network to Metamask/Claim Token
 
@@ -77,7 +77,7 @@ Compile the contract by going over to the ‘Compiler’ tab in Remix and select
 
 ![mint_your_own_crypto_1](/img/mint_your_own_crypto/mint_your_own_crypto_1.jpg)
 
-## Deploying the Smart Contract on Shardeum Liberty
+## Deploying the Smart Contract on Shardeum Sphinx
 
 Let’s deploy a fixed supply of 10000 Tokens (You can change it to another supply at the code level).
 
@@ -93,7 +93,7 @@ Proceed to click ‘Transact’ and approve the transaction in ‘Metamask’ to
 
 ![mint_your_own_crypto_3](/img/mint_your_own_crypto/mint_your_own_crypto_3.jpg)
 
-You have now successfully deployed ERC-20 Token on Shardeum Liberty!
+You have now successfully deployed ERC-20 Token on Shardeum Sphinx!
 
 After deploying, click the ‘Copy Address’ button to copy the contract address.
 

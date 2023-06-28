@@ -14,7 +14,7 @@ image: /img/claim/claim_9.jpeg
 
 2. Verify your Discord account on the Shardeum Discord server by clicking on the Shardeum emoji logo.
 
-3. Go to the faucet channel in SHardeum discord.
+3. Go to the faucet channel in Shardeum discord.
 
   Sphinx 1.X:
 
@@ -42,7 +42,7 @@ Video tutorial on using Shardeum Discord Faucet:
 
 ## Shardeum Faucet Website
 
-1. After adding the Shardeum Liberty network to popular wallets such as MetaMask ([guide here](/wallets/MetaMask/add-shardeum-network)), you can claim testnet SHM from Shardeum Liberty faucet. The SHM can then be used to deploy smart contracts and build dApps on Liberty.
+1. After adding the Shardeum Sphinx networks to popular wallets such as MetaMask ([guide here](/wallets/MetaMask/add-shardeum-network)), you can claim testnet SHM from the faucet. The SHM can then be used to deploy smart contracts and build dApps on Sphinx testnet.
 
 2. Visit the respective Shardeum faucet website:
 
@@ -74,7 +74,7 @@ Video tutorial on using Shardeum Discord Faucet:
 
 ![claim_5](/img/claim/claim_5.jpg)
 
-7. Paste the copied URL into the Shardeum Liberty faucet page and request SHM.
+7. Paste the copied URL into the Shardeum faucet page and request SHM.
 
 ![claim_4](/img/claim/claim_4.jpg)
 ![claim_6](/img/claim/claim_6.jpg)
