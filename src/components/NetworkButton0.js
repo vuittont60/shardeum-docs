@@ -4,7 +4,7 @@ export default function connectToLiberty0() {
 
   const chainId = '0x1f91';
   const rpcURL = 'https://dapps.shardeum.org';
-  const networkName = ' Shardeum App Sphinx 1.X ';
+  const networkName = ' Shardeum Dapp Sphinx 1.X ';
   const currencyName = 'SHM';
   const currencySymbol = 'SHM';
   const explorerURL = 'https://explorer-dapps.shardeum.org';
@@ -42,7 +42,7 @@ export default function connectToLiberty0() {
   };
 
   return (
-    <button className="button buttonHighContrast" onClick={addNetwork}>Click to Connect to App Network</button>
+    <button className="button buttonHighContrast" onClick={addNetwork}>Click to Connect to Dapp Network</button>
   );
 
 }

@@ -7,6 +7,12 @@ sidebar_position: 3
 
 You will have network protocols to follow, like the quantity of coins to be staked and hardware configs. Once nodes have those few prerequisites as determined by network compliance, the network will NOT prioritize or favor any node. Further note, nodes on the network will be rotated in and out.
 
-## What are the hardware requirements to run a node on Shardeum?
+## What are the hardware requirements to run a validator node on Shardeum?
 
-We will know better what hardware requirements are after testnet. A rented server for under $50/month should be more than sufficient. We aim for 4GB RAM type of config.
+```
+-250 GB SSD storage
+-Quad core CPU less than 10 years old if self hosting
+-Dual core CPU works if hosted with newer Xeons / EPYC
+-16 GB of ram,  4+ GB of virtual memory recommended
+-Hosting: 8 GB RAM + 8 GB Virtual Memory
+```
