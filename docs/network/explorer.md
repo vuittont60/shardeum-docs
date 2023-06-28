@@ -7,9 +7,15 @@ sidebar_position: 4
 
 ## Links
 
-**Sphinx 1.X:**
+**Shardeum Validator Sphinx 1.X :**
 
 https://explorer-sphinx.shardeum.org/
+
+**Shardeum App Sphinx 1.X :**
+
+https://explorer-dapps.shardeum.org
+
+
 
 ## Overview
 

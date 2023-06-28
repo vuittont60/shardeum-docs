@@ -3,11 +3,11 @@ import React, {useState} from 'react';
 export default function connectToLiberty0() {
 
   const chainId = '0x1f91';
-  const rpcURL = 'https://liberty20.shardeum.org/';
-  const networkName = 'Shardeum Liberty 2.X';
+  const rpcURL = 'https://dapps.shardeum.org';
+  const networkName = ' Shardeum App Sphinx 1.X ';
   const currencyName = 'SHM';
   const currencySymbol = 'SHM';
-  const explorerURL = 'https://explorer-liberty20.shardeum.org/';
+  const explorerURL = 'https://explorer-dapps.shardeum.org';
 
   const addNetwork = async () => {
     if (!window.ethereum) {
@@ -42,7 +42,7 @@ export default function connectToLiberty0() {
   };
 
   return (
-    <button className="button buttonHighContrast" onClick={addNetwork}>Click to Connect to Liberty 2.X</button>
+    <button className="button buttonHighContrast" onClick={addNetwork}>Click to Connect to App Network</button>
   );
 
 }
