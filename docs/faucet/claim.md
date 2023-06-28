@@ -50,7 +50,7 @@ Video tutorial on using Shardeum Discord Faucet:
 
   https://faucet-sphinx.shardeum.org/
 
-  Shardeum App Sphinx 1.X
+  Shardeum Dapp Sphinx 1.X
 
   https://faucet-dapps.shardeum.org/
 
