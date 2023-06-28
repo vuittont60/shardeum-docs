@@ -15,7 +15,7 @@ export default function connectToLiberty0() {
       return;
     }
     if (window.ethereum.networkVersion == 8081) {
-      alert("You are already connected to Liberty 2.X (chainId 8081).", )
+      alert("You are already connected to Sphinx Dapp 1.X (chainId 8081).", )
       return;
     }
     try{
