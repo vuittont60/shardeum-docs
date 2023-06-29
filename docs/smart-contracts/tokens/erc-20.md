@@ -83,7 +83,7 @@ Let’s deploy a fixed supply of 10000 Tokens (You can change it to another supp
 
 Go to the ‘Deployer’ tab in Remix.
 
-Select the ‘Injected Web3’ environment (make sure you select Shardeum Liberty Network), and connect your MetaMask wallet.
+Select the ‘Injected Web3’ environment (make sure you select Shardeum Sphinx Network), and connect your MetaMask wallet.
 
 Now, select the ‘ShardeumERC20Token.sol’ contract, and enter values for the constructor arguments ‘_Name’ and ‘_Symbol’ as shown in the image below.
 

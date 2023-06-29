@@ -144,7 +144,7 @@ module.exports = function(deployer) {
   </TabItem>
 </Tabs>
 
-## Configuring Truffle For Shardeum Liberty
+## Configuring Truffle For Shardeum Sphinx
 
 - Go to truffle-config.js (located in root directory)
 - Update with Shardeum Sphinx details ([available here](/network/endpoints))
@@ -218,7 +218,7 @@ truffle migrate --network sphinx
   </TabItem>
 </Tabs>
 
-The contract will be deployed on Shardeum Liberty, it should look like this:
+The contract will be deployed on Shardeum Sphinx, it should look like this:
 
 ```
 Starting migrations...

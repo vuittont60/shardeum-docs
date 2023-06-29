@@ -140,10 +140,10 @@ contract testToken is ERC20 {
   </TabItem>
 </Tabs>
 
-## Configuring Hardhat For Shardeum Liberty
+## Configuring Hardhat For Shardeum Sphinx
 
 - Go to hardhat-config.js (located in root directory)
-- Update with Shardeum Liberty details ([available here](/network/endpoints))
+- Update with Shardeum Sphinx details ([available here](/network/endpoints))
 
 <Tabs>
  <TabItem value="javascript" label="Javascript" default>
@@ -259,7 +259,7 @@ main()
   </TabItem>
 </Tabs>
 
-## Deploying on Shardeum Liberty
+## Deploying on Shardeum Sphinx
 
 To deploy the testToken contract run this command in testToken directory.
 
@@ -273,7 +273,7 @@ npx hardhat run scripts/deploy.js --network sphinx
   </TabItem>
 </Tabs>
 
-The contract will be deployed on Shardeum Liberty.
+The contract will be deployed on Shardeum Sphinx.
 
 ```
 testToken deployed to: 0x2f4cBD1a614E1F3760b06Dad3868994591e140d3
