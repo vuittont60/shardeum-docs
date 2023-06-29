@@ -267,7 +267,7 @@ If you wish to set an explicit internal IP, enter an IPv4 address (default=auto)
 Set the first p2p port (default 9001):
 
 ```shell
-To run a validator on the Sphinx network, you will need to open two ports in your firewall.
+To run a validator on the Sphinx Validator 1.X network, you will need to open two ports in your firewall.
 This allows p2p communication between nodes.
 Enter the first port (1025-65536) for p2p communication (default 9001):
 ```
@@ -606,11 +606,11 @@ pm2 delete [id]
 
 ## Step 7: Connect Wallet to Betanet
 
-[Connect to Sphinx 1.X with your wallet by clicking the button linked here](/network/endpoints#connect-wallet)
+[Connect to Sphinx Validator 1.X with your wallet by clicking the button linked here](/network/endpoints#connect-wallet)
 
 ## Step 8: Get SHM from Betanet Faucet
 
-[Shardeum Twitter SHM Faucet Guide for Sphinx 1.X](/faucet/claim#shardeum-faucet-website)
+[Shardeum Twitter SHM Faucet Guide for Sphinx Validator 1.X](/faucet/claim#shardeum-faucet-website)
 
 ## Step 9: Stake SHM to validator
 

@@ -14,4 +14,4 @@ Running your own RPC:
 
 ## How do I run a RPC on Shardeum?
 
-More details on how to run a Shardeum RPC will be shared after Sphinx 1.X.
+More details on how to run a Shardeum RPC will be shared after Sphinx Validator 1.X.
