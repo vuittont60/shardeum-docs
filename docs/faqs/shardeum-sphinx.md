@@ -13,9 +13,9 @@ EVM-based languages is used to compile smart contracts; this includes Solidity a
 
 ## How can I contribute to Shardeum Sphinx as a developer?
 
-You can build and deploy smart contracts on Liberty by following this developer documentation. Further, list your dApps you are building on Liberty [here](https://forms.gle/BFLXtLn9Urq9KH998) to publicize it among the community and become a leader in the Shardeum ecosystem.
+You can build and deploy smart contracts on Sphinx by following this developer documentation. Further, list your dApps you are building on Sphinx [here](https://forms.gle/BFLXtLn9Urq9KH998) to publicize it among the community and become a leader in the Shardeum ecosystem.
 
-Pro-tip: If you already have a smart contract deployed on Ethereum, you can migrate it to Liberty within a few minutes.
+Pro-tip: If you already have a smart contract deployed on Ethereum, you can migrate it to Sphinx within a few minutes.
 
 ## What can the community do on Sphinx?
 
@@ -31,12 +31,12 @@ There will be an ecosystem fund setup to reward devs for creating innovative app
 
 ## I found some bugs on Shardeum Explorer. How do we report it?
 
-Please use this form to report bugs when you face any issues on Liberty so our developers can look into it for improvement opportunities : https://github.com/Shardeum/shardeum-bug-reporting
+Please use this form to report bugs when you face any issues on Sphinx so our developers can look into it for improvement opportunities : https://github.com/Shardeum/shardeum-bug-reporting
 
-## What is the use of the faucet and testnet $SHM coins on Liberty?
+## What is the use of the faucet and testnet $SHM coins on Sphinx?
 
 SHM is the network coin like ETH for Ethereum. SHM is used to pay the gas fees when
-you transact on the network for developing dApps and transferring some coins to your friends/community members during alphanet. You simply have to add Liberty network to your wallets like MetaMask and receive 100 testnet $SHM by following the [instructions](https://docs.shardeum.org/faucet/claim). As mentioned before developers may qualify for grants while community members will stand a chance to qualify for rewards/airdrops from dApp projects in the future for helping them to stress test their projects. In order to take part in testing out such dApps, $SHM can be very useful to pay transaction fees to carry out a transaction.
+you transact on the network for developing dApps and transferring tokens. You simply have to add Sphinx network to your wallets like MetaMask and receive 100 testnet $SHM by following the [instructions](https://docs.shardeum.org/faucet/claim). As mentioned before developers may qualify for grants while community members will stand a chance to qualify for rewards/airdrops from dApp projects in the future for helping them to stress test their projects. In order to take part in testing out such dApps, $SHM can be very useful to pay transaction fees to carry out a transaction.
 
 ## How to find which projects are building on Sphinx so I can consider interacting with their interfaces and stand a chance to earn rewards in the future?
 
