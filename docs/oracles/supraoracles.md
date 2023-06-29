@@ -44,9 +44,9 @@ This creates the interface that you will later apply in order to fetch a price f
 
 To fetch the S-Value from a SupraOracles smart contract, you must first find the S-Value Feed Address for the chain of your choice.
 
-For Shardeum Liberty 2.X and 1.X AlphaNet, the address is 0x700a89Ba8F908af38834B9Aba238b362CFfB665F
+For Shardeum Sphinx, the address is 0x700a89Ba8F908af38834B9Aba238b362CFfB665F
 
-When you have the proper address, create an instance of the S-Value Feed using the interface we previously defined for Shardeum Liberty 2.X or 1.X AlphaNet:
+When you have the proper address, create an instance of the S-Value Feed using the interface we previously defined for Shardeum Sphinx:
 
 <Tabs>
   <TabItem value="solidity" label="Solidity" default>

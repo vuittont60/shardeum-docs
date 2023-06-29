@@ -55,8 +55,6 @@ Example:
     ]
 ```
 
-## When should I use EIP-2930 on Shardeum Liberty 2.X?
-
 ## EIP-2930 Optional:
 
 ## Transfer SHM on Shardeum Between Wallets:
@@ -400,12 +398,11 @@ tokenObject.transfer(recipient, amount)
 will require an accessList to work cross shard.
 
 Contract Multicall can change states in other contracts (in this case contractToCall).
-For sharded Shardeum networks (like Liberty 2.X), we need to specify the addresses and storage slots being called outside "from" and "to" in the transaction.
+For sharded Shardeum networks, we need to specify the addresses and storage slots being called outside "from" and "to" in the transaction.
 
-## Liberty 2.X Address codeHash in storage slots:
+## Sphinx 1.X Address codeHash in storage slots:
 
-Liberty 2.X requires the codeHash for each externally called address (20 bytes) to be mentioned in a storage slot for each address being called externally.
-Liberty 2.1 will not need the codeHash in storage slots for each corresponding externally called address.
+Sphinx 1.X will not need the codeHash in storage slots for each corresponding externally called address.
 
 In Solidity, you can get an address codeHash from a deployed contract on the matching network [along with checking if an address is a contract].
 You can also get an address codeHash with the ethers library.
@@ -530,7 +527,7 @@ import os
 import time
 import math
 
-ShardeumConnectionHTTPS = "https://liberty20.shardeum.org/";
+ShardeumConnectionHTTPS = "https://sphinx.shardeum.org/";
 web3 = Web3(Web3.HTTPProvider(ShardeumConnectionHTTPS))
 
 chainIdConnected = web3.eth.chain_id
@@ -599,12 +596,6 @@ print("TX RECEIPT: " + str(receipt) )
 Tool generates accessList with 91% accuracy:
 
 https://github.com/alexchenzl/predict-al
-
-## GlobalSwap: Liberty 2.X Multicall Sharded AMM DEX
-
-Website:
-
-https://globalswap.netlify.app/#/swap
 
 EIP-2930 accessList generation for swap transactions can be found in this GitHub repository:
 

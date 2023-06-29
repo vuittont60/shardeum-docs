@@ -369,7 +369,7 @@ forge create --rpc-url $goerliHTTPS_InfuraAPIKey --etherscan-api-key $etherscanA
 </Tabs>
 
 
-## Deploying to Shardeum Liberty with Legacy Transaction
+## Deploying to Shardeum Sphinx with Legacy Transaction
 
 If the following Goerli deployment worked, the following Shardeum deployment should work as well.
 
@@ -401,7 +401,7 @@ Check the Shardeum Explorer after a transaction cycle to see if the contract dep
   <TabItem value="shell" label="Shell" default>
 
 ```shell
-forge create --legacy --rpc-url https://liberty20.shardeum.org/ --private-key $devTestnetPrivateKey src/Contract.sol:SimpleStorage
+forge create --legacy --rpc-url 	https://sphinx.shardeum.org/ --private-key $devTestnetPrivateKey src/Contract.sol:SimpleStorage
 ```
 
   </TabItem>

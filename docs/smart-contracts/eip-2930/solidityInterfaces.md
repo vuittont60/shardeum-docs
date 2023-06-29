@@ -159,7 +159,7 @@ contract multicallWSHM {
     fallback() external payable {}
 
     constructor() {
-        WSHM = interfaceWSHM(0xa80d5d2C8Cc0d06fBC1F1A89A05d76f86082C20e); // WSHM Liberty 2.0 address.
+        WSHM = interfaceWSHM(0xa80d5d2C8Cc0d06fBC1F1A89A05d76f86082C20e); // WSHM address.
     }
 
     function multicallDeposit() public payable {
