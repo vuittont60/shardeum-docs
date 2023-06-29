@@ -43,7 +43,7 @@ For more info on Metamask:
 
 Find out how to get testnet tokens from our faucets here:
 
-[Claim LIberty 100 SHM From Shardeum Faucets](/faucet/claim)
+[Claim testnet SHM From Shardeum Faucets](/faucet/claim)
 
 ## Connect Wallet To Shardeum
 
