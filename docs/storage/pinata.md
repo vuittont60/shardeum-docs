@@ -113,7 +113,7 @@ Dedicated Gateways are much much faster than any other method, and should ideall
 
 If you want to go to the next level, consider upgrading to the [Picnic plan](https://pinata.cloud/pricing)! Not only does this plan give you a Dedicated Gateway, it also gives you access to [Submarine.me](https://submarine.me); a new tool that helps creators make token gated content! You can upload content that is only unlockable by NFT, retweeting, geolocation, and soon debit and credit card payments. Take a look at the demo below!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YhT4Xqn1tYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/DTr896ca2PE" title="Pinata Pinning services" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Connect with us!
