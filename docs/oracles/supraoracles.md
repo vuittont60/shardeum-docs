@@ -14,9 +14,7 @@ SupraOracles is a novel, high-throughput Oracle & IntraLayer: A vertically integ
 ## How to use SupraOracles' Price Feeds
 
 
-Integrating with SupraOracles' Price Feeds is quick and easy. SupraOracles currently supports several Solidity/EVM-based networks, like Shardeum, and non-EVM networks like Sui, Aptos.
-
-To see all of the networks SupraOracles is on, please visit   [SupraOracles' Networks](https://supraoracles.com/docs/get-started/networks)!
+Integrating with SupraOracles' Price Feeds is quick and easy. To see all of the networks SupraOracles is on, please visit   [SupraOracles' Networks](https://supraoracles.com/docs/get-started/networks)!
 
 To get started, you will want to visit   [SupraOracles' docs site](https://supraoracles.com/docs/get-started/) and review the documentation or continue to follow this guide for a quick start.
 
@@ -30,7 +28,11 @@ Add the following code to the solidity smart contract that you wish to retrieve 
 
 ```solidity
 interface ISupraSValueFeed {
-    function checkPrice(string memory marketPair) external view returns (int256 price, uint256 timestamp);
+
+    function getSvalue(uint64 _pairIndex) external view returns (bytes32, bool);
+
+    function getSvalues(uint64[] memory _pairIndexes) external view returns (bytes32[] memory, bool[] memory);
+
 }
 ```
 
@@ -44,9 +46,14 @@ This creates the interface that you will later apply in order to fetch a price f
 
 To fetch the S-Value from a SupraOracles smart contract, you must first find the S-Value Feed Address for the chain of your choice.
 
-For Shardeum Sphinx, the address is 0x700a89Ba8F908af38834B9Aba238b362CFfB665F
+:::info
 
-When you have the proper address, create an instance of the S-Value Feed using the interface we previously defined for Shardeum Sphinx:
+For Shardeum Sphinx Dapp testnet, the address is 0xc85F07Dc3BEcBEAccB53CC82D32423f4EAD59311
+
+:::
+
+
+Now, let's create an instance of the S-Value Feed using the interface we previously defined for Shardeum Sphinx Dapp testnet:
 
 <Tabs>
   <TabItem value="solidity" label="Solidity" default>
@@ -56,7 +63,7 @@ contract ISupraSValueFeedExample {
     ISupraSValueFeed internal sValueFeed;
 
     constructor() {
-        sValueFeed = ISupraSValueFeed(0x700a89Ba8F908af38834B9Aba238b362CFfB665F);
+        sValueFeed = ISupraSValueFeed(0xc85F07Dc3BEcBEAccB53CC82D32423f4EAD59311);
     }
 }
 ```
@@ -64,7 +71,29 @@ contract ISupraSValueFeedExample {
   </TabItem>
 </Tabs>
 
-### Step 3: Get The S-Value Crypto Price
+### Step 3: Add unpack function to decode response for S-Value feed 
+```solidity
+// Some codefunction unpack(bytes32 data) internal pure returns(uint256[4] memory) {
+        uint256[4] memory info;
+
+        info[0] = bytesToUint256(abi.encodePacked(data >> 192));       // round
+        info[1] = bytesToUint256(abi.encodePacked(data << 64 >> 248)); // decimal
+        info[2] = bytesToUint256(abi.encodePacked(data << 72 >> 192)); // timestamp
+        info[3] = bytesToUint256(abi.encodePacked(data << 136 >> 160)); // price
+
+        return info;
+    }
+
+    function bytesToUint256(bytes memory _bs) internal pure returns (uint256 value) {
+        require(_bs.length == 32, "bytes length is not 32.");
+        assembly {
+            value := mload(add(_bs, 0x20))
+        }
+    }
+```
+
+
+### Step 4: Get The S-Value Crypto Price
 
 
 Now you can simply access the S-Value Crypto Price of our supported market pairs. In this step, we'll get the price of ETH/USDT (eth_usdt) by applying the following code to our Smart Contract.
@@ -73,16 +102,30 @@ Now you can simply access the S-Value Crypto Price of our supported market pairs
   <TabItem value="solidity" label="Solidity" default>
 
 ```solidity
-function getEthUsdtPrice() external view returns (int) {
-    (
-        int price,
-        /* uint timestamp */
-    ) = sValueFeed.checkPrice("eth_usdt");
+function getPrice(uint64 _priceIndex) external view returns (uint256[4] memory) {
 
-    return price;
+        (bytes32 val,)= sValueFeed.getSvalue(_priceIndex);
+
+        uint256[4] memory decoded = unpack(val);
+
+        return decoded;
+}
+
+function getPriceForMultiplePair(uint64[] memory _pairIndexes) external view returns (uint256[4][] memory) {
+
+        (bytes32[] memory val, ) = sValueFeed.getSvalues(_pairIndexes);
+
+        uint256[4][] memory decodedArray = new uint256[4][](val.length);
+
+        for(uint i=0; i< val.length; i++){
+
+            uint256[4] memory decoded = unpack(val[i]);
+            decodedArray[i] = decoded;
+        }
+
+        return decodedArray;
 }
 ```
-
   </TabItem>
 </Tabs>
 
@@ -97,31 +140,69 @@ pragma solidity ^0.8.7;
 
 
 interface ISupraSValueFeed {
-    function checkPrice(string memory marketPair) external view returns (int256 price, uint256 timestamp);
+    function getSvalue(uint64 _pairIndex) external view returns (bytes32, bool);
+    function getSvalues(uint64[] memory _pairIndexes) external view returns (bytes32[] memory, bool[] memory);
 }
 
-contract ISupraSValueFeedExample {
+contract SupraSValueFeedExample {
+   
     ISupraSValueFeed internal sValueFeed;
 
     constructor() {
-        sValueFeed = ISupraSValueFeed(0x700a89Ba8F908af38834B9Aba238b362CFfB665F);
+sValueFeed = ISupraSValueFeed(0xc85F07Dc3BEcBEAccB53CC82D32423f4EAD59311);
+}
+
+
+    function unpack(bytes32 data) internal pure returns(uint256[4] memory) {
+        uint256[4] memory info;
+
+        info[0] = bytesToUint256(abi.encodePacked(data >> 192));       // round
+        info[1] = bytesToUint256(abi.encodePacked(data << 64 >> 248)); // decimal
+        info[2] = bytesToUint256(abi.encodePacked(data << 72 >> 192)); // timestamp
+        info[3] = bytesToUint256(abi.encodePacked(data << 136 >> 160)); // price
+
+        return info;
     }
 
-    function getEthUsdtPrice() external view returns (int) {
-        (
-            int price,
-            /* uint timestamp */
-        ) = sValueFeed.checkPrice("eth_usdt");
 
-        return price;
+    function bytesToUint256(bytes memory _bs) internal pure returns (uint256 value) {
+        require(_bs.length == 32, "bytes length is not 32.");
+        assembly {
+            value := mload(add(_bs, 0x20))
+        }
     }
+
+    function getPrice(uint64 _priceIndex) external view returns (uint256[4] memory) {
+
+        (bytes32 val,)= sValueFeed.getSvalue(_priceIndex);
+
+        uint256[4] memory decoded = unpack(val);
+
+        return decoded;
+    }
+
+    function getPriceForMultiplePair(uint64[] memory _pairIndexes) external view returns (uint256[4][] memory) {
+
+        (bytes32[] memory val, ) = sValueFeed.getSvalues(_pairIndexes);
+
+        uint256[4][] memory decodedArray = new uint256[4][](val.length);
+
+        for(uint i=0; i< val.length; i++){
+
+            uint256[4] memory decoded = unpack(val[i]);
+            decodedArray[i] = decoded;
+        }
+
+        return decodedArray;
+    }
+
 }
 ```
 
   </TabItem>
 </Tabs>
 
-Tada! You now have a method in your Smart Contract that you can call at any time to retrieve the price of ETH in USDT!
+Tada! You now have everything setup to call the [Trade Pairs](https://supraoracles.com/docs/price-feeds/trading-pairs) using their respective index numbers.
 
 ### Extra: S-Value Feeds with ethers.js
 
@@ -129,18 +210,36 @@ Tada! You now have a method in your Smart Contract that you can call at any time
   <TabItem value="js" label="Javascript" default>
 
 ```js
-// example assumes that the ethers library has been imported and is accessible within your scope
-const getEthUsdtPrice = async () => {
-  const provider = new ethers.providers.JsonRpcProvider('https://data-seed-prebsc-1-s1.binance.org:8545/')
-  const abi = [{ "inputs": [ { "internalType": "string", "name": "marketPair", "type": "string" } ], "name": "checkPrice", "outputs": [ { "internalType": "int256", "name": "price", "type": "int256" }, { "internalType": "uint256", "name": "timestamp", "type": "uint256" } ], "stateMutability": "view", "type": "function" } ]
-  const address = '0x700a89Ba8F908af38834B9Aba238b362CFfB665F'
-  const sValueFeed = new ethers.Contract(address, abi, provider)
-  const price = (await sValueFeed.checkPrice('eth_usdt')).price
+const ethers = require('ethers');
 
-  console.log(`The price is: ${price.toString()}`)
+// Connect to the provider
+let provider = new ethers.providers.JsonRpcProvider('https://dapps.shardeum.org');
+
+// Contract ABI
+let abi =[INSERT ABI]
+
+// Contract address
+let contractAddress = '0xc85F07Dc3BEcBEAccB53CC82D32423f4EAD59311';
+
+// Instantiate the contract
+let contract = new ethers.Contract(contractAddress, abi, provider);
+
+// Call getPrice method
+async function getPrice(priceIndex) {
+    let result = await contract.getPrice(priceIndex);
+    console.log(result);
 }
 
-getEthUsdtPrice()
+getPrice(1); // Replace 1 with your desired priceIndex
+
+// Call getPriceForMultiplePair method
+async function getPriceForMultiplePairs(pairIndexes) {
+    let result = await contract.getPriceForMultiplePair(pairIndexes);
+    console.log(result);
+}
+
+getPriceForMultiplePairs([1, 2, 3]); // Replace [1, 2, 3] with your desired pairIndexes
+
 ```
 
   </TabItem>
@@ -155,10 +254,10 @@ The Supra Network Activate Program (SNAP) offers companies discounted oracle cre
 
 The SNAP program is partnered with some of Web3's most prolific names who are helping with project selection and qualification.
 
-## Connect with us!
+## Connect with Supra Orcales!
 
 
-Still looking for answers? We got them! Check out all the ways you can reach us:
+Still looking for answers? We got them! Check out all the ways you can reach them:
 
 * Visit us at [supraoracles.com](https://supraoracles.com)
 * Read our [Docs](https://supraoracles.com/docs/overview)
