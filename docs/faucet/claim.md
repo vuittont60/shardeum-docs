@@ -1,7 +1,7 @@
 ---
 title: Claim Testnet SHM
 sidebar_position: 1
-image: /img/claim/SHM_testnet_preview__.jpeg
+image: /img/claim/SHM_testnet_preview.jpeg
 ---
 
 # Claim Testnet SHM
