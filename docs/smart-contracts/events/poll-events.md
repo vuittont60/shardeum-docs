@@ -381,44 +381,46 @@ async function readJSONLoopLatestCycle(totalTransactions,baseUrl) {
 from web3 import Web3
 import time
 import math
-from urllib.request import urlopen
-import json
+import requests  # use requests instead of urllib for simplicity
 
 ShardeumConnectionHTTPS = "https://dapps.shardeum.org";
 web3 = Web3(Web3.HTTPProvider(ShardeumConnectionHTTPS))
 
-print("Connected to Web3? ")
-print(web3.isConnected())
+print("Connected to Web3? ", web3.isConnected())
+print("Chain ID? ", web3.eth.chain_id)
 
-print("Chain ID? ")
-print(web3.eth.chain_id)
-
-addressToSubscribeTo = "0x0000000000000000000000000000000000000000"
+addressToSubscribeTo = "0x1dacbab28decd115c8aa6f183877c71b942ae406"
 
 while True:
-print("Current cycle (1 cycle = 10 blocks [bundles]) ")
-cycle =  (math.floor(web3.eth.blockNumber/10))  #Divide current bundle [block] by 10, then round down to get cycle.
-print(cycle)
+    print("Current cycle (1 cycle = 10 blocks [bundles]) ")
+    cycle =  (math.floor(web3.eth.blockNumber/10))  #Divide current bundle [block] by 10, then round down to get cycle.
+    print(cycle)
 
-transactionsInCycleRangeUrlString = "https://dapps.shardeum.org/api/transaction?startCycle=" + str(cycle) + "&endCycle=" + str(cycle) + "&address=" + addressToSubscribeTo
-print(transactionsInCycleRangeUrlString)
-transactionsInCycleRangeUrlOpened = urlopen(transactionsInCycleRangeUrlString)
-transactionsInCycleRangeUrlJSON = json.loads(transactionsInCycleRangeUrlOpened.read())
-totalTransactions = transactionsInCycleRangeUrlJSON["totalTransactions"]
-print(totalTransactions)
-pageIndex = 1
+    transactionsInCycleRangeUrlString = "https://explorer-dapps.shardeum.org/api/transaction?startCycle=" + str(cycle) + "&endCycle=" + str(cycle) + "&address=" + addressToSubscribeTo 
+    print(transactionsInCycleRangeUrlString)
 
-while totalTransactions > 0:
-    print(pageIndex)
+    response = requests.get(transactionsInCycleRangeUrlString)
+    transactionsInCycleRangeUrlJSON = response.json()
+    totalTransactions = transactionsInCycleRangeUrlJSON["totalTransactions"]
     print(totalTransactions)
-    pageIndexIncrementUrlString = transactionsInCycleRangeUrlString + "&page=" + str(pageIndex)
-    pageIndexIncrementUrlOpened = urlopen(pageIndexIncrementUrlString)
-    rawTransactionDataPage = json.loads(pageIndexIncrementUrlOpened.read())
-    print(rawTransactionDataPage)
-    totalTransactions -= 10
-    pageIndex += 1
+    
+    pageIndex = 1
 
-time.sleep(60)   #1 cycle roughly every 60 seconds based on explorer: https://explorer-liberty20.shardeum.org/cycle
+    while totalTransactions > 0:
+        print(pageIndex)
+        print(totalTransactions)
+        
+        pageIndexIncrementUrlString = transactionsInCycleRangeUrlString + "&page=" + str(pageIndex)
+        response = requests.get(pageIndexIncrementUrlString)
+        rawTransactionDataPage = response.json()
+        
+        # Pretty print the JSON data
+        print(json.dumps(rawTransactionDataPage, indent=4))
+        
+        totalTransactions -= 10
+        pageIndex += 1
+
+    time.sleep(60)   
 ```
 
   </TabItem>
