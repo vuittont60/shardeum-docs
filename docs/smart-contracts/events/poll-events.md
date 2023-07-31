@@ -115,12 +115,13 @@ async function getTransactionsToAddressCycleRange(baseUrl) {
   <TabItem value="python" label="Python" default>
 
 ```python
-from urllib.request import urlopen
+import requests
 import json
 
 transactionsInCycleRangeUrlString = "https://explorer-dapps.shardeum.org/api/transaction?startCycle=19020&endCycle=19045&address=0x245E2395712F888CeD1033C924115105dC32e388"
-transactionsInCycleRangeUrlOpened = urlopen(transactionsInCycleRangeUrlString)
-transactionsInCycleRangeUrlJSON = json.loads(transactionsInCycleRangeUrlOpened.read())
+
+response = requests.get(transactionsInCycleRangeUrlString)
+transactionsInCycleRangeUrlJSON = response.json()
 totalTransactions = transactionsInCycleRangeUrlJSON["totalTransactions"]
 print(totalTransactions)
 pageIndex = 1
@@ -128,10 +129,14 @@ pageIndex = 1
 while totalTransactions > 0:
     print(pageIndex)
     print(totalTransactions)
+    
     pageIndexIncrementUrlString = transactionsInCycleRangeUrlString + "&page=" + str(pageIndex)
-    pageIndexIncrementUrlOpened = urlopen(pageIndexIncrementUrlString)
-    rawTransactionDataPage = json.loads(pageIndexIncrementUrlOpened.read())
-    print(rawTransactionDataPage)
+    response = requests.get(pageIndexIncrementUrlString)
+    rawTransactionDataPage = response.json()
+    
+    # Pretty print the JSON data
+    print(json.dumps(rawTransactionDataPage, indent=4))
+    
     totalTransactions -= 10
     pageIndex += 1
 ```
