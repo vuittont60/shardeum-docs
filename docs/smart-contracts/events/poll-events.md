@@ -12,7 +12,7 @@ Smart contract events broadcast new data coming from a contract.
 
 ## Why are smart contract events important?
 
-Smart contract event listening notifies applications and users in real time that something new has happened in a smart contract.
+Smart contract event listening notifies applications and users in real-time that something new has happened in a smart contract.
 
 ## Where are events used in smart contract applications?
 
@@ -30,8 +30,7 @@ Chainlink oracle nodes also depend on smart contract events to know when to comm
 
 ## Websockets
 
-We are planning to add websocket RPC URL support in the future to subscribe to smart contract events.
-This way, users will be able to save API calls instead of polling for new data every new block/bundle/cycle.
+Shardeum supports standard EVM-specific Websockets features. Websockets details can be found [here].(https://docs.shardeum.org/network/endpoints)
 
 ## Polling
 
