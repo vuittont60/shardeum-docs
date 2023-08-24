@@ -154,7 +154,7 @@ module.exports = {
               },
               {
                 label: 'FAQs',
-                to: 'https://docs.google.com/document/d/1RilXqwJN6hupaKdrXhk2RF9gl_DS5qY3uPm6iII3Xyg/edit?usp=sharing',
+                to: 'https://shardeum.org/explore/faqs/general/',
               },
               {
                 label: 'Brand Assets Page',
