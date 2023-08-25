@@ -112,6 +112,10 @@ module.exports = {
                 to: 'https://shardeum.org',
               },
               {
+                label: 'Mainnet Roadmap',
+                to: 'https://shardeum.org/roadmap/mainnet/',
+              },
+              {
                 href: '/faucet/claim',
                 label: 'Claim 100 Testnet SHM',
                 position: 'left',
@@ -172,6 +176,10 @@ module.exports = {
               {
                 label: 'General Inquiries',
                 to: 'mailto:hi@shardeum.org',
+              },
+               {
+                label: 'Partnership Enquiries',
+                to: 'https://shm.gg/partnership-form',
               },
               {
                 label: 'GitHub',
