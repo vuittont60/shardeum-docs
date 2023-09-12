@@ -22,7 +22,7 @@ Therefore, you no longer need to specify the accessList for these networks with 
 This document is useful for: 
 
 -educational purposes  
--situations where the automated accessList fails and you need to specifiy the accessList directly
+-situations where the automated accessList fails and you need to specify the accessList directly
 
 
 ## Where is EIP-2930 data located for a transaction?
