@@ -8,6 +8,8 @@ export default function connectToSphinx() {
   const currencyName = 'SHM';
   const currencySymbol = 'SHM';
   const explorerURL = 'https://explorer-sphinx.shardeum.org/';
+  const iconUrls='https://ipfs.io/ipfs/QmRVnDJue9wyEq8zBhvm24W1sLUcdGqLhTMpso6GoJVkzf';
+
 
   const addNetwork = async () => {
     if (!window.ethereum) {
@@ -27,6 +29,7 @@ export default function connectToSphinx() {
             chainName: networkName,
             rpcUrls: [rpcURL],
             blockExplorerUrls: [explorerURL],
+            iconUrls: [iconUrls],
             nativeCurrency: {
               name: currencyName,
               symbol: currencySymbol, // 2-6 characters long

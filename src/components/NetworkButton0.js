@@ -8,6 +8,7 @@ export default function connectToLiberty0() {
   const currencyName = 'SHM';
   const currencySymbol = 'SHM';
   const explorerURL = 'https://explorer-dapps.shardeum.org';
+  const logo='https://ipfs.io/ipfs/QmRVnDJue9wyEq8zBhvm24W1sLUcdGqLhTMpso6GoJVkzf';
 
   const addNetwork = async () => {
     if (!window.ethereum) {
@@ -27,6 +28,7 @@ export default function connectToLiberty0() {
             chainName: networkName,
             rpcUrls: [rpcURL],
             blockExplorerUrls: [explorerURL],
+            iconUrls: [logo],
             nativeCurrency: {
               name: currencyName,
               symbol: currencySymbol, // 2-6 characters long

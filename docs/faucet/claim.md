@@ -5,6 +5,8 @@ image: /img/claim/SHM_testnet_preview.jpg
 ---
 
 # Claim Testnet SHM
+![SHM_testnet_preview](/img/claim/SHM_testnet_preview.jpg)
+
 
 ## Shardeum Discord Faucet
 
@@ -40,49 +42,6 @@ Video tutorial on using Shardeum Discord Faucet:
   frameBorder="0">
   </iframe>
 
-## Shardeum Faucet Website
-
-1. After adding the Shardeum Sphinx networks to popular wallets such as MetaMask ([guide here](/wallets/MetaMask/add-shardeum-network)), you can claim testnet SHM from the faucet. The SHM can then be used to deploy smart contracts and build dApps on Sphinx testnet.
-
-2. Visit the respective Shardeum faucet website:
-
-  Shardeum Validator Sphinx 1.X
-
-  https://faucet-sphinx.shardeum.org/
-
-  Shardeum Dapp Sphinx 1.X
-
-  https://faucet-dapps.shardeum.org/
-
-![claim_1](/img/claim/sphinxfaucet.png)
-
-3. Click the “Tweet Now” link on the page.
-
-![claim_8](/img/claim/claim_8.jpg)
-
-*Tweet required to avoid malicious activities or abuse of the faucet and to spread Shardeum/its mission to bring decentralization to everyone
-
-4. Twitter will automatically open with a pre-populated tweet. Replace the blank address: 0x0000000000000000000000000000000000000000, with your account address and post the tweet.
-
-![claim_2](/img/claim/claim_2.jpg)
-
-5. Click on the tweet to visit its particular tweet URL.
-
-![claim_3](/img/claim/claim_3.jpg)
-
-6. Copy the tweet URL.
-
-![claim_5](/img/claim/claim_5.jpg)
-
-7. Paste the copied URL into the Shardeum faucet page and request SHM.
-
-![claim_4](/img/claim/claim_4.jpg)
-![claim_6](/img/claim/claim_6.jpg)
-
-8. A pop-up message will appear if the request is successful and testnet SHM will arrive in your wallet shortly.
-
-![claim_7](/img/claim/claim_7.jpg)
-
 ## Chaindrop Faucet Website
 
 1. Visit the Chaindrop faucet and select shardeum network:
@@ -97,18 +56,6 @@ https://chaindrop.org/?chainid=8082&token=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 2. Enter valid wallet address and complete the captcha and click send to receive tokens.
 
 ![chaindrop_3](/img/chaindrop/chaindrop_3.jpg)
-
-## Get-SHM Faucet Website
-
-1. Visit the faucet Sphinx 1.X:
-
-https://get-shm.online/
-
-2. Enter a valid wallet address and click "Get tokens" to receive tokens
-
-![get_shm_1](/img/get_shm/get_shm_1.jpg)
-
-3. Try again if you get an error
 
 ## DotShm Faucet Website
 
