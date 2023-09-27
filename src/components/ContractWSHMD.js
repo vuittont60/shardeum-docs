@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function ContractComponent() {
-  const tokenAddress = '0x1dacbab28decd115c8aa6f183877c71b942ae406'; 
+  const tokenAddress = '0x1DAcbaB28Decd115c8AA6F183877C71b942aE406'; 
   const tokenSymbol = 'WSHM';
   const tokenDecimals = 18;
   const tokenImage = 'https://www.redwolf.in/image/catalog/marketplace/shardeum/shardeum-artist-image.png'; 
