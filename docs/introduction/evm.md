@@ -17,12 +17,12 @@ If you are one of those Ethereum or Ethereum-based developers, please note that 
 
 
 <iframe id="ytplayer" type="text/html"
-  class="video"
-  src="https://www.youtube.com/embed/XTlT3I-Iy5o?autoplay=0&mute=0"
-  allowFullScreen="allowFullScreen"
-  mozallowfullscreen="mozallowfullscreen"
-  msallowfullscreen="msallowfullscreen"
-  oallowfullscreen="oallowfullscreen"
-  webkitallowfullscreen="webkitallowfullscreen"
-  frameBorder="0">
-  </iframe>
+class="video"
+src="https://www.youtube.com/embed/XTlT3I-Iy5o?autoplay=0&mute=0"
+allowFullScreen="allowFullScreen"
+mozallowfullscreen="mozallowfullscreen"
+msallowfullscreen="msallowfullscreen"
+oallowfullscreen="oallowfullscreen"
+webkitallowfullscreen="webkitallowfullscreen"
+frameBorder="0">
+</iframe>
