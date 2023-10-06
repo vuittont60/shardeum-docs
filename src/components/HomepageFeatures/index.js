@@ -69,7 +69,7 @@ const FeatureList = [
         alink:"/faucet/claim",
     },
     {
-        title: 'Deploy Smart Contracts',
+        title:'Deploy Smart Contracts',
         icon: <FaFileContract style={stylecard.iconStyle}/> ,
         description: (
             <>
@@ -84,12 +84,12 @@ function BigFeature({ title,icon, description,alink}) {
     return (
         <div className={clsx('col col--6')}>
             <div  className="card bigcard" onClick={()=>{location.href=alink}}>
-                <div className="card-header">
-                    <h3 >{icon} {title}</h3>
-                    <div className='card-body'>
-                        <p className={styles.description}>{description}</p>
-                    </div>
+
+
+                <div className='card-body'>
+                    <p className='big-icon'>{icon}</p><p className='big-text'>{title}</p>
                 </div>
+
             </div>
         </div>
     );
@@ -98,12 +98,12 @@ function Feature({ title, icon, description,alink}) {
     return (
         <div className={clsx('col col--4')}>
             <div className='card smallcard' onClick={()=>{location.href=alink}}>
-                <div className="card-header">
-                    <h3>{icon}{title}</h3>
-                    <div className='card-body'>
-                        <p className={styles.smalldescription}>{description}</p>
-                    </div>
+
+
+                <div className='card-body'>
+                    <p className='small-icon'>{icon}</p><p className='small-text'>{title}</p>
                 </div>
+
             </div>
         </div>
     );

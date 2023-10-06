@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 
 # What is Sharding?
-![Shards](../../static/img/shards.png)
+
 
 Sharding is a network architecture that enables parallel processing to achieve increased transaction throughput and greater performance. It involves breaking the network into smaller, more manageable pieces called "shards." Each shard processes a portion of the network's transactions independently, thus allowing for parallel processing and increasing the network's overall capacity.
 
@@ -15,7 +15,7 @@ Sharding helps mitigate the performance challenges that unsharded blockchain net
 | Network Sharding  | Transaction Sharding      |  Data Sharding | State Sharding|
 |:----------|:-------------|:------|::-------|
 | Operates Independently | Store entire block chain | Data partitioned into parts |Blockchain state divided into segement|
-| Has its own consesus algorithim | Process transaction assinged to the shard   |  Store a part of data | Each shard maintains a segement  |
+| Has its own consesus algorithim | Process transaction assinged to the shard   |  Store a part of data | Each shard maintains a segment  |
 | Has own ledger & transaction pool| Validate transaction assigned to the shard |   Maintain a part of data | Reduce computational requirement|
 |Process more transactions| Cross shard transction requires additional step | Fast data access and retrieval|  Esay to participate   |
 

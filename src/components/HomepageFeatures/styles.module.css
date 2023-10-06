@@ -29,6 +29,10 @@
 .smalldescription:hover{
   color:#00FF00
 }
+.h3-text{
+  font-weight: 900;
+}
+
 @media screen and (max-width: 500px) {
   .description{
     font-size: medium;

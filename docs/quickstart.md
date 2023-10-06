@@ -4,8 +4,7 @@ sidebar_position: 1
 slug: /quickstart
 ---
 
-![Shardeum Docs](../static/img/shardeum_documentation_grey_new_balanced_shade.png)
-
+![Shardeum Docs](../static/img/shardeum_documentation_light.png/#gh-light-mode-only)
 
 
 ## Shardeum Overview
@@ -13,7 +12,6 @@ slug: /quickstart
 
 Shardeum is an EVM Compatible L1 blockchain that uses dynamic state sharding to keep transaction fees low forever.
 
-[What is Shardeum?](/introduction/what-is-shardeum)
 ### Why Shardeum?
 
 **EVM Compatibility:** Shardeum is tailor-made for those familiar with Ethereum's virtual machine, ensuring a smooth transition and user-friendly experience.
