@@ -306,10 +306,16 @@ img[alt*="claim_8"] {
   transition: all 0.25s linear;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
 
+
 }
 .card:hover{
   box-shadow: -1px 10px 10px 10px rgba(0, 0, 0, 0.8);
   cursor: pointer;
+}
+[data-theme=light] .card {
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #000000;
 }
 [data-theme=dark] .card {
   transition: all 0.25s linear;
@@ -321,7 +327,7 @@ img[alt*="claim_8"] {
   cursor: pointer;
 }
 
-.card-body{
+.card-header{
   display: flex;
   flex-direction: row;
   column-gap: 10px;
@@ -329,13 +335,10 @@ img[alt*="claim_8"] {
   font-size: 1.5rem;
 }
 .bigcard{
-  height:250px;
-  padding-left: 2rem;
-}
-.smallcard{
   height:200px;
   padding-left: 2rem;
 }
+
 p.big-text{
   font-size: 1.5rem;
 }
@@ -350,19 +353,15 @@ p.small-icon{
 }
 @media (max-width: 590px) {
   .card{
-    padding: 1rem;
+    padding: 2rem;
 
   }
   .bigcard{
     margin-top: 20px;
     padding-left: 1rem;
-    height: 150px;
+    height: 200px;
   }
-  .smallcard{
-    margin-top: 20px;
-    padding-left: 1rem;
-    height: 100px;
-  }
+
   .footer{
     padding-left:0px;
     .footer__title{
@@ -394,9 +393,7 @@ p.small-icon{
 
   }
   .smallcard{
-    margin-top: 20px;
-    padding-left: 1rem;
-    height: 100px;
+    margin-top:10px ;
   }
   .footer{
     padding-left:0px;
@@ -410,12 +407,7 @@ p.small-icon{
   p.big-icon{
     font-size: 1rem;
   }
-  p.small-text{
-    font-size: 1.5rem;
-  }
-  p.small-icon{
-    font-size: 1.5rem;
-  }
+
 
 }
 

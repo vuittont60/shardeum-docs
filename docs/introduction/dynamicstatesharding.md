@@ -8,12 +8,11 @@ sidebar_position: 3
 There are two types of State Sharding - **Static State Sharding** & **Dynamic State Sharding**.
 
 | Static Sharding| Dynamic Sharding |
-| :---       |    :----   | 
+|:-----------       |:------------   | 
 |  Limited scalability     | Scalable   | 
-|  Number of shards is fixed |  Number of shards  changes dynamically       | 
+|  Number of shards is fixed/doesn't change | Number of shards changes dynamically| 
 |Same address range   |   Different address range.     |
-|  Simple to implement and manage |    Requires advance knowledge of distributed systems    |
-| Reduce latency     |    Higher latency    |
+
 
 
 The most general approach to sharding is to divide the address space of accounts into multiple fixed-size regions called shards, and nodes in the network are assigned to different shards.

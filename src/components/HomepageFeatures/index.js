@@ -16,19 +16,16 @@ const BigFeatureList=[
         icon:<HiDocumentSearch style={stylecard.iconStyle}/> ,
         description: (
             <>
-                Shardeum is an EVM based L1 that uses dynamic state sharding to achieve linearly scalability while attaining atomic composability across shards.
-                This means Shardeum can increase its TPS capacity with each validator added to the network to retain low fees forever.
-
+                Learn more about Shardeum Architecture, Dynamic State Sharding
             </>
         ),
         alink:"/introduction/what-is-shardeum",
     },
-    { title: 'How to Run a Validator Node',
+    { title: 'Run a Validator Node',
         icon: <BsFillFileEarmarkPlayFill style={stylecard.iconStyle} />,
         description: (
             <>
-                Shardeum validators perform consensus on transactions. Shardeum validators with honest transaction consensus earn testnet SHM.
-                Shardeum validators with dishonest transaction consensus will have their testnet SHM slashed.
+                Learn how to run Shardeum Validator node, earn testnet SHM
             </>
         ),
         alink: "/node/run/validator",
@@ -46,7 +43,7 @@ const FeatureList = [
 
 
 
-                Learn how to connect to Network
+                Learn how to connect to Shardeum Network, create and view transactions
             </>
         ),
         alink:'/network/explorer'
@@ -56,7 +53,7 @@ const FeatureList = [
         icon: <LuBaggageClaim style={stylecard.iconStyle}/>,
         description: (
             <>
-                Join the Shardeum Discord to Claim SphinX SHM, accept the invitation of Shardeum Discord.
+                Join the Shardeum Discord to Claim SphinX SHM
 
 
 
@@ -73,8 +70,7 @@ const FeatureList = [
         icon: <FaFileContract style={stylecard.iconStyle}/> ,
         description: (
             <>
-                Having contracts deployed at the same address cross chain makes it very easy to find contracts.
-
+                Create and deploy smart contract on Shardeum Network
             </>
         ),
         alink:'/smart-contracts/deploy/same-address',
@@ -85,9 +81,11 @@ function BigFeature({ title,icon, description,alink}) {
         <div className={clsx('col col--6')}>
             <div  className="card bigcard" onClick={()=>{location.href=alink}}>
 
-
-                <div className='card-body'>
+                <div className='card-header'>
                     <p className='big-icon'>{icon}</p><p className='big-text'>{title}</p>
+                </div>
+                <div className='card-body'>
+                    <p className={styles.bigdescription}>{description}</p>
                 </div>
 
             </div>
@@ -98,10 +96,12 @@ function Feature({ title, icon, description,alink}) {
     return (
         <div className={clsx('col col--4')}>
             <div className='card smallcard' onClick={()=>{location.href=alink}}>
-
+                <div className='card-header'>
+                    <p className='small-icon'>{icon}</p><p className='small-text'>{title}</p>
+                </div>
 
                 <div className='card-body'>
-                    <p className='small-icon'>{icon}</p><p className='small-text'>{title}</p>
+                    <p className={styles.smalldescription}>{description}</p>
                 </div>
 
             </div>
