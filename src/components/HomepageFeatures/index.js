@@ -13,7 +13,7 @@ const stylecard={
 }
 const BigFeatureList=[
     {title: "Shardeum Overview",
-        icon:<HiDocumentSearch style={stylecard.iconStyle}/> ,
+        icon:<HiDocumentSearch  style={stylecard.iconStyle}/> ,
         description: (
             <>
                 Learn more about Shardeum Architecture, Dynamic State Sharding
@@ -22,7 +22,7 @@ const BigFeatureList=[
         alink:"/introduction/what-is-shardeum",
     },
     { title: 'Run a Validator Node',
-        icon: <BsFillFileEarmarkPlayFill style={stylecard.iconStyle} />,
+        icon: <BsFillFileEarmarkPlayFill  style={stylecard.iconStyle} />,
         description: (
             <>
                 Learn how to run Shardeum Validator node, earn testnet SHM
@@ -37,20 +37,20 @@ const FeatureList = [
 
     {
         title: 'Network Setup',
-        icon:<PiShareNetworkBold style={stylecard.iconStyle}/> ,
+        icon:<PiShareNetworkBold  style={stylecard.iconStyle}/> ,
         description: (
             <>
 
 
 
-                Learn how to connect to Shardeum Network, create and view transactions
+                Learn how to connect to Shardeum Network
             </>
         ),
         alink:'/network/explorer'
     },
     {
         title: ' Faucet Claim',
-        icon: <LuBaggageClaim style={stylecard.iconStyle}/>,
+        icon: <LuBaggageClaim  style={stylecard.iconStyle}/>,
         description: (
             <>
                 Join the Shardeum Discord to Claim SphinX SHM
@@ -67,7 +67,7 @@ const FeatureList = [
     },
     {
         title:'Deploy Smart Contracts',
-        icon: <FaFileContract style={stylecard.iconStyle}/> ,
+        icon: <FaFileContract  style={stylecard.iconStyle}/> ,
         description: (
             <>
                 Create and deploy smart contract on Shardeum Network
@@ -81,11 +81,11 @@ function BigFeature({ title,icon, description,alink}) {
         <div className={clsx('col col--6')}>
             <div  className="card bigcard" onClick={()=>{location.href=alink}}>
 
-                <div className='card-header'>
-                    <p className='big-icon'>{icon}</p><p className='big-text'>{title}</p>
+                <div className='card__header'>
+                    <h3>{icon} {title}</h3>
                 </div>
-                <div className='card-body'>
-                    <p className={styles.bigdescription}>{description}</p>
+                <div className='card__body'>
+                    <p >{description}</p>
                 </div>
 
             </div>
@@ -96,12 +96,12 @@ function Feature({ title, icon, description,alink}) {
     return (
         <div className={clsx('col col--4')}>
             <div className='card smallcard' onClick={()=>{location.href=alink}}>
-                <div className='card-header'>
-                    <p className='small-icon'>{icon}</p><p className='small-text'>{title}</p>
+                <div className='card__header'>
+                    <h4>{icon} {title}</h4>
                 </div>
 
-                <div className='card-body'>
-                    <p className={styles.smalldescription}>{description}</p>
+                <div className='card__body'>
+                    <p >{description}</p>
                 </div>
 
             </div>

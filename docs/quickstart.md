@@ -4,7 +4,7 @@ sidebar_position: 1
 slug: /quickstart
 ---
 
-![Shardeum Docs](../static/img/shardeum_documentation_light.png/#gh-light-mode-only)
+
 
 
 ## Shardeum Overview

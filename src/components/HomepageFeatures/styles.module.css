@@ -13,12 +13,12 @@
   height: 200px;
   width: 200px;
 }
-.description{
+.bigdescription{
   text-align: justify;
   font-size: large;
 
 }
-.description:hover{
+.bigdescription:hover{
   color:#00FF00
 }
 .smalldescription{
@@ -32,9 +32,13 @@
 .h3-text{
   font-weight: 900;
 }
+.bigtitle{
+  font-size: large;
+  font-weight: 800;
+}
 
 @media screen and (max-width: 500px) {
-  .description{
+  .bigdescription{
     font-size: medium;
 
 
@@ -46,10 +50,14 @@
   }
 }
 @media screen and (max-width: 900px) {
-  .description{
+  .bigdescription{
     font-size: large;
 
 
+  }
+  .bigtitle{
+    font-size: x-large;
+    font-weight: 800;
   }
   .smalldescription{
 
