@@ -1,18 +1,37 @@
 ---
 title: Quickstart
 sidebar_position: 1
-slug: /
+slug: /quickstart
 ---
 
-# Quickstart
+
+
 
 ## Shardeum Overview
 
-Shardeum is a blockchain that supports EVM smart contracts.
 
-For more general information on Shardeum:
+Shardeum is an EVM Compatible L1 blockchain that uses dynamic state sharding to keep transaction fees low forever.
 
-[What is Shardeum?](/introduction/what-is-shardeum)
+### Why Shardeum?
+
+**EVM Compatibility:** Shardeum is tailor-made for those familiar with Ethereum's virtual machine, ensuring a smooth transition and user-friendly experience.
+
+**Low Gas Fees:** Experience minimal transaction costs, making decentralized applications more accessible and cost-effective.
+
+**True Decentralization:** Shardeum stands firm on its commitment to decentralization, ensuring a platform where everyone has a voice.
+
+**Robust Security:** With token slashing implemented in Quorum, malicious activities by validators are deterred, ensuring a trustworthy network.
+
+**Dynamic State Sharding:** Shardeum's use of dynamic state sharding ensures unparalleled scalability, processing more transactions per second than many competitors.
+
+**Proof of Quorum:** A unique consensus mechanism that combines the best of proof of stake and proof of Quorum, ensuring faster and more secure transactions.
+
+**Seamless Transition:** Developers can effortlessly deploy their Ethereum-based smart contracts to Shardeum, expanding their reach and impact.
+
+**Wallet Support:** No need for additional downloads; Shardeum supports wallets based on EVM by default, streamlining user experience.{#textid}
+
+**Community-Centric:** Built and developed by a global community of developers and shardians, Shardeum is more than a platform; it's a movement.
+
 
 ## Cross Shard Composability with Linear Scaling
 
@@ -31,9 +50,9 @@ Running nodes:
 
 You will need an EVM wallet like Metamask to:
 
-      -pay for transaction gas fees
-      -transfer tokens
-      -interact with smart contracts
+- pay for transaction gas fees
+- transfer tokens
+- interact with smart contracts
 
 For more info on Metamask:
 
@@ -91,7 +110,7 @@ Popular tokens supported on Shardeum:
 ## Cross Shard Composability Communication With EIP-2930
 
 Smart contract addresses that don't have the same prefix are deployed to different shards.
-The EIP-2930 accessList is used for shard routing contracts on different shards and is automated inside Shardeum nodes. 
+The EIP-2930 accessList is used for shard routing contracts on different shards and is automated inside Shardeum nodes.
 
 For more info on how the EIP-2930 accessList works on Shardeum:
 
