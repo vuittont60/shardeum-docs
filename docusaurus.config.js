@@ -42,14 +42,14 @@ module.exports = {
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       ({
-        announcementBar: {
-          id: 'newsletter',
-          content:
-              '<p class="text-newsletter">Sign up for Shardeum Developer newsletter <a target="_blank" rel="noopener noreferrer" href="https://shardeum.org/developer-newsletter" class="btn-newsletter">Register for free</a></p>',
-          backgroundColor: '#00FF00',
-          textColor: '#000000',
-          isCloseable: true,
-        },
+        /* announcementBar: {
+           id: 'newsletter',
+           content:
+             '<p class="text-newsletter">Sign up for Shardeum Developer newsletter <a target="_blank" rel="noopener noreferrer" href="https://shardeum.org/developer-newsletter" class="btn-newsletter">Register for free</a></p>',
+           backgroundColor: '#00FF00',
+           textColor: '#000000',
+           isCloseable: true,
+         },*/
         algolia: {
           appId: "CK38X87BB3",
           apiKey: "6d53d06cfe9c8cb794826061687d47b5",
