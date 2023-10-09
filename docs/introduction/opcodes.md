@@ -3,6 +3,7 @@ title: Shardeum Opcodes
 sidebar_position: 5
 ---
 
+
 # Shardeum Opcodes
 
 Blocks work differently in Shardeum because transactions are processed individually and not grouped into blocks. However, generating blocks at a specific interval is still required to support the existing smart contracts, which use block-related opcodes and comply with the JSON RPC specifications.
