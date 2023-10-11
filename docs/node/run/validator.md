@@ -18,7 +18,7 @@ export const Validator=()=>(
 <a className="vlink" href="#uninstall-validator"> Uninstall Validator</a >
 </div>
 <div  className="card validatorcard">
-<a className="vlink" href="#step-3-open-validator-cli"> Validator Cli Commands</a >
+<a className="vlink" href="#step-3-open-validator-cli"> Validator CLI Commands</a >
 </div>
 <div  className="card validatorcard">
 <a className="vlink" href="#how-do-i-run-a-validator-on-shardeum"> Dashboard Overview</a >

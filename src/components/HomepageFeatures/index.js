@@ -28,7 +28,7 @@ const BigFeatureList=[
                 Contribute to network security and earn rewards in few easy steps.
             </>
         ),
-        alink: "/node/run/rpc",
+        alink: '/node/run/validator',
 
     }
 ]
@@ -46,7 +46,7 @@ const FeatureList = [
                 Access the Shardeum network in a few clicks.
             </>
         ),
-        alink:'/network/explorer'
+        alink:'/network/endpoints'
     },
     {
         title: ' Faucet Claim',

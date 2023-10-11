@@ -6,12 +6,10 @@ sidebar_position: 3
 export const DynamicTable=()=>(
 <table>
 <tr><th>Static Sharding</th><th>Dynamic Sharding</th></tr>
-<tr><td>Shardeum Pre-exist</td><td>One Dynamic shard is foprmed in real-time for every transaction</td></tr>
-<tr><td>Shards address space is pre-determined </td><td>  Shards address space is the transaction access list</td></tr>
-<tr><td>Possible for one shard to not have complete transaction state</td><td> Dynamic Shard has complete transaction State</td></tr>
-<tr><td>Transactions involving accounts on multiple Shards are processed asynchronously across shards</td><td>  Dynamic shards process transaction atomically</td></tr>
-<tr><td> Not composable in cross shard transactions</td><td>Atomic composability</td></tr>
-<tr><td>Dosen't require access list</td><td>Require access list </td></tr>
+<tr><td>Shards pre-exist</td><td>Shards are formed as needed</td></tr>
+<tr><td>Shards address space is pre-determined </td><td>  Shards address space is variable</td></tr>
+<tr><td>Asynchronous processing of multi-shard transaction</td><td> Synchronous processing of multi-shard transactions</td></tr>
+<tr><td> No composability for cross shard transactions</td><td>Atomic composability for all transactions</td></tr>
 </table>
     );
 
