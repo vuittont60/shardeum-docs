@@ -6,7 +6,34 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+export const Validator=()=>(
+<div className="validatorcontainer">
+<div className="card validatorcard">
+<a className="vlink" href="#how-do-i-run-a-validator-on-shardeum">Install Validator</a >
+</div>
+<div className="card validatorcard">
+<a className="vlink" href="#update">Update Existing Validator</a >
+</div>
+<div className="card validatorcard">
+<a className="vlink" href="#uninstall-validator"> Uninstall Validator</a >
+</div>
+<div  className="card validatorcard">
+<a className="vlink" href="#step-3-open-validator-cli"> Validator Cli Commands</a >
+</div>
+<div  className="card validatorcard">
+<a className="vlink" href="#how-do-i-run-a-validator-on-shardeum"> Dashboard Overview</a >
+</div>
+</div>
+    );
+
+
 # How to run a validator node
+
+
+<Validator />
+
+
+
 
 ## Benefits of operating a validator
 
@@ -637,8 +664,8 @@ When you click "Add Stake", you will see the following:
 This example has filled in 10 SHM tokens to stake.
 
 :::tip
-It is recommended to stake just 10 SHM per Validator node, 
-since rewards will be the same with 10 SHM or more staked for a Validator. 
+It is recommended to stake just 10 SHM per Validator node,
+since rewards will be the same with 10 SHM or more staked for a Validator.
 :::
 
 Once all fields are filled, click the “Stake” button.
@@ -749,8 +776,8 @@ operator-cli unstake
 ### Version
 
 :::warning
-New validator versions will be released over time. 
-It is necessary to keep your validator updated 
+New validator versions will be released over time.
+It is necessary to keep your validator updated
 by checking the minimum version required and your current version periodically.
 :::
 
@@ -776,7 +803,7 @@ curl <server_ip>:9001/nodeinfo
 ### Update
 
 - Stop your validator before updating (you don't need to unstake though)
-- In your terminal, first exit from the container using 
+- In your terminal, first exit from the container using
 
 ```shell
 exit
@@ -823,7 +850,7 @@ Navigate to the .shardeum directory by entering:
 ```shell
 cd .shardeum
 ```
-Execute the shell.sh script by entering: 
+Execute the shell.sh script by entering:
 ```shell
 ./shell.sh
 ```

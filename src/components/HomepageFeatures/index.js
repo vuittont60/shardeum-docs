@@ -16,7 +16,7 @@ const BigFeatureList=[
         icon:<HiDocumentSearch  style={stylecard.iconStyle}/> ,
         description: (
             <>
-                Learn more about Shardeum Architecture, Dynamic State Sharding
+                Grasp the innovative features of Shardeum to build app that scale.
             </>
         ),
         alink:"/introduction/what-is-shardeum",
@@ -25,10 +25,10 @@ const BigFeatureList=[
         icon: <BsFillFileEarmarkPlayFill  style={stylecard.iconStyle} />,
         description: (
             <>
-                Learn how to run Shardeum Validator node, earn testnet SHM
+                Contribute to network security and earn rewards in few easy steps.
             </>
         ),
-        alink: "/node/run/validator",
+        alink: "/node/run/rpc",
 
     }
 ]
@@ -43,7 +43,7 @@ const FeatureList = [
 
 
 
-                Learn how to connect to Shardeum Network
+                Access the Shardeum network in a few clicks.
             </>
         ),
         alink:'/network/explorer'
@@ -53,8 +53,7 @@ const FeatureList = [
         icon: <LuBaggageClaim  style={stylecard.iconStyle}/>,
         description: (
             <>
-                Join the Shardeum Discord to Claim SphinX SHM
-
+                Get test SHM for the Shardeum testnet
 
 
             </>
@@ -70,7 +69,7 @@ const FeatureList = [
         icon: <FaFileContract  style={stylecard.iconStyle}/> ,
         description: (
             <>
-                Create and deploy smart contract on Shardeum Network
+                Build scalable protocols on Shardeum with smart protocols
             </>
         ),
         alink:'/smart-contracts/deploy/same-address',
