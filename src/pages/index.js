@@ -11,9 +11,11 @@ function Page(){
 
     return(
         <Layout>
-            <header  >
-                <div className={styles.heroBanner}>Welcome to Shardeum Docs</div>
-                <div className={styles.subheroBanner}>Shardeum is an EVM based L1 that uses dynamic state sharding to achieve linearly scalability</div>
+
+            <header >
+
+                <div className={styles.heroBanner}>Get Started Building on Shardeum</div>
+                <div className={styles.subheroBanner}>Shardeum is a dynamic state sharded EVM-based L1 with low transaction fees forever</div>
             </header>
             <HomepageFeatures  />
         </Layout>
