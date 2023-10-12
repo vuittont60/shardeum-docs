@@ -299,6 +299,19 @@ img[alt*="claim_8"] {
     a{ font-size: large;}
   }
 }
+table{
+  table-layout:fixed;
+  width:100%;
+
+}
+
+td,th{
+  width:25%;
+
+}
+table,th,td{
+  border-collapse: collapse;
+}
 @keyframes bar {
   from {
     opacity: 0;
@@ -386,10 +399,20 @@ p.text-newsletter{
   font-size: large;
   font-weight: 900;
 }
+.validatorcontainer{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
 @media (max-width: 590px) {
   html div[class*="announcementBar"] {
     padding:0.2rem;
 
+  }
+  .validatorcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   p.text-newsletter{
     text-align: center;
@@ -438,7 +461,11 @@ p.text-newsletter{
   }
 }
 @media (max-width: 990px) {
-
+  .validatorcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
   .bigcard{
     margin-top: 10px;
 
@@ -483,6 +510,22 @@ p.text-newsletter{
   p.small-text{
     font-size: 1rem;
   }
+  .validatorcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .validatorcard{
+      width:150px;
+      height: 50px;
+      padding: 1rem;
+      a.vlink{
+        font-size: 12px;
+      }
+    }
+
+  }
+
+
 }
 @media (max-width:1200px){
   p.small-text{
@@ -493,6 +536,9 @@ p.text-newsletter{
     font-size: 12px;
     padding-left: 0;
 
+  }
+  a.vlink{
+    font-size: 12px;
   }
 }
 
