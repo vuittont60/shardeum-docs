@@ -3,17 +3,21 @@ title: Dynamic State Sharding
 sidebar_position: 3
 ---
 
+export const DynamicTable=()=>(
+<table>
+<tr><th>Static Sharding</th><th>Dynamic Sharding</th></tr>
+<tr><td>Shards pre-exist</td><td>Shards are formed as needed</td></tr>
+<tr><td>Shards address space is pre-determined </td><td>  Shards address space is variable</td></tr>
+<tr><td>Asynchronous processing of multi-shard transaction</td><td> Synchronous processing of multi-shard transactions</td></tr>
+<tr><td> No composability for cross shard transactions</td><td>Atomic composability for all transactions</td></tr>
+</table>
+    );
+
 # Dynamic State Sharding
 
 There are two types of State Sharding - **Static State Sharding** & **Dynamic State Sharding**.
 
-| Static Sharding| Dynamic Sharding |
-|:-----------       |:------------   | 
-|  Limited scalability     | Scalable   | 
-|  Number of shards is fixed/doesn't change | Number of shards changes dynamically| 
-|Same address range   |   Different address range.     |
-
-
+<DynamicTable />
 
 The most general approach to sharding is to divide the address space of accounts into multiple fixed-size regions called shards, and nodes in the network are assigned to different shards.
 
