@@ -21,10 +21,10 @@ export const Validator=()=>(
 </div>
 <div className="row valrow">
 <div  className="card valcard">
-<a className="vlink" href="#step-3-open-validator-cli"> Validator ClI Commands</a >
+<a className="vlink" href="#step-3-open-validator-cli"> Validator CLI Commands</a >
 </div>
 <div  className="card valcard ">
-<a className="vlink" href="#step-8-get-shm-from-betanet-faucet"> Get Betanet SHM card</a >
+<a className="vlink" href="#step-8-get-shm-from-betanet-faucet"> Get Betanet SHM</a >
 </div>
 <div  className="card valcard">
 <a className="vlink" href="#uninstall-validator"> Uninstall Validator</a >
