@@ -399,21 +399,32 @@ p.text-newsletter{
   font-size: large;
   font-weight: 900;
 }
-.validatorcontainer{
+.valcontainer{
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+}
+.valrow{
+  display:flex;
   flex-direction: row;
   gap: 10px;
+  width:100%;
+
+}
+.valcard{
+  width:230px;
+  a{
+    font-size: medium;
+  }
 }
 @media (max-width: 590px) {
   html div[class*="announcementBar"] {
     padding:0.2rem;
 
   }
-  .validatorcontainer{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+
   p.text-newsletter{
     text-align: center;
     margin-top: 5px;
@@ -459,13 +470,26 @@ p.text-newsletter{
     color: #ffffff;
     font-size: 14px;
   }
-}
-@media (max-width: 990px) {
-  .validatorcontainer{
+  .container.valcontainer{
+    gap:10px;
+    width: 100%;
+  }
+  .row.valrow{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
   }
+  .card.valcard{
+    width:100%;
+    a{
+      font-size: 18px;
+    }
+  }
+}
+@media (max-width: 990px) {
+
   .bigcard{
     margin-top: 10px;
 
@@ -510,21 +534,24 @@ p.text-newsletter{
   p.small-text{
     font-size: 1rem;
   }
-  .validatorcontainer{
+
+  .valcontainer{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    .validatorcard{
-      width:150px;
-      height: 50px;
-      padding: 1rem;
-      a.vlink{
-        font-size: 12px;
-      }
-    }
+    gap: 20px;
 
   }
+  .valrow{
+    display:flex;
+    flex-direction: row;
 
+  }
+  .valcard{
+    width:170px;
+    a{
+      font-size: 10px;
+    }
+  }
 
 }
 @media (max-width:1200px){
@@ -539,6 +566,23 @@ p.text-newsletter{
   }
   a.vlink{
     font-size: 12px;
+  }
+  .valcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+  .valrow{
+    display:flex;
+    flex-direction: row;
+
+  }
+  .valcard{
+    width:170px;
+    a{
+      font-size: 12px;
+    }
   }
 }
 

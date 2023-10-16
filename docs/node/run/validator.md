@@ -7,21 +7,28 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 export const Validator=()=>(
-<div className="validatorcontainer">
-<div className="card validatorcard">
+<div className="container valcontainer">
+<div className="row valrow">
+<div className="card valcard">
 <a className="vlink" href="#how-do-i-run-a-validator-on-shardeum">Install Validator</a >
 </div>
-<div className="card validatorcard">
+<div className="card valcard">
 <a className="vlink" href="#update">Update Existing Validator</a >
 </div>
-<div className="card validatorcard">
+<div className="card valcard">
+<a className="vlink" href="#how-do-i-run-a-validator-on-shardeum"> Validator Dashboard</a >
+</div>
+</div>
+<div className="row valrow">
+<div  className="card valcard">
+<a className="vlink" href="#step-3-open-validator-cli"> Validator ClI Commands</a >
+</div>
+<div  className="card valcard ">
+<a className="vlink" href="#step-8-get-shm-from-betanet-faucet"> Get Betanet SHM card</a >
+</div>
+<div  className="card valcard">
 <a className="vlink" href="#uninstall-validator"> Uninstall Validator</a >
 </div>
-<div  className="card validatorcard">
-<a className="vlink" href="#step-3-open-validator-cli"> Validator CLI Commands</a >
-</div>
-<div  className="card validatorcard">
-<a className="vlink" href="#how-do-i-run-a-validator-on-shardeum"> Dashboard Overview</a >
 </div>
 </div>
     );
