@@ -24,7 +24,7 @@ export const Validator=()=>(
 <a className="vlink" href="#step-3-open-validator-cli"> Validator CLI Commands</a >
 </div>
 <div  className="card valcard ">
-<a className="vlink" href=""> Get Betanet SHM</a >
+<a className="vlink" href="#step-8-get-shm-from-betanet-faucet"> Get Betanet SHM</a >
 </div>
 <div  className="card valcard">
 <a className="vlink" href="#uninstall-validator"> Uninstall Validator</a >
