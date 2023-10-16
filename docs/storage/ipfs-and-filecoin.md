@@ -28,7 +28,7 @@ Filecoin is used to keep IPFS content active for simplicity.
 
 ## How to upload to IPFS?
 
-Upload to IPFS uisng Spheron:
+Upload to IPFS using Spheron:
 
 https://spheron.network/
 
