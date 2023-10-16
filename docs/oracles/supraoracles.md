@@ -254,7 +254,7 @@ The Supra Network Activate Program (SNAP) offers companies discounted oracle cre
 
 The SNAP program is partnered with some of Web3's most prolific names who are helping with project selection and qualification.
 
-## Connect with Supra Orcales!
+## Connect with SupraOracles!
 
 
 Still looking for answers? We got them! Check out all the ways you can reach them:
