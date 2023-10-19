@@ -580,7 +580,7 @@ operator-cli start
 
 Wait and refresh the page.
 
-The node is running correctly if the “Start Node” button now says “Stop Node”. If you want to stop tne node with the CLI:
+The node is running correctly if the “Start Node” button now says “Stop Node”. If you want to stop the node with the CLI:
 
 <Tabs>
   <TabItem value="shell" label="Shell" default>
@@ -644,7 +644,7 @@ pm2 delete [id]
 
 ## Step 8: Get SHM from Betanet Faucet
 
-[Shardeum Twitter SHM Faucet Guide for Sphinx Validator 1.X](/faucet/claim#shardeum-faucet-website)
+[Shardeum Testnet SHM Faucet Guide for Sphinx Validator 1.X](/faucet/claim)
 
 ## Step 9: Stake SHM to validator
 
@@ -837,7 +837,7 @@ operator-cli gui start
   </TabItem>
 </Tabs>
 
-- Check your currect version from either CLI or GUI and make sure it is the latest version.
+- Check your current version from either CLI or GUI and make sure it is the latest version.
 
 :::
 

@@ -18,10 +18,12 @@ image: /img/claim/SHM_testnet_preview.jpg
 
 3. Go to the faucet channel in Shardeum discord.
 
-  Sphinx 1.X:
+  Sphinx Validator 1.X: 
 
   https://discord.com/channels/933959587462254612/1070780355931541514
-
+  
+  Sphinx Dapp 1.X:
+  https://discord.com/channels/933959587462254612/1031497272191627284
 
 4. Submit the following text in the faucet text channel you are in (a black box with address will appear after you type /faucet):
 

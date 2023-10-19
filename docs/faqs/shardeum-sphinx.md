@@ -48,4 +48,4 @@ We encourage you to fill up and submit this simple [form](https://forms.gle/BFLX
 
 ## RPC is slow. Is there any ongoing issue?
 
-Shardeum Public RPC has a pretty high limit of throughput and a high rate limiting criteria. If you are having RPC issues, please try again in a a while. We will soon introduce multiple other public RPCs for redundancy purposes.
+Shardeum Public RPC has a pretty high limit of throughput and a high rate limiting criteria. If you are having RPC issues, please try again in a while. We will soon introduce multiple other public RPCs for redundancy purposes.
