@@ -16,7 +16,7 @@ const BigFeatureList=[
         icon:<HiDocumentSearch  style={stylecard.iconStyle}/> ,
         description: (
             <>
-                Grasp the innovative features of Shardeum to build app that scale.
+                Grasp the innovative features of Shardeum to build apps that scale.
             </>
         ),
         alink:"/introduction/what-is-shardeum",
@@ -25,7 +25,7 @@ const BigFeatureList=[
         icon: <BsFillFileEarmarkPlayFill  style={stylecard.iconStyle} />,
         description: (
             <>
-                Contribute to network security and earn rewards in few easy steps.
+                Contribute to network security in few easy steps.
             </>
         ),
         alink: '/node/run/validator',
@@ -43,17 +43,17 @@ const FeatureList = [
 
 
 
-                Access the Shardeum network in a few clicks.
+                Add Shardeum Sphinx networks in a few clicks.
             </>
         ),
         alink:'/network/endpoints'
     },
     {
-        title: ' Faucet Claim',
+        title: ' Faucet',
         icon: <LuBaggageClaim  style={stylecard.iconStyle}/>,
         description: (
             <>
-                Get test SHM for the Shardeum testnet
+                Claim testnet SHM for Sphinx Dapp and Sphinx Validator
 
 
             </>
@@ -69,10 +69,10 @@ const FeatureList = [
         icon: <FaFileContract  style={stylecard.iconStyle}/> ,
         description: (
             <>
-                Build scalable protocols on Shardeum with smart protocols
+                Build scalable dapps on Shardeum
             </>
         ),
-        alink:'/smart-contracts/deploy/same-address',
+        alink:'/network/endpoints',
     },
 ];
 function BigFeature({ title,icon, description,alink}) {
