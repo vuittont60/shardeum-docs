@@ -130,13 +130,13 @@ module.exports = {
                 },
                 {
                   href: '/faucet/claim',
-                  label: 'Claim 100 Testnet SHM',
+                  label: 'Claim Testnet SHM',
                   position: 'left',
 
                 },
                 {
                   label: 'Super Shardians',
-                  to: 'https://shardeum.org/super-shardian/',
+                  to: 'https://shm.gg/super-shardian-tasks',
                 },
                 {
                   label: 'Blog',
@@ -150,11 +150,11 @@ module.exports = {
               items: [
                 {
                   label: 'Telegram',
-                  to: 'https://t.me/shardeum',
+                  to: 'http://t.me/shardians',
                 },
                 {
                   label: 'Discord',
-                  to: 'https://discord.gg/gx2SFZDDSM',
+                  to: 'http://discord.gg/shardeum',
                 },
                 {
                   label: 'Twitter',
@@ -174,11 +174,11 @@ module.exports = {
                   to: 'https://shardeum.org/explore/faqs/general/',
                 },
                 {
-                  label: 'Brand Assets Page',
+                  label: 'Brand Assets',
                   to: 'https://drive.google.com/drive/folders/1jdjJNMajHG_QDu_uAXTRrqpXW3AUuiJu',
                 },
                 {
-                  label: 'Public Drive Link',
+                  label: 'Public Drive',
                   to: 'https://drive.google.com/drive/folders/1zal5vN3f67Ql-Q8jiSYsp6Nf0xoJuqNI',
                 },
               ],
@@ -199,7 +199,7 @@ module.exports = {
                   to: 'https://github.com/shardeum',
                 },
                 {
-                  label: 'Gitlab',
+                  label: 'GitLab',
                   to: 'https://gitlab.com/shardeum',
                 },
               ],
