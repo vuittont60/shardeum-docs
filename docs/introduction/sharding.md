@@ -15,7 +15,7 @@ Sharding helps mitigate the performance challenges that unsharded blockchain net
 | Network Sharding  | Compute Sharding      |  Data Sharding | State Sharding|
 |:----------|:-------------|:------|::-------|
 | Operates Independently | Store entire block chain | Data partitioned into parts |Blockchain state divided into segement|
-| Has its own consesus algorithim | Process transaction assinged to the shard   |  Store a part of data | Each shard maintains a segment  |
+| Has its own consesus algorithm | Process transaction assinged to the shard   |  Store a part of data | Each shard maintains a segment  |
 | Has own ledger & transaction pool| Validate transaction assigned to the shard |   Maintain a part of data | Reduce computational requirement|
 |Process more transactions| Cross shard transaction requires additional step | Fast data access and retrieval|  Esay to participate   |
 
